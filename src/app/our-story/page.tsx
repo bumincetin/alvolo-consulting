@@ -16,13 +16,13 @@ export default function OurStoryPage() {
             </div>
             <article className="prose prose-lg dark:prose-invert max-w-none">
               <p>
-                İtalya'da eğitim veya yeni bir yaşam hayali kuran birçok kişinin karşılaştığı bürokratik zorluklar ve bilgi karmaşası, Çetin & Aslan Danışmanlık fikrinin temelini attı.
+                İtalya&apos;da eğitim veya yeni bir yaşam hayali kuran birçok kişinin karşılaştığı bürokratik zorluklar ve bilgi karmaşası, Çetin & Aslan Danışmanlık fikrinin temelini attı.
               </p>
               <p>
-                Kendi deneyimlerimizden ve çevremizdeki öğrencilerin, akademisyenlerin ve profesyonellerin İtalya'daki süreçlerde yaşadığı zorluklardan ilham alarak, bu yolculuğu herkes için daha anlaşılır, yönetilebilir ve stressiz hale getirmeyi amaçladık.
+                Kendi deneyimlerimizden ve çevremizdeki öğrencilerin, akademisyenlerin ve profesyonellerin İtalya&apos;daki süreçlerde yaşadığı zorluklardan ilham alarak, bu yolculuğu herkes için daha anlaşılır, yönetilebilir ve stressiz hale getirmeyi amaçladık.
               </p>
               <p>
-                En büyük motivasyonumuz, İtalya'daki hedeflerinize ulaşma yolunda karmaşık prosedürler arasında değerli zamanınızı ve enerjinizi kaybetmemeniz, bunun yerine hayallerinize ve yeni başlangıçlarınıza odaklanabilmenizdir.
+                En büyük motivasyonumuz, İtalya&apos;daki hedeflerinize ulaşma yolunda karmaşık prosedürler arasında değerli zamanınızı ve enerjinizi kaybetmemeniz, bunun yerine hayallerinize ve yeni başlangıçlarınıza odaklanabilmenizdir.
               </p>
             </article>
             <div className="mt-12 text-center">

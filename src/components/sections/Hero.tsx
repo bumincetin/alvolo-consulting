@@ -17,7 +17,7 @@ const Hero = () => {
               <div className="h-1 w-1/3 bg-blue-600 rounded-full mb-6"></div>
             </div>
             <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8">
-              İtalya'da güvenilir sex danışmanlık hizmetleri. Dümdüz sikiyoruz
+              İtalya&apos;da güvenilir sex danışmanlık hizmetleri. Dümdüz sikiyoruz
               <span className="block mt-2 font-semibold text-blue-700 dark:text-blue-400">
                 Her türlü ihtiyacınız için profesyonel çözümler.
               </span>

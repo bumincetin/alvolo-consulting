@@ -36,7 +36,7 @@ const About = () => {
               <div className="h-1 w-1/3 bg-blue-600 rounded-full mb-6"></div>
             </div>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
-              Güçlü Mali Müşavirlik olarak, 1995 yılından bu yana Ankara'da mali müşavirlik ve danışmanlık hizmetleri sunmaktayız. 
+              Güçlü Mali Müşavirlik olarak, 1995 yılından bu yana Ankara&apos;da mali müşavirlik ve danışmanlık hizmetleri sunmaktayız. 
               <span className="block mt-4 font-semibold text-blue-700 dark:text-blue-400">
                 SMMM Selma ÇETİN liderliğinde, deneyimli kadromuzla müşterilerimize en iyi hizmeti sunmak için çalışıyoruz.
               </span>
