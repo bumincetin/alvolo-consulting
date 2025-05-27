@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app # Mount current directory to /app in container for live-reloading
+      - /app/node_modules # Don't mount local node_modules
+      - /app/.next # Don't mount local .next folder
+    environment:
+      - NODE_ENV=development
+      # Add any other environment variables your Next.js app might need
+      # POSTGRES_URL: postgresql://user:password@postgres:5432/mydatabase # Example if you were connecting
+
+  # Placeholder Postgres service - not used by Next.js app yet
+  # postgres:
+  #   image: postgres:15
+  #   restart: always
+  #   environment:
+  #     POSTGRES_USER: user
+  #     POSTGRES_PASSWORD: password
+  #     POSTGRES_DB: mydatabase
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+
+# volumes:
+#   postgres_data: 

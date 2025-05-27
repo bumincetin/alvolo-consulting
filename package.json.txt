@@ -1,0 +1,49 @@
+{
+  "name": "italia-edu",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,json,css,scss}\"",
+    "check-types": "tsc --noEmit",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install" 
+  },
+  "dependencies": {
+    "// ": "Make sure you have these from previous steps or add them",
+    "next": "^14.x.x", // Replace with your actual Next.js version
+    "react": "^18.x.x",
+    "react-dom": "^18.x.x",
+    "lucide-react": "^0.x.x",
+    "@radix-ui/react-dropdown-menu": "^2.x.x",
+    "@radix-ui/react-slot": "^1.x.x",
+    "@radix-ui/react-dialog": "^1.x.x", // For Sheet
+    "class-variance-authority": "^0.x.x",
+    "clsx": "^2.x.x",
+    "tailwind-merge": "^2.x.x",
+    "contentlayer": "^0.x.x",
+    "next-contentlayer": "^0.x.x",
+    "date-fns": "^2.x.x" 
+  },
+  "devDependencies": {
+    "// ": "Make sure you have these from previous steps or add them",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.x.x",
+    "eslint": "^8",
+    "eslint-config-next": "^14.x.x",
+    "postcss": "^8.x.x",
+    "tailwindcss": "^3.x.x",
+    "typescript": "^5",
+    "prettier": "^3.x.x", // from current step
+    "eslint-config-prettier": "^9.x.x",
+    "eslint-plugin-prettier": "^5.x.x",
+    "husky": "^8.x.x", // or ^9.x.x
+    "lint-staged": "^15.x.x",
+    "@tailwindcss/typography": "^0.5.x"
+  }
+} 

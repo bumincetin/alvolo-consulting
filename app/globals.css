@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply h-full;
+  }
+  body {
+    @apply font-sans antialiased flex flex-col min-h-screen;
+    /* Add any other global body styles here */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    /* Add other global heading styles if needed */
+  }
+
+  /* Set up consistent section padding */
+  .section-padding {
+    @apply max-w-screen-xl mx-auto py-section-py px-section-px lg:px-section-px-lg;
+  }
+}
+
+/* You might want to import your fonts here if not handled by Next/font */
+/* For example, if using Google Fonts directly: */
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap'); 
+*/
+
+/* Styles for Shadcn/ui if you're not using their CLI to auto-inject themes */
+/* :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: 346.8 77.2% 49.8%; 
+    You'll want to map your #E91E2E to HSL for Shadcn variables if doing this manually
+    ... and so on for other Shadcn variables ...
+} 
+
+.dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+     ... and so on ...
+}
+*/ 
