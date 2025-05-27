@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Disable Next.js Image Optimization for static export
   },
-  // trailingSlash: true, // Optional: if you prefer URLs with trailing slashes
+  trailingSlash: true, // Optional: if you prefer URLs with trailing slashes
 };
 
 export default nextConfig;
