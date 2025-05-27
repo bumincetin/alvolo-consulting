@@ -1,79 +1,105 @@
-# Güçlü Mali Müşavirlik Website
+# Italia Consultant - Next.js Project
 
-Modern, responsive website for Güçlü Mali Müşavirlik, a professional accounting and financial advisory firm based in Ankara, Turkey.
+This project is a modern website for "Çetin & Aslan Danışmanlık," a consultancy firm aimed at Turkish students and individuals planning to study or relocate to Italy. It's built with Next.js 14 (App Router) and TypeScript, focusing on a professional look and feel, multilingual support (planned), and content-driven services.
 
-## 🚀 Features
+## 🚀 Project Goal
 
-- Modern, responsive design
-- Dark mode support
-- Interactive components
-- SEO optimized
-- Mobile-first approach
-- Fast loading with Next.js
+To create a visually appealing, responsive, and informative website providing comprehensive information and consultancy services related to studying and living in Italy. The site aims to support Turkish, with potential for English and Italian in the future.
 
 ## 💻 Tech Stack
 
-- [Next.js 15.2](https://nextjs.org/) - React framework
-- [TailwindCSS](https://tailwindcss.com/) - Styling
-- [React Icons](https://react-icons.github.io/react-icons/) - Icons
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
+*   **Framework:** Next.js 14 (App Router)
+*   **Language:** TypeScript
+*   **Styling:** Tailwind CSS
+*   **UI Components:** (Shadcn/ui - to be integrated or custom components)
+*   **Icons:** React Icons
+*   **Internationalization (i18n):** (next-i18next or similar - to be integrated)
+*   **Content Management:** (Contentlayer - for potential blog/dynamic service pages - to be integrated)
+*   **Form Handling:** (React-Hook-Form & Zod - to be integrated)
+*   **Emailing:** (Nodemailer - for contact form, server-side - to be integrated)
+*   **Animations:** (Framer Motion - for subtle animations - to be integrated)
+*   **Linting & Formatting:** ESLint, Prettier
+*   **Git Hooks:** Husky & lint-staged (assumed from general good practice)
+*   **Deployment:** Vercel (assumed)
+*   **Containerization:** Docker (for local development consistency, if used)
 
 ## 🛠️ Installation
 
-1. Clone the repository
-```bash
-git clone https://github.com/bumincetin/guclu-mali-musavirlik.git
-```
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/bumincetin/cetin-aslan.git
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd cetin-aslan
+    ```
+3.  Install dependencies:
+    ```bash
+    npm install
+    # or
+    # pnpm install
+    # or
+    # yarn install
+    ```
+4.  Run the development server:
+    ```bash
+    npm run dev
+    # or
+    # pnpm run dev
+    # or
+    # yarn dev
+    ```
+5.  Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-2. Install dependencies
-```bash
-cd guclu-mali-musavirlik
-npm install
-```
-
-3. Run the development server
-```bash
-npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## 📁 Project Structure
+## 📁 Project Structure (Simplified)
 
 ```
 src/
 ├── app/
-│   └── page.tsx           # Main page component
+│   ├── (pages)/                # Route groups for main pages
+│   │   ├── page.tsx            # Main page (Home)
+│   │   ├── hizmetlerimiz/page.tsx # Services page
+│   │   ├── pricing/page.tsx      # Pricing page
+│   │   ├── our-story/page.tsx    # Our Story page
+│   │   └── ...                 # Other page routes
+│   ├── layout.tsx              # Root layout
+│   └── globals.css             # Global styles
 ├── components/
 │   ├── layout/
-│   │   └── Navbar.tsx     # Navigation component
-│   └── sections/
-│       ├── Hero.tsx       # Hero section
-│       ├── Services.tsx   # Services section
-│       ├── About.tsx      # About section
-│       └── Contact.tsx    # Contact section
-└── styles/
-    └── globals.css        # Global styles
+│   │   └── Navbar.tsx          # Navigation component
+│   │   └── Footer.tsx          # Footer component (if exists)
+│   └── sections/               # Components for page sections (Hero, About, Contact, etc.)
+│   └── ui/                     # UI elements (buttons, cards, etc.)
+├── public/                     # Static assets (images, fonts)
+├── styles/                     # Potentially other global styles or theme files (if any)
+├── lib/                        # Utility functions, helper scripts (if any)
+├── content/                    # (If using Contentlayer) MDX files for blog/services
+├── next.config.mjs             # Next.js configuration
+├── tailwind.config.ts          # Tailwind CSS configuration
+└── tsconfig.json               # TypeScript configuration
 ```
 
 ## 🌟 Key Features
 
-- **Professional Design**: Modern and clean design that reflects the professional nature of the business
-- **Responsive Layout**: Fully responsive design that works on all devices
-- **Interactive Elements**: Smooth animations and transitions
-- **Contact Form**: Built-in contact form for client inquiries
-- **Service Showcase**: Detailed presentation of all services
-- **Dark Mode**: Built-in dark mode support
+*   **Professional Design**: Modern and clean design reflecting the consultancy's nature.
+*   **Responsive Layout**: Fully responsive design working across all devices.
+*   **Interactive Elements**: Smooth transitions and user-friendly interactions.
+*   **Service Showcase**: Detailed presentation of consultancy services.
+*   **Pricing Information**: Clear pricing packages.
+*   **Company Story**: Narrative about the consultancy's origins.
+*   **Dark Mode Support**: Adapts to user's system preference.
+*   **(Planned) Multilingual Support**: To cater to a wider audience.
+*   **(Planned) Content-driven services**: Using a CMS like Contentlayer for easy updates.
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details (assuming MIT, please create one if it doesn't exist).
 
 ## 👤 Author
 
 **Bumin Kağan Çetin**
-- GitHub: [@bumincetin](https://github.com/bumincetin)
+*   GitHub: [@bumincetin](https://github.com/bumincetin)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
