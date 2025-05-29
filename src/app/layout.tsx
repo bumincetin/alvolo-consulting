@@ -1,21 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
+  variable: "--font-playfair-display",
+  weight: ["400", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lato = Lato({
   subsets: ["latin"],
+  variable: "--font-lato",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Güçlü Mali Müşavirlik | SMMM Selma ÇETİN",
+  title: "Cetin & Aslan Danismanlik",
   description: "1995'ten beri Ankara'da güvenilir mali müşavirlik ve danışmanlık hizmetleri. Vergi, muhasebe ve danışmanlık ihtiyaçlarınız için profesyonel çözümler.",
-  keywords: "mali müşavir, SMMM, vergi danışmanlığı, muhasebe, Ankara, mali müşavirlik, Selma ÇETİN",
+  keywords: "mali müşavir, SMMM, vergi danışmanlığı, muhasebe, Ankara, mali müşavirlik, Cetin & Aslan Danismanlik",
 };
 
 export default function RootLayout({
@@ -26,9 +30,18 @@ export default function RootLayout({
   return (
     <html lang="tr" suppressHydrationWarning={true}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${playfairDisplay.variable} ${lato.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          disableTransitionOnChange
+        >
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

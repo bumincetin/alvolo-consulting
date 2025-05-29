@@ -1,48 +1,48 @@
-import { FaCalculator, FaChartLine, FaFileInvoiceDollar, FaHandshake, FaBalanceScale, FaBook } from 'react-icons/fa';
+"use client"; // Make sure client component if not already
 
-const services = [
-  {
-    icon: FaCalculator,
-    title: "Emlak Danışmanlığı",
-    description: "konaklama alanında danışmanlık, konut seçimi, kontrat, depozito ve noter işlemlerinde hukuki rehberlik."
-  },
-  {
-    icon: FaFileInvoiceDollar,
-    title: "Oturum İzni (Permesso di Soggiorno) Danışmanlığı",
-    description: "Belgelerin (kontrat, sigorta, gelir kanıtı vb.) eksiksiz hazırlanması, karakol (Questura) randevusu alma, posta kitinin doldurulması ve posta takibi."
-  },
-  {
-    icon: FaBook,
-    title: "Öğrencilere Burs Başvurusu Danışmanlığı",
-    description: "Profilinize uygun devlet, bölgesel ve özel burs olanaklarının taranması, başvuru takvimi ve şartların burs başvurusu zaman çizelgesine dönüştürülmesi, CV, motivasyon mektubu, gelir belgeleri ve referansların hazırlanıp kontrol edilmesi, online portallarda başvuru gönderimi ve sonuçların takibi."
-  },
-  {
-    icon: FaHandshake,
-    title: "Şirket Kuruluş ve Kapanış",
-    description: "Limited ve Anonim şirket kuruluşu, şirket kapanış işlemleri ve tasfiye süreçleri."
-  },
-  {
-    icon: FaChartLine,
-    title: "Finansal Danışmanlık Hizmetleri",
-    description: "Finansal planlama, bütçeleme ve yönetim danışmanlığı hizmetleri."
-  },
-  {
-    icon: FaBalanceScale,
-    title: "Karşılama Hizmeti",
-    description: "Havalimanında karşılama & özel transfer (birey/öğrenci grupları), Şehir oryantasyonu: toplu taşıma kartı, SIM kart, temel ihtiyaç noktaları, İlk günler için acil destek hattı (kayıp eşya, sağlık, dil yardımı), Özel taleplere göre turlar ve rehberlik organizasyonu."
-  }
+import { FaCalculator, FaChartLine, FaFileInvoiceDollar, FaHandshake, FaBalanceScale, FaBook } from 'react-icons/fa';
+import { useLanguage } from '@/contexts/LanguageContext'; // Import useLanguage
+
+// Original services data - keep for structure if needed, or remove if fully dynamic
+const staticServicesData = [
+  { icon: FaCalculator, keyPrefix: "service1" },
+  { icon: FaFileInvoiceDollar, keyPrefix: "service2" },
+  { icon: FaBook, keyPrefix: "service3" },
+  { icon: FaHandshake, keyPrefix: "service4" },
+  { icon: FaChartLine, keyPrefix: "service5" },
+  { icon: FaBalanceScale, keyPrefix: "service6" },
 ];
 
 const Services = () => {
+  const { translations, isLoading } = useLanguage(); // Get translations
+
+  if (isLoading || !translations.servicesPage) {
+    // Show loading state or a fallback
+    return (
+      <section id="services" className="py-20 bg-brand-bg-primary">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-xl text-brand-text-secondary">Loading services...</p>
+        </div>
+      </section>
+    );
+  }
+
+  // Map over static data to get icons and keys, then use translations
+  const services = staticServicesData.map(service => ({
+    icon: service.icon,
+    title: translations.servicesPage[service.keyPrefix]?.title || `${service.keyPrefix} title missing`,
+    description: translations.servicesPage[service.keyPrefix]?.description || `${service.keyPrefix} description missing`,
+  }));
+
   return (
-    <section id="services" className="py-20 bg-white dark:bg-gray-900">
+    <section id="services" className="py-20 bg-brand-bg-primary">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Hizmetlerimiz
+          <h2 className="text-4xl font-bold text-brand-blue mb-4">
+            {translations.servicesPage.title}
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400">
-            Profesyonel ve güvenilir mali müşavirlik hizmetleri
+          <p className="text-xl text-brand-text-secondary">
+            {translations.servicesPage.subtitle}
           </p>
         </div>
         
@@ -50,13 +50,13 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-8 rounded-xl bg-gray-50 dark:bg-gray-800 hover:shadow-xl transition duration-300"
+              className="p-8 rounded-xl bg-brand-bg-surface hover:shadow-xl transition duration-300"
             >
-              <service.icon className="w-12 h-12 text-blue-600 mb-6" />
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              <service.icon className="w-12 h-12 text-brand-gold mb-6" />
+              <h3 className="text-2xl font-semibold text-brand-blue mb-4">
                 {service.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-brand-text-secondary">
                 {service.description}
               </p>
             </div>

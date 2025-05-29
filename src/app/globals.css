@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* New Brand Colors as CSS Variables */
+  --brand-blue: #2A4494;
+  --brand-gold: #B08D57;
+  --brand-text-primary: #2D3748;
+  --brand-text-secondary: #4A5568;
+  --brand-bg-primary: #F7FAFC; /* Intended for overall page background */
+  --brand-bg-surface: #FFFFFF; /* Intended for surfaces like cards, navbar */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Base Definitions using Brand Colors */
+  --background: var(--brand-bg-primary);
+  --foreground: var(--brand-text-primary);
+  
+  --font-size-base: 1rem; 
+  --line-height-base: 1.6;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--brand-bg-primary); /* Explicitly set page background */
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700; 
+  color: var(--brand-blue); /* Headings in brand blue */
+}
+
+/* Optional: Style links with the accent color */
+a {
+  color: var(--brand-gold);
+}
+
+a:hover {
+  color: var(--brand-blue); /* Darken gold on hover or use primary blue */
+}
+
+/* Ensure navbar has a solid background by default if classes fail */
+/* This is a fallback, Tailwind classes should handle it */
+nav {
+  background-color: var(--brand-bg-surface) !important; 
 }

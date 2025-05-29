@@ -48,14 +48,14 @@ export default function ServicesPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 pt-20">
+      <div className="min-h-screen bg-brand-bg-primary pt-20">
         <div className="container mx-auto px-6 py-20">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
               Hizmetlerimiz
             </h1>
-            <div className="h-1 w-24 bg-blue-600 mx-auto rounded-full mb-6"></div>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
+            <div className="h-1 w-24 bg-brand-gold mx-auto rounded-full mb-6"></div>
+            <p className="text-xl text-brand-text-secondary">
               Profesyonel mali müşavirlik ve danışmanlık hizmetlerimiz
             </p>
           </div>
@@ -64,16 +64,16 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+                className="bg-brand-bg-surface rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
               >
-                <h2 className="text-2xl font-bold text-blue-700 dark:text-blue-400 mb-6">
+                <h2 className="text-2xl font-bold text-brand-blue mb-6">
                   {service.title}
                 </h2>
                 <ul className="space-y-4">
                   {service.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start gap-3">
-                      <FaCheckCircle className="text-blue-600 flex-shrink-0 mt-1" />
-                      <span className="text-gray-700 dark:text-gray-300">{item}</span>
+                      <FaCheckCircle className="text-brand-gold flex-shrink-0 mt-1" />
+                      <span className="text-brand-text-secondary">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -82,12 +82,12 @@ export default function ServicesPage() {
           </div>
 
           <div className="mt-16 text-center">
-            <p className="text-lg text-gray-600 dark:text-gray-300">
+            <p className="text-lg text-brand-text-secondary">
               Detaylı bilgi ve danışmanlık için bizimle iletişime geçebilirsiniz.
             </p>
             <Link
               href="/#contact"
-              className="inline-block mt-6 px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl"
+              className="inline-block mt-6 px-8 py-4 bg-brand-gold text-white rounded-lg hover:bg-yellow-700 transition duration-300 shadow-lg hover:shadow-xl"
             >
               İletişime Geçin
             </Link>

@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const repoName = 'cetin-aslan'; // Define repo name once
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  // output: 'export',
   basePath: isProd ? `/${repoName}` : undefined,
   assetPrefix: isProd ? '' : undefined, // Try with empty assetPrefix when basePath is set
   images: {

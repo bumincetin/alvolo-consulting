@@ -87,7 +87,6 @@ src/
 *   **Service Showcase**: Detailed presentation of consultancy services.
 *   **Pricing Information**: Clear pricing packages.
 *   **Company Story**: Narrative about the consultancy's origins.
-*   **Dark Mode Support**: Adapts to user's system preference.
 *   **(Planned) Multilingual Support**: To cater to a wider audience.
 *   **(Planned) Content-driven services**: Using a CMS like Contentlayer for easy updates.
 

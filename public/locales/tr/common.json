@@ -1,0 +1,78 @@
+{
+  "navbar": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler",
+    "pricing": "Fiyatlandırma",
+    "about": "Hakkımızda",
+    "ourStory": "Hikayemiz",
+    "contact": "İletişim",
+    "brand": "Çetin & Aslan Danışmanlık"
+  },
+  "servicesPage": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Profesyonel ve güvenilir mali müşavirlik hizmetleri",
+    "service1": {
+      "title": "Emlak Danışmanlığı",
+      "description": "konaklama alanında danışmanlık, konut seçimi, kontrat, depozito ve noter işlemlerinde hukuki rehberlik."
+    },
+    "service2": {
+      "title": "Oturum İzni (Permesso di Soggiorno) Danışmanlığı",
+      "description": "Belgelerin (kontrat, sigorta, gelir kanıtı vb.) eksiksiz hazırlanması, karakol (Questura) randevusu alma, posta kitinin doldurulması ve posta takibi."
+    },
+    "service3": {
+      "title": "Öğrencilere Burs Başvurusu Danışmanlığı",
+      "description": "Profilinize uygun devlet, bölgesel ve özel burs olanaklarının taranması, başvuru takvimi ve şartların burs başvurusu zaman çizelgesine dönüştürülmesi, CV, motivasyon mektubu, gelir belgeleri ve referansların hazırlanıp kontrol edilmesi, online portallarda başvuru gönderimi ve sonuçların takibi."
+    },
+    "service4": {
+      "title": "Şirket Kuruluş ve Kapanış",
+      "description": "Limited ve Anonim şirket kuruluşu, şirket kapanış işlemleri ve tasfiye süreçleri."
+    },
+    "service5": {
+      "title": "Finansal Danışmanlık Hizmetleri",
+      "description": "Finansal planlama, bütçeleme ve yönetim danışmanlığı hizmetleri."
+    },
+    "service6": {
+      "title": "Karşılama Hizmeti",
+      "description": "Havalimanında karşılama & özel transfer (birey/öğrenci grupları), Şehir oryantasyonu: toplu taşıma kartı, SIM kart, temel ihtiyaç noktaları, İlk günler için acil destek hattı (kayıp eşya, sağlık, dil yardımı), Özel taleplere göre turlar ve rehberlik organizasyonu."
+    }
+  },
+  "metadata": {
+    "title": "Cetin & Aslan Danismanlik",
+    "description": "1995'ten beri Ankara'da güvenilir mali müşavirlik ve danışmanlık hizmetleri. Vergi, muhasebe ve danışmanlık ihtiyaçlarınız için profesyonel çözümler.",
+    "keywords": "mali müşavir, SMMM, vergi danışmanlığı, muhasebe, Ankara, mali müşavirlik, Cetin & Aslan Danismanlik"
+  },
+  "heroSection": {
+    "mainHeading": "Çetin & Aslan Danışmanlık",
+    "subheading1": "İtalya'da güvenilir bürokrasi ve emlak danışmanlık hizmetleri",
+    "subheading2": "Her türlü ihtiyacınız için profesyonel çözümler.",
+    "contactButton": "İletişime Geçin",
+    "servicesButton": "Hizmetlerimiz"
+  },
+  "aboutSection": {
+    "title": "Hakkımızda",
+    "paragraph1": "Cetin & Aslan Danışmanlık olarak, 1995 yılından bu yana Ankara'da mali müşavirlik ve danışmanlık hizmetleri sunmaktayız.",
+    "paragraph2": "Deneyimli kadromuzla müşterilerimize en iyi hizmeti sunmak için çalışıyoruz.",
+    "paragraph3": "Mesleki gelişmeleri ve değişen mevzuatı yakından takip ederek, müşterilerimize güncel ve doğru bilgiyi aktarıyoruz.",
+    "valuesTitle": "Değerlerimiz",
+    "value1": "Mesleki etik değerlere bağlılık",
+    "value2": "Güvenilirlik ve şeffaflık",
+    "value3": "Müşteri odaklı hizmet anlayışı",
+    "value4": "Güncel mevzuat takibi",
+    "value5": "Hızlı ve etkili çözümler",
+    "experienceStat": "Yıllık Tecrübe",
+    "happyClientsStat": "Mutlu Müşteri"
+  },
+  "contactSection": {
+    "title": "İletişim",
+    "subtitle": "Sorularınız için bize ulaşın",
+    "formNameLabel": "Ad Soyad",
+    "formEmailLabel": "E-posta",
+    "formMessageLabel": "Mesajınız",
+    "formSubmitButton": "Gönder",
+    "phoneFaxTitle": "Telefon & Faks",
+    "emailTitle": "E-posta",
+    "addressTitle": "Adres",
+    "emailAddress1": "info@cetin-aslan.com",
+    "emailAddress2": "info@cetin-aslan.com"
+  }
+} 

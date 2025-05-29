@@ -9,73 +9,73 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
+    <section id="contact" className="py-20 bg-brand-bg-primary">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl font-bold text-brand-blue mb-4">
             İletişim
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400">
+          <p className="text-xl text-brand-text-secondary">
             Sorularınız için bize ulaşın
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
+          <div className="bg-brand-bg-surface p-8 rounded-lg shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="name" className="block text-brand-text-primary mb-2">
                   Ad Soyad
                 </label>
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-brand-text-primary focus:outline-none focus:ring-2 focus:ring-brand-gold"
                   required
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="email" className="block text-brand-text-primary mb-2">
                   E-posta
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-brand-text-primary focus:outline-none focus:ring-2 focus:ring-brand-gold"
                   required
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-brand-text-primary mb-2">
                   Mesajınız
                 </label>
                 <textarea
                   id="message"
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-brand-text-primary focus:outline-none focus:ring-2 focus:ring-brand-gold"
                   required
                 ></textarea>
               </div>
               
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300"
+                className="w-full bg-brand-gold text-white py-3 px-6 rounded-lg hover:bg-yellow-700 transition duration-300"
               >
                 Gönder
               </button>
             </form>
           </div>
           
-          <div className="space-y-8">
+          <div className="space-y-8 text-brand-text-primary">
             <div className="flex items-start gap-4">
-              <FaPhone className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+              <FaPhone className="w-6 h-6 text-brand-gold flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-brand-blue mb-2">
                   Telefon & Faks
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-brand-text-secondary">
                   Tel: 0 312 229 01 98<br />
                   Faks: 0 312 230 75 28
                 </p>
@@ -83,12 +83,12 @@ const Contact = () => {
             </div>
             
             <div className="flex items-start gap-4">
-              <FaEnvelope className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+              <FaEnvelope className="w-6 h-6 text-brand-gold flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-brand-blue mb-2">
                   E-posta
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-brand-text-secondary">
                   cetinselma@guclumalimusavirlik.com<br />
                   info@guclumalimusavirlik.com
                 </p>
@@ -96,12 +96,12 @@ const Contact = () => {
             </div>
             
             <div className="flex items-start gap-4">
-              <FaMapMarkerAlt className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+              <FaMapMarkerAlt className="w-6 h-6 text-brand-gold flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-brand-blue mb-2">
                   Adres
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-brand-text-secondary">
                   Toros Sok. 25B / 17<br />
                   Sıhhıye / ANKARA
                 </p>
