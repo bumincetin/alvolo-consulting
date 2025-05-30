@@ -2,12 +2,12 @@
 
 :root {
   /* New Brand Colors as CSS Variables */
-  --brand-blue: #2A4494;
-  --brand-gold: #B08D57;
+  --brand-blue: #020035;
+  --brand-gold: #271D34 ;
   --brand-text-primary: #2D3748;
   --brand-text-secondary: #4A5568;
   --brand-bg-primary: #F7FAFC; /* Intended for overall page background */
-  --brand-bg-surface: #FFFFFF; /* Intended for surfaces like cards, navbar */
+  --brand-bg-surface: #b3e5fc; /* Intended for surfaces like cards, navbar */
 
   /* Base Definitions using Brand Colors */
   --background: var(--brand-bg-primary);

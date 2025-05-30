@@ -1,8 +1,8 @@
 import Hero from '@/components/sections/Hero';
 import Services from '@/components/sections/Services';
-import About from '@/components/sections/About';
 import Contact from '@/components/sections/Contact';
 import Navbar from '@/components/layout/Navbar';
+import AnimatedSection from '@/components/AnimatedSection';
 
 export default function Home() {
   return (
@@ -10,9 +10,12 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen">
         <Hero />
-        <Services />
-        <About />
-        <Contact />
+        <AnimatedSection>
+          <Services />
+        </AnimatedSection>
+        <AnimatedSection delay={0.2}>
+          <Contact />
+        </AnimatedSection>
       </main>
     </>
   );

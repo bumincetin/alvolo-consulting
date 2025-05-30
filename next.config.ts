@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'cetin-aslan'; // Define repo name once
+const repoName = 'alvolo-consulting'; // Define repo name once
 
 const nextConfig: NextConfig = {
   // output: 'export',

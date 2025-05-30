@@ -2,71 +2,40 @@
 
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 
-interface Translations {
-  [key: string]: any; // Allow nested translation objects
-}
-
 interface LanguageContextType {
   language: string;
   setLanguage: (language: string) => void;
-  translations: Translations;
-  isLoading: boolean;
+  // Add a simple translations object if you want to store some static strings here
+  // translations: any; 
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// Helper function to safely get from localStorage
-const getInitialLanguage = () => {
-  if (typeof window !== "undefined") {
-    const storedLanguage = localStorage.getItem('preferredLanguage');
-    if (storedLanguage && ['tr', 'en', 'it'].includes(storedLanguage)) {
-      return storedLanguage;
-    }
-  }
-  return 'tr'; // Default to Turkish
-};
-
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguageState] = useState<string>(getInitialLanguage);
-  const [translations, setTranslations] = useState<Translations>({});
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [language, setLanguageState] = useState('tr'); // Default to Turkish
+  // const [translations, setTranslations] = useState({}); // If loading static translations here
 
-  useEffect(() => {
-    const fetchTranslations = async (lang: string) => {
-      setIsLoading(true);
-      try {
-        const response = await fetch(`/locales/${lang}/common.json`);
-        if (!response.ok) {
-          throw new Error(`Failed to fetch translations for ${lang}`);
-        }
-        const data = await response.json();
-        setTranslations(data);
-        // Update document title when translations load
-        if (data.metadata && data.metadata.title) {
-          document.title = data.metadata.title;
-        }
-      } catch (error) {
-        console.error("Error loading translations:", error);
-        // Fallback to default or handle error appropriately
-        if (lang !== 'tr') { // Avoid infinite loop if default fails
-            fetchTranslations('tr'); // Attempt to load default Turkish
-        }
-      }
-      setIsLoading(false);
-    };
-
-    fetchTranslations(language);
-  }, [language]);
-
+  // Function to set language and potentially persist it (e.g., to localStorage)
   const setLanguage = (lang: string) => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem('preferredLanguage', lang);
-    }
     setLanguageState(lang);
+    // if (typeof window !== "undefined") {
+    //   localStorage.setItem('language', lang);
+    // }
+    // Here you could also set static translations based on lang if not loading from files
+    // e.g., if (lang === 'en') setTranslations({ greeting: 'Hello' });
   };
 
+  // useEffect(() => {
+  //   // Optionally load persisted language
+  //   const storedLanguage = typeof window !== "undefined" ? localStorage.getItem('language') : null;
+  //   if (storedLanguage) {
+  //     setLanguageState(storedLanguage);
+  //   }
+  //   // Load initial static translations or based on storedLanguage
+  // }, []);
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, translations, isLoading }}>
+    <LanguageContext.Provider value={{ language, setLanguage /*, translations */ }}>
       {children}
     </LanguageContext.Provider>
   );

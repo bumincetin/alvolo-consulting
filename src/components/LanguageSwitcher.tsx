@@ -10,17 +10,17 @@ const languages = [
 ];
 
 export const LanguageSwitcher = () => {
-  const { language, setLanguage, isLoading } = useLanguage();
+  const { language, setLanguage } = useLanguage();
 
-  if (isLoading) {
-    return <div className="w-20 h-10 rounded-md bg-gray-200 animate-pulse"></div>; // Placeholder while loading
-  }
+  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setLanguage(event.target.value);
+  };
 
   return (
     <div className="relative">
       <select
         value={language}
-        onChange={(e) => setLanguage(e.target.value)}
+        onChange={handleChange}
         className="p-2 rounded-md border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
         aria-label="Select language"
       >

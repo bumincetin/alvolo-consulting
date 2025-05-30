@@ -1,11 +1,70 @@
 'use client';
 
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { useLanguage } from '@/contexts/LanguageContext';
+
+const getContactSectionContent = (lang: string) => {
+  const content = {
+    tr: {
+      title: "İletişim",
+      subtitle: "Sorularınız için bize ulaşın",
+      formNameLabel: "Ad Soyad",
+      formEmailLabel: "E-posta",
+      formMessageLabel: "Mesajınız",
+      formSubmitButton: "Gönder",
+      phoneTitle: "Telefon",
+      phoneDetails: "+39 348 170 5207<br />Alternatif: +39 351 713 6434",
+      emailTitle: "E-posta",
+      emailDetails: "alvoloconsulting@gmail.com<br />info@alvoloconsulting.it",
+      addressTitle: "Adres",
+      addressDetails: "Via Valsugana <br />20139 Milano (MI)"
+    },
+    en: {
+      title: "Contact",
+      subtitle: "Contact us with your questions",
+      formNameLabel: "Full Name",
+      formEmailLabel: "Email",
+      formMessageLabel: "Your Message",
+      formSubmitButton: "Send",
+      phoneTitle: "Phone",
+      phoneDetails: "+39 348 170 5207<br />Alternative: +39 351 713 6434",
+      emailTitle: "Email",
+      emailDetails: "alvoloconsulting@gmail.com<br />info@alvoloconsulting.it",
+      addressTitle: "Address",
+      addressDetails: "Via Valsugana <br />20139 Milano (MI)"
+    },
+    it: {
+      title: "Contatti",
+      subtitle: "Contattaci con le tue domande",
+      formNameLabel: "Nome Cognome",
+      formEmailLabel: "Email",
+      formMessageLabel: "Il Tuo Messaggio",
+      formSubmitButton: "Invia",
+      phoneTitle: "Telefono",
+      phoneDetails: "+39 348 170 5207<br />Alternativo: +39 351 713 6434",
+      emailTitle: "Email",
+      emailDetails: "alvoloconsulting@gmail.com<br />info@alvoloconsulting.it",
+      addressTitle: "Indirizzo",
+      addressDetails: "Via Valsugana <br />20139 Milano (MI)"
+    }
+  };
+  return content[lang as keyof typeof content] || content.tr;
+};
 
 const Contact = () => {
+  const { language } = useLanguage();
+  const c = getContactSectionContent(language);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Form submission logic to be implemented
+    // You might want to show a success/error message based on language here too
+    alert(language === 'tr' ? 'Mesajınız gönderildi!' : (language === 'en' ? 'Your message has been sent!' : 'Il tuo messaggio è stato inviato!'));
+  };
+
+  // Helper to render text with <br /> tags
+  const renderHtml = (htmlString: string) => {
+    return <div dangerouslySetInnerHTML={{ __html: htmlString }} />;
   };
 
   return (
@@ -13,10 +72,10 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-brand-blue mb-4">
-            İletişim
+            {c.title}
           </h2>
           <p className="text-xl text-brand-text-secondary">
-            Sorularınız için bize ulaşın
+            {c.subtitle}
           </p>
         </div>
 
@@ -25,7 +84,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-brand-text-primary mb-2">
-                  Ad Soyad
+                  {c.formNameLabel}
                 </label>
                 <input
                   type="text"
@@ -37,7 +96,7 @@ const Contact = () => {
               
               <div>
                 <label htmlFor="email" className="block text-brand-text-primary mb-2">
-                  E-posta
+                  {c.formEmailLabel}
                 </label>
                 <input
                   type="email"
@@ -49,7 +108,7 @@ const Contact = () => {
               
               <div>
                 <label htmlFor="message" className="block text-brand-text-primary mb-2">
-                  Mesajınız
+                  {c.formMessageLabel}
                 </label>
                 <textarea
                   id="message"
@@ -63,7 +122,7 @@ const Contact = () => {
                 type="submit"
                 className="w-full bg-brand-gold text-white py-3 px-6 rounded-lg hover:bg-yellow-700 transition duration-300"
               >
-                Gönder
+                {c.formSubmitButton}
               </button>
             </form>
           </div>
@@ -73,12 +132,11 @@ const Contact = () => {
               <FaPhone className="w-6 h-6 text-brand-gold flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-xl font-semibold text-brand-blue mb-2">
-                  Telefon & Faks
+                  {c.phoneTitle}
                 </h3>
-                <p className="text-brand-text-secondary">
-                  Tel: 0 312 229 01 98<br />
-                  Faks: 0 312 230 75 28
-                </p>
+                <div className="text-brand-text-secondary">
+                  {renderHtml(c.phoneDetails)}
+                </div>
               </div>
             </div>
             
@@ -86,12 +144,11 @@ const Contact = () => {
               <FaEnvelope className="w-6 h-6 text-brand-gold flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-xl font-semibold text-brand-blue mb-2">
-                  E-posta
+                  {c.emailTitle}
                 </h3>
-                <p className="text-brand-text-secondary">
-                  cetinselma@guclumalimusavirlik.com<br />
-                  info@guclumalimusavirlik.com
-                </p>
+                <div className="text-brand-text-secondary">
+                  {renderHtml(c.emailDetails)}
+                </div>
               </div>
             </div>
             
@@ -99,12 +156,11 @@ const Contact = () => {
               <FaMapMarkerAlt className="w-6 h-6 text-brand-gold flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-xl font-semibold text-brand-blue mb-2">
-                  Adres
+                  {c.addressTitle}
                 </h3>
-                <p className="text-brand-text-secondary">
-                  Toros Sok. 25B / 17<br />
-                  Sıhhıye / ANKARA
-                </p>
+                <div className="text-brand-text-secondary">
+                  {renderHtml(c.addressDetails)}
+                </div>
               </div>
             </div>
           </div>

@@ -27,11 +27,11 @@ To create a visually appealing, responsive, and informative website providing co
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/bumincetin/cetin-aslan.git
+    git clone https://github.com/bumincetin/alvolo-consulting.git
     ```
 2.  Navigate to the project directory:
     ```bash
-    cd cetin-aslan
+    cd alvolo-consulting
     ```
 3.  Install dependencies:
     ```bash

@@ -1,138 +1,204 @@
-import { FaCheckCircle, FaStar, FaRocket, FaShieldAlt } from 'react-icons/fa';
+'use client';
+
 import Navbar from '@/components/layout/Navbar';
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { 
+  FaBoxOpen, 
+  FaPlaneArrival, 
+  FaHome, 
+  FaPassport, 
+  FaGraduationCap, 
+  FaCar,
+  FaArrowRight
+} from 'react-icons/fa';
 
-const pricingPlans = [
-  {
-    title: "Başlangıç Paketi",
-    price: "€199",
-    icon: FaRocket,
-    features: [
-      "Profilinize uygun devlet/özel burs olanaklarının taranması (Temel Liste)",
-      "Başvuru takvimi ve şartların genel bir zaman çizelgesine oturtulması",
-      "CV ve motivasyon mektubu için genel şablon ve rehberlik",
-      "Tek bir online portalda başvuru gönderimi için rehberlik",
-    ],
-    bgColor: "bg-brand-bg-surface",
-    titleColor: "text-brand-blue",
-    buttonClass: "bg-brand-gold hover:bg-yellow-700 text-white",
-    description: "İtalya'da eğitim yolculuğunuza ilk adımı atın.",
-    textColor: "text-brand-text-primary",
-    featureTextColor: "text-brand-text-secondary"
-  },
-  {
-    title: "Kapsamlı Paket",
-    price: "€499",
-    icon: FaShieldAlt,
-    features: [
-      "Kişisel durumunuza göre uygun permesso di soggiorno türü seçimi",
-      "Detaylı belge hazırlığı (kontrat, sigorta, gelir kanıtı vb.) ve kontrolü",
-      "Questura randevusu alma, posta kitinin doldurulması ve takibi",
-      "Bütçe ve konum tercihlerinize göre özelleştirilmiş konaklama portföyü (5 opsiyon)",
-      "Emlak gezileri ve sözleşme müzakerelerinde danışmanlık",
-      "Yenileme & adres değişikliği için hatırlatma ve temel belge desteği",
-    ],
-    bgColor: "bg-brand-blue",
-    titleColor: "text-white",
-    buttonClass: "bg-brand-gold hover:bg-yellow-700 text-brand-blue",
-    description: "Oturum izni ve konaklama süreçlerinizde tam güvence.",
-    popular: true,
-    textColor: "text-white",
-    featureTextColor: "text-gray-200"
-  },
-  {
-    title: "VIP Tam Destek Paketi",
-    price: "€999",
-    icon: FaStar,
-    features: [
-      "Tüm 'Kapsamlı Paket' hizmetleri",
-      "Havalimanında karşılama ve konaklama yerine özel transfer",
-      "Şehir oryantasyonu (toplu taşıma, SIM kart, banka hesabı vb.)",
-      "Acil durumlar için ilk 1 ay kişisel destek hattı",
-      "Kontrat, depozito ve noter işlemlerinde tam hukuki rehberlik",
-      "Taşınma günü abone açılışları ve belediye kayıt işlemleri",
-    ],
-    bgColor: "bg-brand-bg-surface",
-    titleColor: "text-brand-blue",
-    buttonClass: "bg-brand-gold hover:bg-yellow-700 text-white",
-    description: "İtalya'daki yeni hayatınıza stressiz bir başlangıç.",
-    textColor: "text-brand-text-primary",
-    featureTextColor: "text-brand-text-secondary"
-  }
-];
+const getPricingContent = (lang: string) => {
+  const content = {
+    tr: {
+      pageTitle: "Fiyatlandırma Planlarımız",
+      pageSubtitle: "İhtiyaçlarınıza en uygun çözümü seçin.",
+      individualServicesTitle: "Tekil Hizmet Fiyatları",
+      packagesTitle: "Avantajlı Paketlerimiz",
+      contactPrompt: "Size özel bir paket oluşturmak veya detaylı bilgi almak için bizimle iletişime geçin.",
+      contactButtonText: "İletişime Geçin",
+      currencySymbol: "€",
+      learnMoreText: "Daha Fazla Bilgi",
+      services: [
+        { name: "Karşılama Hizmeti", price: 200, icon: FaPlaneArrival, description: "Havalimanı veya tren istasyonunda kişisel karşılama ve konaklama yerinize transfer.", slug: "karsilama-hizmeti" },
+        { name: "Konaklama Bulma Danışmanlığı", price: 300, icon: FaHome, description: "Bütçenize ve tercihlerinize uygun kiralık daire veya oda bulma desteği.", slug: "konaklama-danismanligi" },
+        { name: "Oturum İzni & İkametgah Danışmanlığı", price: 200, icon: FaPassport, description: "Permesso di Soggiorno ve residenza başvurularınız için tam kapsamlı danışmanlık.", slug: "oturum-izni-ikametgah" },
+        { name: "Burs Başvurusu Danışmanlığı", price: 200, icon: FaGraduationCap, description: "İtalya'daki burs olanaklarını araştırma ve başvuru sürecinde profesyonel destek.", slug: "burs-basvurusu" },
+        { name: "Sürücü Belgesi Alma Danışmanlığı", price: 200, icon: FaCar, description: "İtalyan ehliyeti alma veya mevcut ehliyetinizi çevirme işlemlerinde rehberlik.", slug: "surucu-belgesi" },
+      ],
+      packages: [
+        { title: "Emlak + Bürokrasi Paketi (Permesso & Residenza)", price: 450, description: "Konaklama bulma ve oturum izni (permesso di soggiorno) ile ikametgah (residenza) kayıt işlemleriniz için kapsamlı destek." },
+        { title: "Karşılama + Emlak Paketi", price: 450, description: "Havalimanı karşılama, şehre adaptasyon ve konaklama bulma hizmetlerini içerir." },
+        { title: "Freelancer Profesyonel Paketi (Emlak + Tüm Bürokrasi)", price: 600, description: "Freelancerlar için özel olarak tasarlanmış; konaklama bulma, oturum izni, ikametgah kaydı ve diğer ilgili tüm bürokratik işlemleri kapsayan paket." },
+        { title: "Tam Paket (Karşılama + Emlak + Bürokrasi: Permesso & Residenza)", price: 600, description: "Karşılama, konaklama bulma ve temel bürokrasi (permesso & residenza) hizmetlerimizi içeren avantajlı paket." },
+        { title: "Ultra Tam Paket (Karşılama + Emlak + Bürokrasi: Permesso & Residenza + Burs)", price: 760, description: "En kapsamlı paketimiz; karşılama, konaklama, temel bürokrasi (permesso & residenza) ve burs başvurusu danışmanlığını içerir." }
+      ]
+    },
+    en: {
+      pageTitle: "Our Pricing Plans",
+      pageSubtitle: "Choose the best solution for your needs.",
+      individualServicesTitle: "Individual Service Prices",
+      packagesTitle: "Our Advantageous Packages",
+      contactPrompt: "Contact us to create a custom package or for more detailed information.",
+      contactButtonText: "Contact Us",
+      currencySymbol: "€",
+      learnMoreText: "Learn More",
+      services: [
+        { name: "Welcome Service", price: 200, icon: FaPlaneArrival, description: "Personal welcome at the airport or train station and transfer to your accommodation.", slug: "welcome-service" },
+        { name: "Accommodation Finding Consultancy", price: 300, icon: FaHome, description: "Support in finding a suitable apartment or room for rent according to your budget and preferences.", slug: "accommodation-consultancy" },
+        { name: "Residence Permit & Residency Consultancy", price: 200, icon: FaPassport, description: "Comprehensive consultancy for your Permesso di Soggiorno and residenza applications.", slug: "residence-permit-residency" },
+        { name: "Scholarship Application Consultancy", price: 200, icon: FaGraduationCap, description: "Professional support in researching scholarship opportunities in Italy and the application process.", slug: "scholarship-application" },
+        { name: "Driving License Acquisition Consultancy", price: 200, icon: FaCar, description: "Guidance on obtaining an Italian driving license or converting your current license.", slug: "driving-license" },
+      ],
+      packages: [
+        { title: "Real Estate + Bureaucracy Package (Permesso & Residenza)", price: 450, description: "Comprehensive support for finding accommodation and for your residence permit (permesso di soggiorno) and residency registration (residenza) procedures." },
+        { title: "Welcome + Real Estate Package", price: 450, description: "Includes airport reception, city orientation, and accommodation finding services." },
+        { title: "Freelancer Professional Package (Real Estate + Full Bureaucracy)", price: 600, description: "Specially designed for freelancers; includes accommodation finding, residence permit, residency registration, and all other related bureaucratic procedures." },
+        { title: "Full Package (Welcome + Real Estate + Bureaucracy: Permesso & Residenza)", price: 600, description: "Advantageous package including our welcome, accommodation finding, and essential bureaucracy (permesso & residenza) services." },
+        { title: "Ultra Full Package (Welcome + Real Estate + Bureaucracy: Permesso & Residenza + Scholarship)", price: 760, description: "Our most comprehensive package; includes welcome, accommodation, essential bureaucracy (permesso & residenza), and scholarship application consultancy." }
+      ]
+    },
+    it: {
+      pageTitle: "I Nostri Piani Tariffari",
+      pageSubtitle: "Scegli la soluzione migliore per le tue esigenze.",
+      individualServicesTitle: "Prezzi dei Servizi Individuali",
+      packagesTitle: "I Nostri Pacchetti Vantaggiosi",
+      contactPrompt: "Contattaci per creare un pacchetto personalizzato o per informazioni più dettagliate.",
+      contactButtonText: "Contattaci",
+      currencySymbol: "€",
+      learnMoreText: "Scopri di più",
+      services: [
+        { name: "Servizio di Benvenuto", price: 200, icon: FaPlaneArrival, description: "Accoglienza personale in aeroporto o stazione ferroviaria e trasferimento al tuo alloggio.", slug: "servizio-benvenuto" },
+        { name: "Consulenza per la Ricerca di Alloggio", price: 300, icon: FaHome, description: "Supporto nella ricerca di un appartamento o stanza in affitto adatti al tuo budget e preferenze.", slug: "consulenza-alloggio" },
+        { name: "Consulenza Permesso di Soggiorno e Residenza", price: 200, icon: FaPassport, description: "Consulenza completa per le tue richieste di Permesso di Soggiorno e residenza.", slug: "permesso-soggiorno-residenza" },
+        { name: "Consulenza per la Domanda di Borsa di Studio", price: 200, icon: FaGraduationCap, description: "Supporto professionale nella ricerca di opportunità di borse di studio in Italia e nel processo di candidatura.", slug: "domanda-borsa-studio" },
+        { name: "Consulenza per Ottenimento Patente di Guida", price: 200, icon: FaCar, description: "Guida per ottenere la patente di guida italiana o convertire la tua patente attuale.", slug: "patente-guida" },
+      ],
+      packages: [
+        { title: "Pacchetto Immobiliare + Burocrazia (Permesso & Residenza)", price: 450, description: "Supporto completo per la ricerca dell'alloggio e per le procedure del permesso di soggiorno e registrazione della residenza." },
+        { title: "Pacchetto Benvenuto + Immobiliare", price: 450, description: "Include accoglienza in aeroporto, orientamento in città e servizi di ricerca alloggio." },
+        { title: "Pacchetto Professionale Freelancer (Immobiliare + Tutta la Burocrazia)", price: 600, description: "Progettato appositamente per i liberi professionisti; include ricerca alloggio, permesso di soggiorno, registrazione della residenza e tutte le altre procedure burocratiche correlate." },
+        { title: "Pacchetto Completo (Benvenuto + Immobiliare + Burocrazia: Permesso & Residenza)", price: 600, description: "Pacchetto vantaggioso che include i nostri servizi di benvenuto, ricerca alloggio e burocrazia essenziale (permesso & residenza)." },
+        { title: "Pacchetto Ultra Completo (Benvenuto + Immobiliare + Burocrazia: Permesso & Residenza + Borsa di Studio)", price: 760, description: "Il nostro pacchetto più completo; include benvenuto, alloggio, burocrazia essenziale (permesso & residenza) e consulenza per la domanda di borsa di studio." }
+      ]
+    }
+  };
+  return content[lang as keyof typeof content] || content.tr;
+};
+
+const PricingPageComponent = () => {
+  const { language } = useLanguage();
+  const c = getPricingContent(language);
+
+  return (
+    <div className="min-h-screen bg-brand-bg-primary pt-20">
+      <div className="container mx-auto px-6 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
+            {c.pageTitle}
+          </h1>
+          <div className="h-1 w-24 bg-brand-gold mx-auto rounded-full mb-6"></div>
+          <p className="text-xl text-brand-text-secondary">
+            {c.pageSubtitle}
+          </p>
+        </div>
+
+        {/* Individual Services Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-brand-blue mb-10 text-center">
+            {c.individualServicesTitle}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {c.services.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-brand-bg-surface rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 flex flex-col text-center"
+                >
+                  <div className="flex-grow">
+                    {IconComponent && (
+                      <IconComponent className="text-brand-gold text-4xl mb-4 mx-auto" />
+                    )}
+                    <h3 className="text-xl font-semibold text-brand-blue mb-2">
+                      {service.name}
+                    </h3>
+                    <p className="text-brand-text-secondary text-sm mb-3">
+                      {service.description}
+                    </p>
+                    <p className="text-3xl font-bold text-brand-gold mb-4">
+                      {c.currencySymbol}{service.price}
+                    </p>
+                  </div>
+                  <Link
+                    href={`/pricing/${service.slug}`}
+                    className="mt-auto inline-flex items-center justify-center px-6 py-2.5 bg-brand-blue text-white rounded-lg hover:bg-blue-700 transition duration-300 text-sm font-medium"
+                  >
+                    {c.learnMoreText}
+                    <FaArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Packages Section */}
+        <div>
+          <h2 className="text-3xl font-bold text-brand-blue mb-10 text-center">
+            {c.packagesTitle}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+            {c.packages.map((pkg, index) => (
+              <div
+                key={index}
+                className="bg-brand-bg-surface rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row items-start md:items-center"
+              >
+                <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6 text-center md:text-left">
+                    <FaBoxOpen className="text-brand-gold text-5xl mx-auto md:mx-0" />
+                </div>
+                <div className="flex-grow mb-4 md:mb-0">
+                  <h3 className="text-xl font-bold text-brand-blue mb-2">
+                    {pkg.title}
+                  </h3>
+                  <p className="text-brand-text-secondary text-sm">
+                    {pkg.description}
+                  </p>
+                </div>
+                <div className="text-3xl font-bold text-brand-gold self-center md:self-auto md:ml-6 whitespace-nowrap">
+                  {c.currencySymbol}{pkg.price}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="mt-20 text-center">
+          <p className="text-lg text-brand-text-secondary">
+            {c.contactPrompt}
+          </p>
+          <Link
+            href="/#contact"
+            className="inline-block mt-6 px-8 py-4 bg-brand-gold text-white rounded-lg hover:bg-yellow-700 transition duration-300 shadow-lg hover:shadow-xl"
+          >
+            {c.contactButtonText}
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default function PricingPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-brand-bg-primary pt-20">
-        <div className="container mx-auto px-6 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
-              Fiyatlandırma Planlarımız
-            </h1>
-            <div className="h-1 w-24 bg-brand-gold mx-auto rounded-full mb-6"></div>
-            <p className="text-xl text-brand-text-secondary">
-              İhtiyaçlarınıza en uygun danışmanlık paketini seçin.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-            {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`rounded-xl shadow-lg p-8 flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300 ${plan.bgColor} ${plan.popular ? 'border-4 border-brand-gold transform scale-105' : 'border border-gray-200'}`}
-              >
-                <div>
-                  {plan.popular && (
-                    <div className="absolute top-0 -mt-5 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-brand-gold text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">Popüler</span>
-                    </div>
-                  )}
-                  <div className="flex justify-center mb-6">
-                    <plan.icon className={`text-5xl ${plan.titleColor}`} />
-                  </div>
-                  <h2 className={`text-3xl font-bold text-center mb-4 ${plan.titleColor}`}>
-                    {plan.title}
-                  </h2>
-                  <p className={`text-4xl font-extrabold text-center mb-6 ${plan.titleColor}`}>
-                    {plan.price}
-                  </p>
-                  <p className={`text-center text-sm mb-8 ${plan.textColor}`}>
-                    {plan.description}
-                  </p>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start gap-3">
-                        <FaCheckCircle className={`${plan.popular ? 'text-brand-gold' : 'text-brand-blue'} flex-shrink-0 mt-1`} />
-                        <span className={`${plan.featureTextColor}`}>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <Link
-                  href="/#contact"
-                  className={`w-full block text-center mt-auto px-6 py-3 rounded-lg font-semibold transition duration-300 shadow-md hover:shadow-lg ${plan.buttonClass}`}
-                >
-                  Paketi Seç & İletişime Geç
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-20 text-center">
-            <p className="text-lg text-brand-text-secondary mb-4">
-              Özel ihtiyaçlarınız veya farklı hizmet kombinasyonları için size özel bir teklif oluşturabiliriz.
-            </p>
-            <Link
-              href="/#contact"
-              className="inline-block px-10 py-4 bg-green-500 hover:bg-green-600 text-white rounded-lg transition duration-300 shadow-lg hover:shadow-xl"
-            >
-              Özel Teklif Alın
-            </Link>
-          </div>
-        </div>
-      </div>
+      <PricingPageComponent />
     </>
   );
-} 
+}
