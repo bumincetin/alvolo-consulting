@@ -3,6 +3,7 @@
 import Navbar from '@/components/layout/Navbar';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
+import Image from 'next/image'; // Added import
 import { FaChevronLeft, FaInfoCircle, FaListUl, FaQuestionCircle, FaRegFileAlt } from 'react-icons/fa';
 
 // Define a type for the service details
@@ -683,8 +684,14 @@ export default function ServiceDetailPage({ params }: { params: ServicePageParam
             </div>
 
             {service.mainImage && (
-              <div className="mb-10 rounded-lg overflow-hidden shadow-lg">
-                <img src={service.mainImage} alt={service.title} className="w-full h-auto object-cover max-h-[400px]" />
+              <div className="mb-10 rounded-lg overflow-hidden shadow-lg relative w-full h-[400px]">
+                <Image 
+                  src={service.mainImage} 
+                  alt={service.title} 
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-lg"
+                />
               </div>
             )}
 

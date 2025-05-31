@@ -59,12 +59,12 @@ const Hero = () => {
               </span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <a
+              <Link
                 href="/#contact"
                 className="px-8 py-4 bg-brand-gold text-white rounded-lg hover:bg-yellow-700 transition duration-300 shadow-lg hover:shadow-xl text-center"
               >
                 {c.contactButton}
-              </a>
+              </Link>
               <Link
                 href="/hizmetlerimiz"
                 className="px-8 py-4 border-2 border-brand-gold text-brand-gold rounded-lg hover:bg-yellow-50 hover:text-yellow-700 transition duration-300 text-center"
