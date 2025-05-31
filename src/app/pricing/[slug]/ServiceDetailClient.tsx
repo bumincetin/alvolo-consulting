@@ -10,6 +10,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getServiceDetails } from './serviceData';   // ✅ now a clean import
 
+export const runtime = 'edge';
+
 interface ServiceDetailClientProps {
   slug: string;
 }

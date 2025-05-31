@@ -16,7 +16,8 @@ export interface ServiceDetail {
     contactButtonText: string;
     goBackText: string;
   }
-
+  export const runtime = 'edge';
+  
   export const allServiceDetails: Record<
   string,
   Record<string, ServiceDetail>

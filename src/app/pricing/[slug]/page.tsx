@@ -3,6 +3,7 @@
 // NO 'use client' in this file
 import ServiceDetailClient from './ServiceDetailClient';
 
+export const runtime = 'edge';
 /** params is delivered as a *Promise* in App Router v15+  */
 type SlugParams = Promise<{ slug: string }>;
 
