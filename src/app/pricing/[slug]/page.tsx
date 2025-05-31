@@ -622,7 +622,7 @@ interface ServicePageParams {
   slug: string;
 }
 
-export default function ServiceDetailPage({ params }: { params: ServicePageParams }) {
+export default function ServiceDetailPage({ params }: { params: { slug: string } }) {
   const { language } = useLanguage();
   const service = getServiceDetails(params.slug, language);
 
