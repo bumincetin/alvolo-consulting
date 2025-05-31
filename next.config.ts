@@ -5,8 +5,8 @@ const repoName = 'alvoloconsulting'; // Define repo name once
 
 const nextConfig: NextConfig = {
   // output: 'export',
-  basePath: isProd ? `/${repoName}` : undefined,
-  assetPrefix: isProd ? '' : undefined, // Try with empty assetPrefix when basePath is set
+  basePath: undefined,
+  assetPrefix:  undefined, // Try with empty assetPrefix when basePath is set
   images: {
     unoptimized: true, // Disable Next.js Image Optimization for static export
   },
