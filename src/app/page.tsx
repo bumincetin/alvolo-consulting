@@ -4,6 +4,8 @@ import Contact from '@/components/sections/Contact';
 import Navbar from '@/components/layout/Navbar';
 import AnimatedSection from '@/components/AnimatedSection';
 
+export const runtime = 'edge';
+
 export default function Home() {
   return (
     <>
