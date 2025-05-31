@@ -1,5 +1,3 @@
-
-name               = "alvoloconsulting"
-compatibility_date = "2025-05-31"
+name        = "alvoloconsulting"
+account_id  = "00a74df2b78c209e154ac8f4aec5c747"
 pages_build_output_dir = ".vercel/output/static"
-
