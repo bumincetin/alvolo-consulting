@@ -74,5 +74,23 @@
     "addressTitle": "Address",
     "emailAddress1": "info@alvolo-consulting.com",
     "emailAddress2": "info@alvolo-consulting.com"
+  },
+  "for_real_estate_agents": {
+    "for_real_estate_agents_title": "For Real Estate Agents",
+    "for_real_estate_agents_intro": "We help you reach serious, ready-to-rent international tenants — students, professionals, and newcomers to Italy — by matching your listings with their needs through targeted promotion and personalized support.",
+    "for_real_estate_agents_value_prop_intro": "You bring the property. We bring vetted demand that you would otherwise not reach.",
+    "for_real_estate_agents_what_we_offer_title": "What We Offer You:",
+    "for_real_estate_agents_offer_1_title": "New Demand Stream",
+    "for_real_estate_agents_offer_1_desc": "We connect your listings to non-Italian tenants, including international students, expats, and freelancers moving to Italy — a group often underserved by traditional agencies.",
+    "for_real_estate_agents_offer_2_title": "Multi-Channel Visibility",
+    "for_real_estate_agents_offer_2_desc": "We promote your properties on non-Italian platforms (like Sahibinden, Facebook expat groups, and university housing boards), helping you reach tenants who may not speak Italian or use local platforms.",
+    "for_real_estate_agents_offer_3_title": "Localized Tenant Support",
+    "for_real_estate_agents_offer_3_desc": "We handle communication, translation, and clarification of the Italian rental process — reducing your time spent managing language barriers and unrealistic expectations.",
+    "for_real_estate_agents_offer_4_title": "Lead Quality, Not Quantity",
+    "for_real_estate_agents_offer_4_desc": "You receive inquiries only from pre-screened tenants who match your rental conditions (duration, documents, budget). We filter out non-serious interest.",
+    "for_real_estate_agents_offer_5_title": "No Exclusivity, No Disruption",
+    "for_real_estate_agents_offer_5_desc": "You keep full control over your listings, contracts, and fees. We're not a competing agency — we're an additional demand channel that works alongside your existing model.",
+    "for_real_estate_agents_offer_6_title": "Professional Presentation",
+    "for_real_estate_agents_offer_6_desc": "We help prepare or translate listing information, ensuring that your property is clearly and professionally presented to international audiences."
   }
 } 

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -12,6 +13,9 @@ const getContactSectionContent = (lang: string) => {
       formEmailLabel: "E-posta",
       formMessageLabel: "Mesajınız",
       formSubmitButton: "Gönder",
+      formSendingButton: "Gönderiliyor...",
+      formSuccessMessage: "Mesajınız başarıyla gönderildi!",
+      formErrorMessage: "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
       phoneTitle: "Telefon",
       phoneDetails: "+39 348 170 5207<br />Alternatif: +39 351 713 6434",
       emailTitle: "E-posta",
@@ -26,6 +30,9 @@ const getContactSectionContent = (lang: string) => {
       formEmailLabel: "Email",
       formMessageLabel: "Your Message",
       formSubmitButton: "Send",
+      formSendingButton: "Sending...",
+      formSuccessMessage: "Your message has been sent successfully!",
+      formErrorMessage: "An error occurred while sending your message. Please try again.",
       phoneTitle: "Phone",
       phoneDetails: "+39 348 170 5207<br />Alternative: +39 351 713 6434",
       emailTitle: "Email",
@@ -40,6 +47,9 @@ const getContactSectionContent = (lang: string) => {
       formEmailLabel: "Email",
       formMessageLabel: "Il Tuo Messaggio",
       formSubmitButton: "Invia",
+      formSendingButton: "Invio in corso...",
+      formSuccessMessage: "Il tuo messaggio è stato inviato con successo!",
+      formErrorMessage: "Si è verificato un errore durante l'invio del messaggio. Riprova.",
       phoneTitle: "Telefono",
       phoneDetails: "+39 348 170 5207<br />Alternativo: +39 351 713 6434",
       emailTitle: "Email",
@@ -55,11 +65,43 @@ const Contact = () => {
   const { language } = useLanguage();
   const c = getContactSectionContent(language);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState<'success' | 'error' | null>(null);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic to be implemented
-    // You might want to show a success/error message based on language here too
-    alert(language === 'tr' ? 'Mesajınız gönderildi!' : (language === 'en' ? 'Your message has been sent!' : 'Il tuo messaggio è stato inviato!'));
+    setIsSubmitting(true);
+    setSubmissionStatus(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmissionStatus('success');
+        setFormData({ name: '', email: '', message: '' }); // Reset form
+      } else {
+        setSubmissionStatus('error');
+      }
+    } catch (error) {
+      setSubmissionStatus('error');
+    }
+    setIsSubmitting(false);
   };
 
   // Helper to render text with <br /> tags
@@ -91,6 +133,9 @@ const Contact = () => {
                   id="name"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-brand-text-primary focus:outline-none focus:ring-2 focus:ring-brand-gold"
                   required
+                  value={formData.name}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
                 />
               </div>
               
@@ -103,6 +148,9 @@ const Contact = () => {
                   id="email"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-brand-text-primary focus:outline-none focus:ring-2 focus:ring-brand-gold"
                   required
+                  value={formData.email}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
                 />
               </div>
               
@@ -115,15 +163,25 @@ const Contact = () => {
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-brand-text-primary focus:outline-none focus:ring-2 focus:ring-brand-gold"
                   required
+                  value={formData.message}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
                 ></textarea>
               </div>
               
               <button
                 type="submit"
-                className="w-full bg-brand-gold text-white py-3 px-6 rounded-lg hover:bg-yellow-700 transition duration-300"
+                className="w-full bg-brand-blue text-black py-3 px-6 rounded-lg hover:brightness-10 transition duration-300 disabled:opacity-50"
+                disabled={isSubmitting}
               >
-                {c.formSubmitButton}
+                {isSubmitting ? c.formSendingButton : c.formSubmitButton}
               </button>
+              {submissionStatus === 'success' && (
+                <p className="text-green-600">{c.formSuccessMessage}</p>
+              )}
+              {submissionStatus === 'error' && (
+                <p className="text-red-600">{c.formErrorMessage}</p>
+              )}
             </form>
           </div>
           

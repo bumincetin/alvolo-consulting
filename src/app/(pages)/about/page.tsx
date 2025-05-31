@@ -24,7 +24,7 @@ const getAboutSectionContent = (lang: string) => {
       team: [
         { name: "Bumin Kağan Çetin", title: "Kurucu Ortak", image: "/bumin.jpg", linkedin: "https://www.linkedin.com/in/buminkcetin/" },
         { name: "Oğuzhan Aslan", title: "Kurucu Ortak", image: "/ozi.jpg", linkedin: "https://www.linkedin.com/in/oguzhan--aslan/" },
-        { name: "Ece Melisa Özgüner", title: "Kurucu Ortak", image: "/placeholder-ece.jpg", linkedin: "https://www.linkedin.com/in/ecemelisaozguner/" },
+        { name: "Ece Melisa Özgüner", title: "Kurucu Ortak", image: "/melisa.jpeg", linkedin: "https://www.linkedin.com/in/ecemelisaozguner/" },
       ]
     },
     en: {
@@ -44,7 +44,7 @@ const getAboutSectionContent = (lang: string) => {
       team: [
         { name: "Bumin Kağan Çetin", title: "Co-founder", image: "/bumin.jpg", linkedin: "https://www.linkedin.com/in/buminkcetin/" },
         { name: "Oğuzhan Aslan", title: "Co-founder", image: "/ozi.jpg", linkedin: "https://www.linkedin.com/in/oguzhan--aslan/" },
-        { name: "Ece Melisa Özgüner", title: "Co-founder", image: "/placeholder-ece.jpg", linkedin: "https://www.linkedin.com/in/ecemelisaozguner/" },
+        { name: "Ece Melisa Özgüner", title: "Co-founder", image: "/melisa.jpeg", linkedin: "https://www.linkedin.com/in/ecemelisaozguner/" },
       ]
     },
     it: {
@@ -64,7 +64,7 @@ const getAboutSectionContent = (lang: string) => {
       team: [
         { name: "Bumin Kağan Çetin", title: "Co-fondatore", image: "/bumin.jpg", linkedin: "https://www.linkedin.com/in/buminkcetin/" },
         { name: "Oğuzhan Aslan", title: "Co-fondatore", image: "/ozi.jpg", linkedin: "https://www.linkedin.com/in/oguzhan--aslan/" },
-        { name: "Ece Melisa Özgüner", title: "Co-fondatore", image: "/placeholder-ece.jpg", linkedin: "https://www.linkedin.com/in/ecemelisaozguner/" },
+        { name: "Ece Melisa Özgüner", title: "Co-fondatore", image: "/melisa.jpeg", linkedin: "https://www.linkedin.com/in/ecemelisaozguner/" },
       ]
     }
   };

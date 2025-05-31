@@ -74,5 +74,23 @@
     "addressTitle": "Adres",
     "emailAddress1": "info@alvolo-consulting.com",
     "emailAddress2": "info@alvolo-consulting.com"
+  },
+  "for_real_estate_agents": {
+    "for_real_estate_agents_title": "Emlakçılar İçin",
+    "for_real_estate_agents_intro": "İtalya'ya yeni gelen öğrenciler, profesyoneller ve göçmenler gibi ciddi, kiralamaya hazır uluslararası kiracılara ulaşmanıza yardımcı oluyoruz - listelerinizi hedefli tanıtım ve kişiselleştirilmiş destek yoluyla ihtiyaçlarıyla eşleştiriyoruz.",
+    "for_real_estate_agents_value_prop_intro": "Siz mülkü getirirsiniz. Biz, başka türlü ulaşamayacağınız, incelenmiş bir talep getiririz.",
+    "for_real_estate_agents_what_we_offer_title": "Size Ne Sunuyoruz:",
+    "for_real_estate_agents_offer_1_title": "Yeni Talep Akışı",
+    "for_real_estate_agents_offer_1_desc": "Listelerinizi, uluslararası öğrenciler, gurbetçiler ve İtalya'ya taşınan serbest çalışanlar da dahil olmak üzere İtalyan olmayan kiracılara bağlıyoruz - geleneksel ajanslar tarafından genellikle yeterince hizmet verilmeyen bir grup.",
+    "for_real_estate_agents_offer_2_title": "Çok Kanallı Görünürlük",
+    "for_real_estate_agents_offer_2_desc": "Mülklerinizi İtalyan olmayan platformlarda (Sahibinden, Facebook gurbetçi grupları ve üniversite konut panoları gibi) tanıtarak, İtalyanca konuşmayan veya yerel platformları kullanmayan kiracılara ulaşmanıza yardımcı oluyoruz.",
+    "for_real_estate_agents_offer_3_title": "Yerelleştirilmiş Kiracı Desteği",
+    "for_real_estate_agents_offer_3_desc": "İtalyan kiralama sürecinin iletişimini, çevirisini ve açıklığa kavuşturulmasını biz yönetiyoruz - dil engellerini ve gerçekçi olmayan beklentileri yönetmek için harcadığınız zamanı azaltıyoruz.",
+    "for_real_estate_agents_offer_4_title": "Nicelik Değil, Nitelikli Müşteri Adayları",
+    "for_real_estate_agents_offer_4_desc": "Yalnızca kiralama koşullarınıza (süre, belgeler, bütçe) uyan önceden incelenmiş kiracılardan sorular alırsınız. Ciddi olmayan ilgiyi filtreliyoruz.",
+    "for_real_estate_agents_offer_5_title": "Münhasırlık Yok, Kesinti Yok",
+    "for_real_estate_agents_offer_5_desc": "Listeleriniz, sözleşmeleriniz ve ücretleriniz üzerinde tam kontrole sahip olursunuz. Rakip bir ajans değiliz - mevcut modelinizle birlikte çalışan ek bir talep kanalız.",
+    "for_real_estate_agents_offer_6_title": "Profesyonel Sunum",
+    "for_real_estate_agents_offer_6_desc": "Mülkünüzün uluslararası kitlelere açık ve profesyonel bir şekilde sunulmasını sağlayarak listeleme bilgilerinin hazırlanmasına veya çevrilmesine yardımcı oluyoruz."
   }
 } 

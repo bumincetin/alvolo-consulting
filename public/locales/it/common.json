@@ -74,5 +74,23 @@
     "addressTitle": "Indirizzo",
     "emailAddress1": "info@alvolo-consulting.com",
     "emailAddress2": "info@alvolo-consulting.com"
+  },
+  "for_real_estate_agents": {
+    "for_real_estate_agents_title": "Per Agenti Immobiliari",
+    "for_real_estate_agents_intro": "Ti aiutiamo a raggiungere inquilini internazionali seri e pronti per l'affitto — studenti, professionisti e nuovi arrivati in Italia — abbinando le tue inserzioni alle loro esigenze attraverso una promozione mirata e un supporto personalizzato.",
+    "for_real_estate_agents_value_prop_intro": "Tu porti la proprietà. Noi portiamo una domanda verificata che altrimenti non raggiungeresti.",
+    "for_real_estate_agents_what_we_offer_title": "Cosa Ti Offriamo:",
+    "for_real_estate_agents_offer_1_title": "Nuovo Flusso di Domanda",
+    "for_real_estate_agents_offer_1_desc": "Colleghiamo le tue inserzioni a inquilini non italiani, inclusi studenti internazionali, expat e liberi professionisti che si trasferiscono in Italia — un gruppo spesso poco servito dalle agenzie tradizionali.",
+    "for_real_estate_agents_offer_2_title": "Visibilità Multicanale",
+    "for_real_estate_agents_offer_2_desc": "Promuoviamo le tue proprietà su piattaforme non italiane (come Sahibinden, gruppi Facebook per expat e bacheche universitarie), aiutandoti a raggiungere inquilini che potrebbero non parlare italiano o non utilizzare piattaforme locali.",
+    "for_real_estate_agents_offer_3_title": "Supporto Localizzato per Inquilini",
+    "for_real_estate_agents_offer_3_desc": "Gestiamo la comunicazione, la traduzione e la chiarificazione del processo di affitto italiano — riducendo il tempo speso a gestire barriere linguistiche e aspettative irrealistiche.",
+    "for_real_estate_agents_offer_4_title": "Qualità dei Contatti, Non Quantità",
+    "for_real_estate_agents_offer_4_desc": "Ricevi richieste solo da inquilini pre-selezionati che corrispondono alle tue condizioni di affitto (durata, documenti, budget). Filtriamo l'interesse non serio.",
+    "for_real_estate_agents_offer_5_title": "Nessuna Esclusività, Nessuna Interruzione",
+    "for_real_estate_agents_offer_5_desc": "Mantieni il pieno controllo sulle tue inserzioni, contratti e commissioni. Non siamo un'agenzia concorrente — siamo un canale di domanda aggiuntivo che funziona parallelamente al tuo modello esistente.",
+    "for_real_estate_agents_offer_6_title": "Presentazione Professionale",
+    "for_real_estate_agents_offer_6_desc": "Aiutiamo a preparare o tradurre le informazioni delle inserzioni, assicurando che la tua proprietà sia presentata in modo chiaro e professionale a un pubblico internazionale."
   }
 } 
