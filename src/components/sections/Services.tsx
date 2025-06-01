@@ -50,7 +50,7 @@ const Services = () => {
   const c = getServicesSectionContent(language);
 
   return (
-    <section id="services" className="py-20 bg-brand-bg-primary">
+    <section id="services" className="pt-10 pb-20 md:pt-20 bg-brand-bg-primary">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-brand-blue mb-4">

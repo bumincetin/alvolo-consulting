@@ -39,7 +39,7 @@ const Hero = () => {
   const c = getHeroContent(language);
 
   return (
-    <section id="hero" className="relative h-screen flex items-center justify-center bg-gradient-to-r from-brand-bg-primary to-blue-50">
+    <section id="hero" className="relative min-h-[80vh] md:min-h-screen flex flex-col justify-center md:items-center bg-gradient-to-r from-brand-bg-primary to-blue-50 pt-20 md:pt-0">
       {/* Turkish pattern overlay */}
       <div className="absolute inset-0 opacity-5 bg-[url('/pattern.png')] bg-repeat"></div>
       
