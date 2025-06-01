@@ -99,10 +99,12 @@ const Contact = () => {
         setSubmissionStatus('error');
       }
     } catch (error) {
+      console.error('Error submitting form:', error);
       setSubmissionStatus('error');
     }
     setIsSubmitting(false);
   };
+
 
   // Helper to render text with <br /> tags
   const renderHtml = (htmlString: string) => {
