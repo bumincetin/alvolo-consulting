@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   title: "Alvolo Consulting Danismanlik", // Default to TR, or consider removing if it should be truly dynamic via other means
   description: "1995'ten beri Ankara'da güvenilir mali müşavirlik ve danışmanlık hizmetleri. Vergi, muhasebe ve danışmanlık ihtiyaçlarınız için profesyonel çözümler.",
   keywords: "mali müşavir, SMMM, vergi danışmanlığı, muhasebe, Ankara, mali müşavirlik, Alvolo Consulting Danismanlik",
+  icons: {
+    icon: '/ICON.png', // Points to public/icon.png
+  },
   // For truly dynamic metadata based on language, you'd typically rely on route parameters (e.g., /[locale])
   // and generateMetadata function, which is not directly compatible with a purely client-side language context for metadata.
 };
