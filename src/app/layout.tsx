@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description: "Eğitim, bürokrasi, emlak ve adaptasyon süreçlerinizde profesyonel danışmanlık hizmetleri",
   keywords: "Alvolo Consulting Danismanlik, Eğitim, bürokrasi, emlak, adaptasyon, danışmanlık",
   icons: {
-    icon: '/icon.png', // Points to public/icon.png
+    icon: '/ICON.png', // Points to public/icon.png
   },
   // For truly dynamic metadata based on language, you'd typically rely on route parameters (e.g., /[locale])
   // and generateMetadata function, which is not directly compatible with a purely client-side language context for metadata.
