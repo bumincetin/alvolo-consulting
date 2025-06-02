@@ -261,7 +261,7 @@ export interface ServiceDetail {
       slug: 'ogrenci-vizesi',
       title: 'Öğrenci Vizesi Danışmanlığı Detayları',
       pageSubtitle: 'İtalya\'da eğitim almak için gerekli vize başvuru süreçlerinde rehberlik.',
-      mainImage: '/bürokrasi.jpg',
+      mainImage: '/vize.jpg',
       introduction: 'İtalya\'da eğitim almak için öğrenci vizesi başvurusu yapmanız gerekmektedir. Bu süreç, doğru belgelerin hazırlanması ve başvurunun doğru şekilde yapılması açısından kritik öneme sahiptir. Öğrenci vizesi danışmanlık hizmetimizle, vize başvuru sürecinizin her aşamasında size rehberlik ediyoruz.',
       sections: [
         {
@@ -344,7 +344,7 @@ export interface ServiceDetail {
       slug: 'student-visa',
       title: 'Student Visa Consultancy Details',
       pageSubtitle: 'Guidance in visa application processes for studying in Italy.',
-      mainImage: '/bürokrasi.jpg',
+      mainImage: '/vize.jpg',
       introduction: 'To study in Italy, you need to apply for a student visa. This process is critical in terms of preparing the correct documents and making the application properly. With our student visa consultancy service, we guide you through every stage of your visa application process.',
       sections: [
         {
@@ -427,7 +427,7 @@ export interface ServiceDetail {
       slug: 'visto-studentesco',
       title: 'Dettagli Consulenza Visto Studentesco',
       pageSubtitle: 'Guida nei processi di richiesta del visto per studiare in Italia.',
-      mainImage: '/bürokrasi.jpg',
+      mainImage: '/vize.jpg',
       introduction: 'Per studiare in Italia, è necessario richiedere un visto studentesco. Questo processo è fondamentale in termini di preparazione dei documenti corretti e presentazione della domanda in modo appropriato. Con il nostro servizio di consulenza per il visto studentesco, ti guidiamo attraverso ogni fase del processo di richiesta del visto.',
       sections: [
         {

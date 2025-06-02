@@ -159,6 +159,17 @@ const PricingPageComponent = () => {
               );
             })}
           </div>
+          <div className="mt-8 p-6 bg-brand-bg-surface rounded-xl border border-brand-gold">
+            <p className="text-brand-text-secondary text-sm italic">
+              {language === 'tr' ? (
+                "Önemli Bilgilendirme: Konaklama bulma danışmanlık hizmetimizin fiyatı, kira bedeli veya emlak ofisi komisyonu içermemektedir. Bu ücret, sadece şirketimizin sunduğu danışmanlık hizmetleri için geçerlidir. Bu bilgilendirmeyi yasal gereklilikler kapsamında yapmaktayız."
+              ) : language === 'en' ? (
+                "Important Notice: The price of our accommodation finding consultancy service does not include the rent or real estate agency fee. This fee is solely for the consultancy services provided by our company. We are providing this information as a legal requirement."
+              ) : (
+                "Informazione Importante: Il prezzo del nostro servizio di consulenza per la ricerca dell'alloggio non include l'affitto o la commissione dell'agenzia immobiliare. Questa tariffa è esclusivamente per i servizi di consulenza forniti dalla nostra azienda. Forniamo questa informazione come requisito legale."
+              )}
+            </p>
+          </div>
         </div>
 
         {/* Packages Section */}
