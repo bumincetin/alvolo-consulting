@@ -29,7 +29,8 @@ const getPricingContent = (lang: string) => {
         { name: "Karşılama Hizmeti", price: 200, icon: FaPlaneArrival, description: "Havalimanı veya tren istasyonunda kişisel karşılama ve konaklama yerinize transfer.", slug: "karsilama-hizmeti" },
         { name: "Konaklama Bulma Danışmanlığı", price: 300, icon: FaHome, description: "Bütçenize ve tercihlerinize uygun kiralık daire veya oda bulma desteği.", slug: "konaklama-danismanligi" },
         { name: "Oturum İzni & İkametgah Danışmanlığı", price: 200, icon: FaPassport, description: "Permesso di Soggiorno ve residenza başvurularınız için tam kapsamlı danışmanlık.", slug: "oturum-izni-ikametgah" },
-        { name: "Üniversite Kayıt Danışmanlığı", price: 400, icon: FaUniversity, description: "İtalyan üniversitelerine kayıt sürecinde profesyonel rehberlik ve başvuru desteği.", slug: "universite-kayit" },
+        { name: "Üniversite Basvuru Danışmanlığı", price: 800, icon: FaUniversity, description: "İtalyan üniversitelerine kayıt sürecinde profesyonel rehberlik ve başvuru desteği.", slug: "universite-kayit" },
+        { name: "Öğrenci Vizesi Danışmanlığı", price: 200, icon: FaPassport, description: "İtalya'da eğitim almak için gerekli vize başvuru süreçlerinde rehberlik.", slug: "ogrenci-vizesi" },
         { name: "Burs Başvurusu Danışmanlığı", price: 200, icon: FaGraduationCap, description: "İtalya'daki burs olanaklarını araştırma ve başvuru sürecinde profesyonel destek.", slug: "burs-basvurusu" },
         { name: "Sürücü Belgesi Alma Danışmanlığı", price: 200, icon: FaCar, description: "İtalyan ehliyeti alma veya mevcut ehliyetinizi çevirme işlemlerinde rehberlik.", slug: "surucu-belgesi" }
       ],
@@ -37,8 +38,10 @@ const getPricingContent = (lang: string) => {
         { title: "Emlak + Bürokrasi Paketi (Permesso & Residenza)", price: 450, description: "Konaklama bulma ve oturum izni (permesso di soggiorno) ile ikametgah (residenza) kayıt işlemleriniz için kapsamlı destek." },
         { title: "Karşılama + Emlak Paketi", price: 450, description: "Havalimanı karşılama, şehre adaptasyon ve konaklama bulma hizmetlerini içerir." },
         { title: "Freelancer Profesyonel Paketi (Emlak + Tüm Bürokrasi)", price: 600, description: "Freelancerlar için özel olarak tasarlanmış; konaklama bulma, oturum izni, ikametgah kaydı ve diğer ilgili tüm bürokratik işlemleri kapsayan paket." },
-        { title: "Tam Paket (Karşılama + Emlak + Bürokrasi: Permesso & Residenza)", price: 600, description: "Karşılama, konaklama bulma ve temel bürokrasi (permesso & residenza) hizmetlerimizi içeren avantajlı paket." },
-        { title: "Ultra Tam Paket (Karşılama + Emlak + Bürokrasi: Permesso & Residenza + Burs)", price: 760, description: "En kapsamlı paketimiz; karşılama, konaklama, temel bürokrasi (permesso & residenza) ve burs başvurusu danışmanlığını içerir." }
+        { title: "Üniversite Kabul Sonrası Kapsamlı Paket (Karşılama + Emlak + Bürokrasi: Permesso & Residenza)", price: 600, description: "Karşılama, konaklama bulma ve temel bürokrasi (permesso & residenza) hizmetlerimizi içeren avantajlı paket." },
+        { title: "Üniversite Kabul Sonrası Ultra Tam Paket (Karşılama + Emlak + Bürokrasi: Permesso & Residenza + Burs)", price: 760, description: "En kapsamlı kabul sonrası paketimiz; karşılama, konaklama, temel bürokrasi (permesso & residenza) ve burs başvurusu danışmanlığını içerir." },
+        { title: "Üniversite Kabul Öncesi Tam Paket (Üniversite Kayıt + Öğrenci Vizesi)", price: 960, description: "En kapsamlı kabul öncesi paketimiz; üniversite kayıt ve öğrenci vizesi danışmanlığını içerir." },
+        { title: "Ultra Deluxe Paket (Karşılama + Emlak + Bürokrasi: Permesso & Residenza + Üniversite Kayıt + Öğrenci Vizesi + Burs)", price: 1400, description: "En kapsamlı paketimiz; karşılama, konaklama, temel bürokrasi (permesso & residenza), üniversite kayıt, öğrenci vizesi ve burs başvurusu danışmanlığını içerir." }
       ]
     },
     en: {
@@ -54,7 +57,8 @@ const getPricingContent = (lang: string) => {
         { name: "Welcome Service", price: 200, icon: FaPlaneArrival, description: "Personal welcome at the airport or train station and transfer to your accommodation.", slug: "welcome-service" },
         { name: "Accommodation Finding Consultancy", price: 300, icon: FaHome, description: "Support in finding a suitable apartment or room for rent according to your budget and preferences.", slug: "accommodation-consultancy" },
         { name: "Residence Permit & Residency Consultancy", price: 200, icon: FaPassport, description: "Comprehensive consultancy for your Permesso di Soggiorno and residenza applications.", slug: "residence-permit-residency" },
-        { name: "University Enrollment Consultancy", price: 400, icon: FaUniversity, description: "Professional guidance and application support for enrolling in Italian universities.", slug: "university-enrollment" },
+        { name: "University Enrollment Consultancy", price: 800, icon: FaUniversity, description: "Professional guidance and application support for enrolling in Italian universities.", slug: "university-enrollment" },
+        { name: "Student Visa Consultancy", price: 200, icon: FaPassport, description: "Guidance in visa application processes for studying in Italy.", slug: "student-visa" },
         { name: "Scholarship Application Consultancy", price: 200, icon: FaGraduationCap, description: "Professional support in researching scholarship opportunities in Italy and the application process.", slug: "scholarship-application" },
         { name: "Driving License Acquisition Consultancy", price: 200, icon: FaCar, description: "Guidance on obtaining an Italian driving license or converting your current license.", slug: "driving-license" }
       ],
@@ -79,7 +83,8 @@ const getPricingContent = (lang: string) => {
         { name: "Servizio di Benvenuto", price: 200, icon: FaPlaneArrival, description: "Accoglienza personale in aeroporto o stazione ferroviaria e trasferimento al tuo alloggio.", slug: "servizio-benvenuto" },
         { name: "Consulenza per la Ricerca di Alloggio", price: 300, icon: FaHome, description: "Supporto nella ricerca di un appartamento o stanza in affitto adatti al tuo budget e preferenze.", slug: "consulenza-alloggio" },
         { name: "Consulenza Permesso di Soggiorno e Residenza", price: 200, icon: FaPassport, description: "Consulenza completa per le tue richieste di Permesso di Soggiorno e residenza.", slug: "permesso-soggiorno-residenza" },
-        { name: "Consulenza Iscrizione Universitaria", price: 400, icon: FaUniversity, description: "Guida professionale e supporto per l'iscrizione alle università italiane.", slug: "iscrizione-universitaria" },
+        { name: "Consulenza Iscrizione Universitaria", price: 800, icon: FaUniversity, description: "Guida professionale e supporto per l'iscrizione alle università italiane.", slug: "iscrizione-universitaria" },
+        { name: "Consulenza Visto Studentesco", price: 200, icon: FaPassport, description: "Guida nei processi di richiesta del visto per studiare in Italia.", slug: "visto-studentesco" },
         { name: "Consulenza per la Domanda di Borsa di Studio", price: 200, icon: FaGraduationCap, description: "Supporto professionale nella ricerca di opportunità di borse di studio in Italia e nel processo di candidatura.", slug: "domanda-borsa-studio" },
         { name: "Consulenza per Ottenimento Patente di Guida", price: 200, icon: FaCar, description: "Guida per ottenere la patente di guida italiana o convertire la tua patente attuale.", slug: "patente-guida" }
       ],

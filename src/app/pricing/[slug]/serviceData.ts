@@ -231,7 +231,6 @@ export interface ServiceDetail {
             'Dichiarazione di Valore (DV) İşlemleri: Diplomanızın İtalyan makamları tarafından tanınması için gerekli işlemler.',
             'Online Başvuru Süreci: Universitaly portalı üzerinden başvuru işlemlerinin yapılması.',
             'Sınav Hazırlığı: Gerekli durumlarda giriş sınavlarına hazırlık desteği.',
-            'Vize Başvurusu Desteği: Öğrenci vizesi başvuru sürecinde rehberlik.',
             'Kayıt Sonrası Destek: Üniversiteye kayıt ve oryantasyon sürecinde yardım.'
           ]
         },
@@ -244,7 +243,7 @@ export interface ServiceDetail {
             'Belge Hazırlığı: Gerekli tüm belgelerin hazırlanması ve çevirisi.',
             'Başvuru Süreci: Online başvuruların yapılması ve takibi.',
             'Sınav Hazırlığı: Gerekli durumlarda sınavlara hazırlık desteği.',
-            'Vize ve Kayıt: Vize başvurusu ve üniversiteye kayıt işlemleri.'
+            'Kayıt: Üniversiteye kayıt işlemleri.'
           ]
         },
         {
@@ -253,10 +252,217 @@ export interface ServiceDetail {
           content: 'İtalyan üniversitelerine kayıt süreci, karmaşık prosedürler ve belge gereksinimleri nedeniyle zorlayıcı olabilir. Yanlış veya eksik başvurular, zaman kaybına ve başvurunuzun reddedilmesine yol açabilir. Profesyonel danışmanlığımızla, sürecin her aşamasında doğru yönlendirme alarak başarılı bir kayıt süreci tamamlamanızı sağlıyoruz.'
         }
       ],
-      priceDisplay: 'Bu hizmetin tekil fiyatı €400\'dür.',
+      priceDisplay: 'Bu hizmetin tekil fiyatı €800\'dür.',
       contactPrompt: 'İtalyan üniversitelerine kayıt sürecinizde profesyonel destek mi arıyorsunuz?',
       contactButtonText: 'Bize Ulaşın',
       goBackText: 'Tüm Fiyatlara Geri Dön'
+    },
+    'ogrenci-vizesi': {
+      slug: 'ogrenci-vizesi',
+      title: 'Öğrenci Vizesi Danışmanlığı Detayları',
+      pageSubtitle: 'İtalya\'da eğitim almak için gerekli vize başvuru süreçlerinde rehberlik.',
+      mainImage: '/bürokrasi.jpg',
+      introduction: 'İtalya\'da eğitim almak için öğrenci vizesi başvurusu yapmanız gerekmektedir. Bu süreç, doğru belgelerin hazırlanması ve başvurunun doğru şekilde yapılması açısından kritik öneme sahiptir. Öğrenci vizesi danışmanlık hizmetimizle, vize başvuru sürecinizin her aşamasında size rehberlik ediyoruz.',
+      sections: [
+        {
+          title: 'Danışmanlık Hizmetimizin İçeriği',
+          type: 'list',
+          items: [
+            'Vize Başvuru Süreci Analizi: Kişisel durumunuza göre uygun vize türünün belirlenmesi.',
+            'Gerekli Belgelerin Hazırlanması: Başvuru formu, kabul mektubu, finansal belgeler, sigorta vb. belgelerin hazırlanması.',
+            'Başvuru Formlarının Doldurulması: Tüm formların doğru ve eksiksiz doldurulması.',
+            'Randevu Alma ve Takibi: İtalyan konsolosluğu veya vize merkezi randevularının alınması ve takibi.',
+            'Mülakat Hazırlığı: Vize mülakatı için hazırlık ve rehberlik.',
+            'Başvuru Sonrası Takip: Vize başvurunuzun durumunun takibi.'
+          ]
+        },
+        {
+          title: 'Süreç Adımları',
+          type: 'steps',
+          items: [
+            'İlk Değerlendirme: Vize başvuru gereksinimlerinizin analizi.',
+            'Belge Hazırlığı: Gerekli tüm belgelerin hazırlanması ve kontrolü.',
+            'Başvuru Hazırlığı: Formların doldurulması ve başvuru dosyasının oluşturulması.',
+            'Randevu ve Başvuru: Konsolosluk randevusunun alınması ve başvurunun yapılması.',
+            'Mülakat ve Takip: Mülakat hazırlığı ve başvuru sonrası süreç takibi.'
+          ]
+        },
+        {
+          title: 'Neden Bu Hizmeti Almalısınız?',
+          type: 'paragraph',
+          content: 'Öğrenci vizesi başvuru süreci, doğru belgelerin hazırlanması ve başvurunun doğru şekilde yapılması açısından kritik öneme sahiptir. Yanlış veya eksik başvurular, vize reddine yol açabilir. Profesyonel danışmanlığımızla, vize başvuru sürecinizi doğru ve eksiksiz bir şekilde tamamlamanızı sağlıyoruz.'
+        }
+      ],
+      priceDisplay: 'Bu hizmetin tekil fiyatı €200\'dür.',
+      contactPrompt: 'İtalya\'da eğitim almak için vize başvuru sürecinizde profesyonel destek mi arıyorsunuz?',
+      contactButtonText: 'Bize Ulaşın',
+      goBackText: 'Tüm Fiyatlara Geri Dön'
+    },
+    'university-enrollment': {
+      slug: 'university-enrollment',
+      title: 'University Enrollment Consultancy Details',
+      pageSubtitle: 'Professional guidance in your Italian university enrollment process.',
+      mainImage: '/bocconi.jpg',
+      introduction: 'The enrollment process for Italian universities can be challenging due to complex application procedures and document preparation processes. With our university enrollment consultancy service, we guide you through every stage of your application process and provide all the necessary support for a successful enrollment.',
+      sections: [
+        {
+          title: 'Content of Our Consultancy Service',
+          type: 'list',
+          items: [
+            'University and Program Selection: Selection of universities and programs suitable for your goals and academic background.',
+            'Application File Preparation: Preparation and translation of all required documents (diploma, transcript, language certificate, etc.).',
+            'Dichiarazione di Valore (DV) Procedures: Necessary procedures for the recognition of your diploma by Italian authorities.',
+            'Online Application Process: Processing applications through the Universitaly portal.',
+            'Exam Preparation: Support for entrance exam preparation when required.',
+            'Post-Registration Support: Assistance with university registration and orientation process.'
+          ]
+        },
+        {
+          title: 'Process Steps',
+          type: 'steps',
+          items: [
+            'Initial Consultation: Detailed information exchange about your goals and academic background.',
+            'University and Program Selection: Determination of the most suitable options for you.',
+            'Document Preparation: Preparation and translation of all required documents.',
+            'Application Process: Submission and tracking of online applications.',
+            'Exam Preparation: Support for exam preparation when required.',
+            'Registration: University registration procedures.'
+          ]
+        },
+        {
+          title: 'Why Should You Get This Service?',
+          type: 'paragraph',
+          content: 'The enrollment process for Italian universities can be challenging due to complex procedures and document requirements. Incorrect or incomplete applications can lead to time loss and even rejection of your application. With our professional consultancy, we ensure you complete a successful enrollment process by receiving correct guidance at every stage.'
+        }
+      ],
+      priceDisplay: 'The individual price for this service is €800.',
+      contactPrompt: 'Are you looking for professional support in your Italian university enrollment process?',
+      contactButtonText: 'Contact Us',
+      goBackText: 'Back to All Pricing'
+    },
+    'student-visa': {
+      slug: 'student-visa',
+      title: 'Student Visa Consultancy Details',
+      pageSubtitle: 'Guidance in visa application processes for studying in Italy.',
+      mainImage: '/bürokrasi.jpg',
+      introduction: 'To study in Italy, you need to apply for a student visa. This process is critical in terms of preparing the correct documents and making the application properly. With our student visa consultancy service, we guide you through every stage of your visa application process.',
+      sections: [
+        {
+          title: 'Content of Our Consultancy Service',
+          type: 'list',
+          items: [
+            'Visa Application Process Analysis: Determination of the appropriate visa type based on your personal situation.',
+            'Preparation of Required Documents: Preparation of application form, acceptance letter, financial documents, insurance, etc.',
+            'Filling Out Application Forms: Correct and complete filling of all forms.',
+            'Appointment Scheduling and Tracking: Scheduling and tracking appointments at the Italian consulate or visa center.',
+            'Interview Preparation: Preparation and guidance for the visa interview.',
+            'Post-Application Follow-up: Tracking the status of your visa application.'
+          ]
+        },
+        {
+          title: 'Process Steps',
+          type: 'steps',
+          items: [
+            'Initial Assessment: Analysis of your visa application requirements.',
+            'Document Preparation: Preparation and checking of all required documents.',
+            'Application Preparation: Filling out forms and creating the application file.',
+            'Appointment and Application: Scheduling the consulate appointment and submitting the application.',
+            'Interview and Follow-up: Interview preparation and post-application process tracking.'
+          ]
+        },
+        {
+          title: 'Why Should You Get This Service?',
+          type: 'paragraph',
+          content: 'The student visa application process is critical in terms of preparing the correct documents and making the application properly. Incorrect or incomplete applications can lead to visa rejection. With our professional consultancy, we ensure you complete your visa application process correctly and completely.'
+        }
+      ],
+      priceDisplay: 'The individual price for this service is €200.',
+      contactPrompt: 'Are you looking for professional support in your visa application process for studying in Italy?',
+      contactButtonText: 'Contact Us',
+      goBackText: 'Back to All Pricing'
+    },
+    'iscrizione-universitaria': {
+      slug: 'iscrizione-universitaria',
+      title: 'Dettagli Consulenza Iscrizione Universitaria',
+      pageSubtitle: 'Guida professionale nel processo di iscrizione alle università italiane.',
+      mainImage: '/bocconi.jpg',
+      introduction: 'Il processo di iscrizione alle università italiane può essere impegnativo a causa delle complesse procedure di candidatura e dei processi di preparazione dei documenti. Con il nostro servizio di consulenza per l\'iscrizione universitaria, ti guidiamo attraverso ogni fase del processo di candidatura e forniamo tutto il supporto necessario per un\'iscrizione di successo.',
+      sections: [
+        {
+          title: 'Contenuto del Nostro Servizio di Consulenza',
+          type: 'list',
+          items: [
+            'Selezione dell\'Università e del Programma: Selezione di università e programmi adatti ai tuoi obiettivi e background accademico.',
+            'Preparazione del Dossier di Candidatura: Preparazione e traduzione di tutti i documenti richiesti (diploma, trascrizione, certificato linguistico, ecc.).',
+            'Procedure Dichiarazione di Valore (DV): Procedure necessarie per il riconoscimento del tuo diploma dalle autorità italiane.',
+            'Processo di Candidatura Online: Gestione delle candidature tramite il portale Universitaly.',
+            'Preparazione agli Esami: Supporto per la preparazione agli esami di ammissione quando richiesto.',
+            'Supporto Post-Registrazione: Assistenza nel processo di registrazione universitaria e orientamento.'
+          ]
+        },
+        {
+          title: 'Fasi del Processo',
+          type: 'steps',
+          items: [
+            'Consulenza Iniziale: Scambio dettagliato di informazioni sui tuoi obiettivi e background accademico.',
+            'Selezione dell\'Università e del Programma: Determinazione delle opzioni più adatte a te.',
+            'Preparazione dei Documenti: Preparazione e traduzione di tutti i documenti richiesti.',
+            'Processo di Candidatura: Invio e monitoraggio delle candidature online.',
+            'Preparazione agli Esami: Supporto per la preparazione agli esami quando richiesto.',
+            'Registrazione: Procedure di registrazione universitaria.'
+          ]
+        },
+        {
+          title: 'Perché Scegliere Questo Servizio?',
+          type: 'paragraph',
+          content: 'Il processo di iscrizione alle università italiane può essere impegnativo a causa delle procedure complesse e dei requisiti documentali. Candidature errate o incomplete possono portare a perdita di tempo e persino al rifiuto della tua domanda. Con la nostra consulenza professionale, garantiamo che tu completi con successo il processo di iscrizione ricevendo una guida corretta in ogni fase.'
+        }
+      ],
+      priceDisplay: 'Il prezzo individuale per questo servizio è di €800.',
+      contactPrompt: 'Stai cercando un supporto professionale nel tuo processo di iscrizione alle università italiane?',
+      contactButtonText: 'Contattaci',
+      goBackText: 'Torna a Tutti i Prezzi'
+    },
+    'visto-studentesco': {
+      slug: 'visto-studentesco',
+      title: 'Dettagli Consulenza Visto Studentesco',
+      pageSubtitle: 'Guida nei processi di richiesta del visto per studiare in Italia.',
+      mainImage: '/bürokrasi.jpg',
+      introduction: 'Per studiare in Italia, è necessario richiedere un visto studentesco. Questo processo è fondamentale in termini di preparazione dei documenti corretti e presentazione della domanda in modo appropriato. Con il nostro servizio di consulenza per il visto studentesco, ti guidiamo attraverso ogni fase del processo di richiesta del visto.',
+      sections: [
+        {
+          title: 'Contenuto del Nostro Servizio di Consulenza',
+          type: 'list',
+          items: [
+            'Analisi del Processo di Richiesta del Visto: Determinazione del tipo di visto appropriato in base alla tua situazione personale.',
+            'Preparazione dei Documenti Richiesti: Preparazione del modulo di domanda, lettera di accettazione, documenti finanziari, assicurazione, ecc.',
+            'Compilazione dei Moduli di Domanda: Compilazione corretta e completa di tutti i moduli.',
+            'Prenotazione e Monitoraggio degli Appuntamenti: Prenotazione e monitoraggio degli appuntamenti presso il consolato italiano o il centro visti.',
+            'Preparazione al Colloquio: Preparazione e guida per il colloquio per il visto.',
+            'Follow-up Post-Domanda: Monitoraggio dello stato della tua domanda di visto.'
+          ]
+        },
+        {
+          title: 'Fasi del Processo',
+          type: 'steps',
+          items: [
+            'Valutazione Iniziale: Analisi dei requisiti per la tua domanda di visto.',
+            'Preparazione dei Documenti: Preparazione e verifica di tutti i documenti richiesti.',
+            'Preparazione della Domanda: Compilazione dei moduli e creazione del fascicolo di domanda.',
+            'Appuntamento e Domanda: Prenotazione dell\'appuntamento al consolato e presentazione della domanda.',
+            'Colloquio e Follow-up: Preparazione al colloquio e monitoraggio del processo post-domanda.'
+          ]
+        },
+        {
+          title: 'Perché Scegliere Questo Servizio?',
+          type: 'paragraph',
+          content: 'Il processo di richiesta del visto studentesco è fondamentale in termini di preparazione dei documenti corretti e presentazione della domanda in modo appropriato. Domande errate o incomplete possono portare al rifiuto del visto. Con la nostra consulenza professionale, garantiamo che tu completi il processo di richiesta del visto in modo corretto e completo.'
+        }
+      ],
+      priceDisplay: 'Il prezzo individuale per questo servizio è di €200.',
+      contactPrompt: 'Stai cercando un supporto professionale nel processo di richiesta del visto per studiare in Italia?',
+      contactButtonText: 'Contattaci',
+      goBackText: 'Torna a Tutti i Prezzi'
     }
   },
   en: {
@@ -432,7 +638,7 @@ export interface ServiceDetail {
             'Required Documents and Steps for Converting a Foreign License to an Italian License.',
             'Process for Obtaining an Italian License from Scratch: Theory and Practical Exams, Driving School Selection.',
             'Guidance on Required Medical Reports and Other Bureaucratic Procedures.',
-            'Motorizzazione Civile (Ministry of Transport) Appointments and Procedures.',
+            'Motorizzazione Civile (Ulaştırma Bakanlığı) Randevuları ve İşlemleri.',
             'Information on International Driving Permit (IDP).'
           ]
         },
@@ -468,7 +674,6 @@ export interface ServiceDetail {
             'Dichiarazione di Valore (DV) Procedures: Necessary procedures for the recognition of your diploma by Italian authorities.',
             'Online Application Process: Processing applications through the Universitaly portal.',
             'Exam Preparation: Support for entrance exam preparation when required.',
-            'Visa Application Support: Guidance in the student visa application process.',
             'Post-Registration Support: Assistance with university registration and orientation process.'
           ]
         },
@@ -481,7 +686,7 @@ export interface ServiceDetail {
             'Document Preparation: Preparation and translation of all required documents.',
             'Application Process: Submission and tracking of online applications.',
             'Exam Preparation: Support for exam preparation when required.',
-            'Visa and Registration: Visa application and university registration procedures.'
+            'Registration: University registration procedures.'
           ]
         },
         {
@@ -490,10 +695,92 @@ export interface ServiceDetail {
           content: 'The enrollment process for Italian universities can be challenging due to complex procedures and document requirements. Incorrect or incomplete applications can lead to time loss and even rejection of your application. With our professional consultancy, we ensure you complete a successful enrollment process by receiving correct guidance at every stage.'
         }
       ],
-      priceDisplay: 'The individual price for this service is €400.',
+      priceDisplay: 'The individual price for this service is €800.',
       contactPrompt: 'Are you looking for professional support in your Italian university enrollment process?',
       contactButtonText: 'Contact Us',
       goBackText: 'Back to All Pricing'
+    },
+    'student-visa': {
+      slug: 'student-visa',
+      title: 'Student Visa Consultancy Details',
+      pageSubtitle: 'Guidance in visa application processes for studying in Italy.',
+      mainImage: '/bürokrasi.jpg',
+      introduction: 'To study in Italy, you need to apply for a student visa. This process is critical in terms of preparing the correct documents and making the application properly. With our student visa consultancy service, we guide you through every stage of your visa application process.',
+      sections: [
+        {
+          title: 'Content of Our Consultancy Service',
+          type: 'list',
+          items: [
+            'Visa Application Process Analysis: Determination of the appropriate visa type based on your personal situation.',
+            'Preparation of Required Documents: Preparation of application form, acceptance letter, financial documents, insurance, etc.',
+            'Filling Out Application Forms: Correct and complete filling of all forms.',
+            'Appointment Scheduling and Tracking: Scheduling and tracking appointments at the Italian consulate or visa center.',
+            'Interview Preparation: Preparation and guidance for the visa interview.',
+            'Post-Application Follow-up: Tracking the status of your visa application.'
+          ]
+        },
+        {
+          title: 'Process Steps',
+          type: 'steps',
+          items: [
+            'Initial Assessment: Analysis of your visa application requirements.',
+            'Document Preparation: Preparation and checking of all required documents.',
+            'Application Preparation: Filling out forms and creating the application file.',
+            'Appointment and Application: Scheduling the consulate appointment and submitting the application.',
+            'Interview and Follow-up: Interview preparation and post-application process tracking.'
+          ]
+        },
+        {
+          title: 'Why Should You Get This Service?',
+          type: 'paragraph',
+          content: 'The student visa application process is critical in terms of preparing the correct documents and making the application properly. Incorrect or incomplete applications can lead to visa rejection. With our professional consultancy, we ensure you complete your visa application process correctly and completely.'
+        }
+      ],
+      priceDisplay: 'The individual price for this service is €200.',
+      contactPrompt: 'Are you looking for professional support in your visa application process for studying in Italy?',
+      contactButtonText: 'Contact Us',
+      goBackText: 'Back to All Pricing'
+    },
+    'visto-studentesco': {
+      slug: 'visto-studentesco',
+      title: 'Dettagli Consulenza Visto Studentesco',
+      pageSubtitle: 'Guida nei processi di richiesta del visto per studiare in Italia.',
+      mainImage: '/bürokrasi.jpg',
+      introduction: 'Per studiare in Italia, è necessario richiedere un visto studentesco. Questo processo è fondamentale in termini di preparazione dei documenti corretti e presentazione della domanda in modo appropriato. Con il nostro servizio di consulenza per il visto studentesco, ti guidiamo attraverso ogni fase del processo di richiesta del visto.',
+      sections: [
+        {
+          title: 'Contenuto del Nostro Servizio di Consulenza',
+          type: 'list',
+          items: [
+            'Analisi del Processo di Richiesta del Visto: Determinazione del tipo di visto appropriato in base alla tua situazione personale.',
+            'Preparazione dei Documenti Richiesti: Preparazione del modulo di domanda, lettera di accettazione, documenti finanziari, assicurazione, ecc.',
+            'Compilazione dei Moduli di Domanda: Compilazione corretta e completa di tutti i moduli.',
+            'Prenotazione e Monitoraggio degli Appuntamenti: Prenotazione e monitoraggio degli appuntamenti presso il consolato italiano o il centro visti.',
+            'Preparazione al Colloquio: Preparazione e guida per il colloquio per il visto.',
+            'Follow-up Post-Domanda: Monitoraggio dello stato della tua domanda di visto.'
+          ]
+        },
+        {
+          title: 'Fasi del Processo',
+          type: 'steps',
+          items: [
+            'Valutazione Iniziale: Analisi dei requisiti per la tua domanda di visto.',
+            'Preparazione dei Documenti: Preparazione e verifica di tutti i documenti richiesti.',
+            'Preparazione della Domanda: Compilazione dei moduli e creazione del fascicolo di domanda.',
+            'Appuntamento e Domanda: Prenotazione dell\'appuntamento al consolato e presentazione della domanda.',
+            'Colloquio e Follow-up: Preparazione al colloquio e monitoraggio del processo post-domanda.'
+          ]
+        },
+        {
+          title: 'Perché Scegliere Questo Servizio?',
+          type: 'paragraph',
+          content: 'Il processo di richiesta del visto studentesco è fondamentale in termini di preparazione dei documenti corretti e presentazione della domanda in modo appropriato. Domande errate o incomplete possono portare al rifiuto del visto. Con la nostra consulenza professionale, garantiamo che tu completi il processo di richiesta del visto in modo corretto e completo.'
+        }
+      ],
+      priceDisplay: 'Il prezzo individuale per questo servizio è di €200.',
+      contactPrompt: 'Stai cercando un supporto professionale nel processo di richiesta del visto per studiare in Italia?',
+      contactButtonText: 'Contattaci',
+      goBackText: 'Torna a Tutti i Prezzi'
     }
   },
   it: {
@@ -685,9 +972,9 @@ export interface ServiceDetail {
         }
       ],
       priceDisplay: 'Il prezzo individuale per questo servizio è di €200.',
-      contactPrompt: 'Hai bisogno di aiuto con le procedure per la tua patente di guida italiana?',
-      contactButtonText: 'Contattaci',
-      goBackText: 'Torna a Tutti i Prezzi'
+      contactPrompt: 'İtalyan sürücü belgesi işlemleriniz için yardıma mı ihtiyacınız var?',
+      contactButtonText: 'Bize Ulaşın',
+      goBackText: 'Tüm Fiyatlara Geri Dön'
     },
     'iscrizione-universitaria': {
       slug: 'iscrizione-universitaria',
@@ -705,7 +992,6 @@ export interface ServiceDetail {
             'Procedure Dichiarazione di Valore (DV): Procedure necessarie per il riconoscimento del tuo diploma dalle autorità italiane.',
             'Processo di Candidatura Online: Gestione delle candidature tramite il portale Universitaly.',
             'Preparazione agli Esami: Supporto per la preparazione agli esami di ammissione quando richiesto.',
-            'Supporto per la Domanda di Visto: Guida nel processo di richiesta del visto studentesco.',
             'Supporto Post-Registrazione: Assistenza nel processo di registrazione universitaria e orientamento.'
           ]
         },
@@ -718,7 +1004,7 @@ export interface ServiceDetail {
             'Preparazione dei Documenti: Preparazione e traduzione di tutti i documenti richiesti.',
             'Processo di Candidatura: Invio e monitoraggio delle candidature online.',
             'Preparazione agli Esami: Supporto per la preparazione agli esami quando richiesto.',
-            'Visto e Registrazione: Procedure per la richiesta del visto e la registrazione universitaria.'
+            'Registrazione: Procedure di registrazione universitaria.'
           ]
         },
         {
@@ -727,8 +1013,49 @@ export interface ServiceDetail {
           content: 'Il processo di iscrizione alle università italiane può essere impegnativo a causa delle procedure complesse e dei requisiti documentali. Candidature errate o incomplete possono portare a perdita di tempo e persino al rifiuto della tua domanda. Con la nostra consulenza professionale, garantiamo che tu completi con successo il processo di iscrizione ricevendo una guida corretta in ogni fase.'
         }
       ],
-      priceDisplay: 'Il prezzo individuale per questo servizio è di €400.',
+      priceDisplay: 'Il prezzo individuale per questo servizio è di €800.',
       contactPrompt: 'Stai cercando un supporto professionale nel tuo processo di iscrizione alle università italiane?',
+      contactButtonText: 'Contattaci',
+      goBackText: 'Torna a Tutti i Prezzi'
+    },
+    'visto-studentesco': {
+      slug: 'visto-studentesco',
+      title: 'Dettagli Consulenza Visto Studentesco',
+      pageSubtitle: 'Guida nei processi di richiesta del visto per studiare in Italia.',
+      mainImage: '/bürokrasi.jpg',
+      introduction: 'Per studiare in Italia, è necessario richiedere un visto studentesco. Questo processo è fondamentale in termini di preparazione dei documenti corretti e presentazione della domanda in modo appropriato. Con il nostro servizio di consulenza per il visto studentesco, ti guidiamo attraverso ogni fase del processo di richiesta del visto.',
+      sections: [
+        {
+          title: 'Contenuto del Nostro Servizio di Consulenza',
+          type: 'list',
+          items: [
+            'Analisi del Processo di Richiesta del Visto: Determinazione del tipo di visto appropriato in base alla tua situazione personale.',
+            'Preparazione dei Documenti Richiesti: Preparazione del modulo di domanda, lettera di accettazione, documenti finanziari, assicurazione, ecc.',
+            'Compilazione dei Moduli di Domanda: Compilazione corretta e completa di tutti i moduli.',
+            'Prenotazione e Monitoraggio degli Appuntamenti: Prenotazione e monitoraggio degli appuntamenti presso il consolato italiano o il centro visti.',
+            'Preparazione al Colloquio: Preparazione e guida per il colloquio per il visto.',
+            'Follow-up Post-Domanda: Monitoraggio dello stato della tua domanda di visto.'
+          ]
+        },
+        {
+          title: 'Fasi del Processo',
+          type: 'steps',
+          items: [
+            'Valutazione Iniziale: Analisi dei requisiti per la tua domanda di visto.',
+            'Preparazione dei Documenti: Preparazione e verifica di tutti i documenti richiesti.',
+            'Preparazione della Domanda: Compilazione dei moduli e creazione del fascicolo di domanda.',
+            'Appuntamento e Domanda: Prenotazione dell\'appuntamento al consolato e presentazione della domanda.',
+            'Colloquio e Follow-up: Preparazione al colloquio e monitoraggio del processo post-domanda.'
+          ]
+        },
+        {
+          title: 'Perché Scegliere Questo Servizio?',
+          type: 'paragraph',
+          content: 'Il processo di richiesta del visto studentesco è fondamentale in termini di preparazione dei documenti corretti e presentazione della domanda in modo appropriato. Domande errate o incomplete possono portare al rifiuto del visto. Con la nostra consulenza professionale, garantiamo che tu completi il processo di richiesta del visto in modo corretto e completo.'
+        }
+      ],
+      priceDisplay: 'Il prezzo individuale per questo servizio è di €200.',
+      contactPrompt: 'Stai cercando un supporto professionale nel processo di richiesta del visto per studiare in Italia?',
       contactButtonText: 'Contattaci',
       goBackText: 'Torna a Tutti i Prezzi'
     }
