@@ -20,7 +20,7 @@ const getContactSectionContent = (lang: string) => {
       phoneTitle: "Telefon",
       phoneDetails: "Whatsapp: +39 348 170 5207<br />Alternatif: +39 351 713 6434",
       emailTitle: "E-posta",
-      emailDetails: "alvoloconsulting@gmail.com<br />info@alvoloconsulting.it",
+      emailDetails: "alvoloconsulting@gmail.com",
       addressTitle: "Adres",
       addressDetails: "Via Valsugana <br />20139 Milano (MI)"
     },
@@ -38,7 +38,7 @@ const getContactSectionContent = (lang: string) => {
       phoneTitle: "Phone",
       phoneDetails: "Whatsapp: +39 348 170 5207<br />Alternative: +39 351 713 6434",
       emailTitle: "Email",
-      emailDetails: "alvoloconsulting@gmail.com<br />info@alvoloconsulting.it",
+      emailDetails: "alvoloconsulting@gmail.com",
       addressTitle: "Address",
       addressDetails: "Via Valsugana <br />20139 Milano (MI)"
     },
@@ -56,7 +56,7 @@ const getContactSectionContent = (lang: string) => {
       phoneTitle: "Telefono",
       phoneDetails: "Whatsapp: +39 348 170 5207<br />Alternativo: +39 351 713 6434",
       emailTitle: "Email",
-      emailDetails: "alvoloconsulting@gmail.com<br />info@alvoloconsulting.it",
+      emailDetails: "alvoloconsulting@gmail.com",
       addressTitle: "Indirizzo",
       addressDetails: "Via Valsugana <br />20139 Milano (MI)"
     }

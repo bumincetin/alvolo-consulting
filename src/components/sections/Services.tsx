@@ -1,6 +1,6 @@
 "use client"; // Make sure client component if not already
 
-import { FaCalculator, FaChartLine, FaFileInvoiceDollar, FaHandshake, FaBalanceScale, FaBook } from 'react-icons/fa';
+import { FaCalculator, FaChartLine, FaFileInvoiceDollar, FaHandshake, FaBalanceScale, FaBook, FaPlaneArrival, FaHome, FaPassport, FaGraduationCap, FaCar, FaUniversity } from 'react-icons/fa';
 import { useLanguage } from '@/contexts/LanguageContext'; // Import useLanguage
 
 const getServicesSectionContent = (lang: string) => {

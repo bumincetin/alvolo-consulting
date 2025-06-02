@@ -214,6 +214,49 @@ export interface ServiceDetail {
       contactPrompt: 'İtalyan sürücü belgesi işlemleriniz için yardıma mı ihtiyacınız var?',
       contactButtonText: 'Bize Ulaşın',
       goBackText: 'Tüm Fiyatlara Geri Dön'
+    },
+    'universite-kayit': {
+      slug: 'universite-kayit',
+      title: 'Üniversite Kayıt Danışmanlığı Detayları',
+      pageSubtitle: 'İtalyan üniversitelerine kayıt sürecinizde profesyonel rehberlik.',
+      mainImage: '/bocconi.jpg',
+      introduction: 'İtalyan üniversitelerine kayıt süreci, karmaşık başvuru prosedürleri ve belge hazırlama süreçleri nedeniyle zorlayıcı olabilir. Üniversite kayıt danışmanlık hizmetimizle, başvuru sürecinizin her aşamasında size rehberlik ediyor ve başarılı bir kayıt süreci için gerekli tüm desteği sağlıyoruz.',
+      sections: [
+        {
+          title: 'Danışmanlık Hizmetimizin İçeriği',
+          type: 'list',
+          items: [
+            'Üniversite ve Bölüm Seçimi: Hedeflerinize ve akademik geçmişinize uygun üniversite ve bölüm seçimi.',
+            'Başvuru Dosyası Hazırlama: Tüm gerekli belgelerin (diploma, transkript, dil sertifikası vb.) hazırlanması ve çevirisi.',
+            'Dichiarazione di Valore (DV) İşlemleri: Diplomanızın İtalyan makamları tarafından tanınması için gerekli işlemler.',
+            'Online Başvuru Süreci: Universitaly portalı üzerinden başvuru işlemlerinin yapılması.',
+            'Sınav Hazırlığı: Gerekli durumlarda giriş sınavlarına hazırlık desteği.',
+            'Vize Başvurusu Desteği: Öğrenci vizesi başvuru sürecinde rehberlik.',
+            'Kayıt Sonrası Destek: Üniversiteye kayıt ve oryantasyon sürecinde yardım.'
+          ]
+        },
+        {
+          title: 'Süreç Adımları',
+          type: 'steps',
+          items: [
+            'İlk Görüşme: Hedefleriniz ve akademik geçmişiniz hakkında detaylı bilgi alışverişi.',
+            'Üniversite ve Bölüm Seçimi: Size en uygun seçeneklerin belirlenmesi.',
+            'Belge Hazırlığı: Gerekli tüm belgelerin hazırlanması ve çevirisi.',
+            'Başvuru Süreci: Online başvuruların yapılması ve takibi.',
+            'Sınav Hazırlığı: Gerekli durumlarda sınavlara hazırlık desteği.',
+            'Vize ve Kayıt: Vize başvurusu ve üniversiteye kayıt işlemleri.'
+          ]
+        },
+        {
+          title: 'Neden Bu Hizmeti Almalısınız?',
+          type: 'paragraph',
+          content: 'İtalyan üniversitelerine kayıt süreci, karmaşık prosedürler ve belge gereksinimleri nedeniyle zorlayıcı olabilir. Yanlış veya eksik başvurular, zaman kaybına ve başvurunuzun reddedilmesine yol açabilir. Profesyonel danışmanlığımızla, sürecin her aşamasında doğru yönlendirme alarak başarılı bir kayıt süreci tamamlamanızı sağlıyoruz.'
+        }
+      ],
+      priceDisplay: 'Bu hizmetin tekil fiyatı €400\'dür.',
+      contactPrompt: 'İtalyan üniversitelerine kayıt sürecinizde profesyonel destek mi arıyorsunuz?',
+      contactButtonText: 'Bize Ulaşın',
+      goBackText: 'Tüm Fiyatlara Geri Dön'
     }
   },
   en: {
@@ -408,6 +451,49 @@ export interface ServiceDetail {
       contactPrompt: 'Do you need help with your Italian driving license procedures?',
       contactButtonText: 'Contact Us',
       goBackText: 'Back to All Pricing'
+    },
+    'university-enrollment': {
+      slug: 'university-enrollment',
+      title: 'University Enrollment Consultancy Details',
+      pageSubtitle: 'Professional guidance in your Italian university enrollment process.',
+      mainImage: '/bocconi.jpg',
+      introduction: 'The enrollment process for Italian universities can be challenging due to complex application procedures and document preparation processes. With our university enrollment consultancy service, we guide you through every stage of your application process and provide all the necessary support for a successful enrollment.',
+      sections: [
+        {
+          title: 'Content of Our Consultancy Service',
+          type: 'list',
+          items: [
+            'University and Program Selection: Selection of universities and programs suitable for your goals and academic background.',
+            'Application File Preparation: Preparation and translation of all required documents (diploma, transcript, language certificate, etc.).',
+            'Dichiarazione di Valore (DV) Procedures: Necessary procedures for the recognition of your diploma by Italian authorities.',
+            'Online Application Process: Processing applications through the Universitaly portal.',
+            'Exam Preparation: Support for entrance exam preparation when required.',
+            'Visa Application Support: Guidance in the student visa application process.',
+            'Post-Registration Support: Assistance with university registration and orientation process.'
+          ]
+        },
+        {
+          title: 'Process Steps',
+          type: 'steps',
+          items: [
+            'Initial Consultation: Detailed information exchange about your goals and academic background.',
+            'University and Program Selection: Determination of the most suitable options for you.',
+            'Document Preparation: Preparation and translation of all required documents.',
+            'Application Process: Submission and tracking of online applications.',
+            'Exam Preparation: Support for exam preparation when required.',
+            'Visa and Registration: Visa application and university registration procedures.'
+          ]
+        },
+        {
+          title: 'Why Should You Get This Service?',
+          type: 'paragraph',
+          content: 'The enrollment process for Italian universities can be challenging due to complex procedures and document requirements. Incorrect or incomplete applications can lead to time loss and even rejection of your application. With our professional consultancy, we ensure you complete a successful enrollment process by receiving correct guidance at every stage.'
+        }
+      ],
+      priceDisplay: 'The individual price for this service is €400.',
+      contactPrompt: 'Are you looking for professional support in your Italian university enrollment process?',
+      contactButtonText: 'Contact Us',
+      goBackText: 'Back to All Pricing'
     }
   },
   it: {
@@ -600,6 +686,49 @@ export interface ServiceDetail {
       ],
       priceDisplay: 'Il prezzo individuale per questo servizio è di €200.',
       contactPrompt: 'Hai bisogno di aiuto con le procedure per la tua patente di guida italiana?',
+      contactButtonText: 'Contattaci',
+      goBackText: 'Torna a Tutti i Prezzi'
+    },
+    'iscrizione-universitaria': {
+      slug: 'iscrizione-universitaria',
+      title: 'Dettagli Consulenza Iscrizione Universitaria',
+      pageSubtitle: 'Guida professionale nel processo di iscrizione alle università italiane.',
+      mainImage: '/bocconi.jpg',
+      introduction: 'Il processo di iscrizione alle università italiane può essere impegnativo a causa delle complesse procedure di candidatura e dei processi di preparazione dei documenti. Con il nostro servizio di consulenza per l\'iscrizione universitaria, ti guidiamo attraverso ogni fase del processo di candidatura e forniamo tutto il supporto necessario per un\'iscrizione di successo.',
+      sections: [
+        {
+          title: 'Contenuto del Nostro Servizio di Consulenza',
+          type: 'list',
+          items: [
+            'Selezione dell\'Università e del Programma: Selezione di università e programmi adatti ai tuoi obiettivi e background accademico.',
+            'Preparazione del Dossier di Candidatura: Preparazione e traduzione di tutti i documenti richiesti (diploma, trascrizione, certificato linguistico, ecc.).',
+            'Procedure Dichiarazione di Valore (DV): Procedure necessarie per il riconoscimento del tuo diploma dalle autorità italiane.',
+            'Processo di Candidatura Online: Gestione delle candidature tramite il portale Universitaly.',
+            'Preparazione agli Esami: Supporto per la preparazione agli esami di ammissione quando richiesto.',
+            'Supporto per la Domanda di Visto: Guida nel processo di richiesta del visto studentesco.',
+            'Supporto Post-Registrazione: Assistenza nel processo di registrazione universitaria e orientamento.'
+          ]
+        },
+        {
+          title: 'Fasi del Processo',
+          type: 'steps',
+          items: [
+            'Consulenza Iniziale: Scambio dettagliato di informazioni sui tuoi obiettivi e background accademico.',
+            'Selezione dell\'Università e del Programma: Determinazione delle opzioni più adatte a te.',
+            'Preparazione dei Documenti: Preparazione e traduzione di tutti i documenti richiesti.',
+            'Processo di Candidatura: Invio e monitoraggio delle candidature online.',
+            'Preparazione agli Esami: Supporto per la preparazione agli esami quando richiesto.',
+            'Visto e Registrazione: Procedure per la richiesta del visto e la registrazione universitaria.'
+          ]
+        },
+        {
+          title: 'Perché Scegliere Questo Servizio?',
+          type: 'paragraph',
+          content: 'Il processo di iscrizione alle università italiane può essere impegnativo a causa delle procedure complesse e dei requisiti documentali. Candidature errate o incomplete possono portare a perdita di tempo e persino al rifiuto della tua domanda. Con la nostra consulenza professionale, garantiamo che tu completi con successo il processo di iscrizione ricevendo una guida corretta in ogni fase.'
+        }
+      ],
+      priceDisplay: 'Il prezzo individuale per questo servizio è di €400.',
+      contactPrompt: 'Stai cercando un supporto professionale nel tuo processo di iscrizione alle università italiane?',
       contactButtonText: 'Contattaci',
       goBackText: 'Torna a Tutti i Prezzi'
     }
