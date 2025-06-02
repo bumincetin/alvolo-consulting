@@ -12,11 +12,11 @@ const getNavbarContent = (lang: string) => {
     tr: {
       brand: "Alvolo Danışmanlık",
       home: "Ana Sayfa",
+      missionVision: "Misyon & Vizyon",
       services: "Hizmetlerimiz",
       pricing: "Fiyatlandırma",
       about: "Hakkımızda",
       ourStory: "Hikayemiz",
-      missionVision: "Misyon & Vizyon",
       realEstateAgents: "Emlakçılar İçin",
       contact: "İletişim",
       openMenu: "Menüyü Aç",
@@ -25,11 +25,11 @@ const getNavbarContent = (lang: string) => {
     en: {
       brand: "Alvolo Consulting",
       home: "Home",
+      missionVision: "Mission & Vision",
       services: "Services",
       pricing: "Pricing",
       about: "About Us",
       ourStory: "Our Story",
-      missionVision: "Mission & Vision",
       realEstateAgents: "For Real Estate Agents",
       contact: "Contact",
       openMenu: "Open Menu",
@@ -38,11 +38,11 @@ const getNavbarContent = (lang: string) => {
     it: {
       brand: "Alvolo Consulenza",
       home: "Pagina Iniziale",
+      missionVision: "Missione & Visione",
       services: "Servizi",
       pricing: "Prezzi",
       about: "Chi Siamo",
       ourStory: "La Nostra Storia",
-      missionVision: "Missione & Visione",
       realEstateAgents: "Per Agenti Immobiliari",
       contact: "Contatti",
       openMenu: "Apri Menu",
@@ -59,11 +59,11 @@ const Navbar = () => {
 
   const navItems = [
     { label: c.home, href: '/' },
+    { label: c.missionVision, href: '/mission-vision' },
     { label: c.services, href: '/hizmetlerimiz' },
     { label: c.pricing, href: '/pricing' },
     { label: c.about, href: '/about' },
     { label: c.ourStory, href: '/our-story' },
-    { label: c.missionVision, href: '/mission-vision' },
     { label: c.realEstateAgents, href: '/real-estate-agents' },
     { label: c.contact, href: '/#contact' },
   ];
