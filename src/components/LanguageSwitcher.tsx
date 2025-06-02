@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { usePathname, useRouter } from 'next/navigation';
 
 const languages = [
   { code: 'tr', label: 'Türkçe' },
