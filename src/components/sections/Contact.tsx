@@ -16,6 +16,7 @@ const getContactSectionContent = (lang: string) => {
       formSendingButton: "Gönderiliyor...",
       formSuccessMessage: "Mesajınız başarıyla gönderildi!",
       formErrorMessage: "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
+      formErrorDetails: "Hata detayı: ",
       phoneTitle: "Telefon",
       phoneDetails: "Whatsapp: +39 348 170 5207<br />Alternatif: +39 351 713 6434",
       emailTitle: "E-posta",
@@ -33,6 +34,7 @@ const getContactSectionContent = (lang: string) => {
       formSendingButton: "Sending...",
       formSuccessMessage: "Your message has been sent successfully!",
       formErrorMessage: "An error occurred while sending your message. Please try again.",
+      formErrorDetails: "Error details: ",
       phoneTitle: "Phone",
       phoneDetails: "Whatsapp: +39 348 170 5207<br />Alternative: +39 351 713 6434",
       emailTitle: "Email",
@@ -50,6 +52,7 @@ const getContactSectionContent = (lang: string) => {
       formSendingButton: "Invio in corso...",
       formSuccessMessage: "Il tuo messaggio è stato inviato con successo!",
       formErrorMessage: "Si è verificato un errore durante l'invio del messaggio. Riprova.",
+      formErrorDetails: "Dettagli errore: ",
       phoneTitle: "Telefono",
       phoneDetails: "Whatsapp: +39 348 170 5207<br />Alternativo: +39 351 713 6434",
       emailTitle: "Email",
@@ -72,16 +75,23 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionStatus, setSubmissionStatus] = useState<'success' | 'error' | null>(null);
+  const [errorDetails, setErrorDetails] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormData(prev => ({ ...prev, [id]: value }));
+    // Clear error when user starts typing
+    if (submissionStatus === 'error') {
+      setSubmissionStatus(null);
+      setErrorDetails(null);
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmissionStatus(null);
+    setErrorDetails(null);
 
     try {
       const response = await fetch('/api/contact', {
@@ -92,19 +102,22 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
         setSubmissionStatus('success');
         setFormData({ name: '', email: '', message: '' }); // Reset form
       } else {
         setSubmissionStatus('error');
+        setErrorDetails(data.details || data.error || 'An unknown error occurred');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmissionStatus('error');
+      setErrorDetails('Network error. Please check your internet connection.');
     }
     setIsSubmitting(false);
   };
-
 
   // Helper to render text with <br /> tags
   const renderHtml = (htmlString: string) => {
@@ -178,16 +191,24 @@ const Contact = () => {
               >
                 {isSubmitting ? c.formSendingButton : c.formSubmitButton}
               </button>
+
               {submissionStatus === 'success' && (
                 <p className="text-green-600">{c.formSuccessMessage}</p>
               )}
               {submissionStatus === 'error' && (
-                <p className="text-red-600">{c.formErrorMessage}</p>
+                <div className="text-red-600">
+                  <p>{c.formErrorMessage}</p>
+                  {errorDetails && (
+                    <p className="text-sm mt-1">
+                      {c.formErrorDetails}{errorDetails}
+                    </p>
+                  )}
+                </div>
               )}
             </form>
           </div>
           
-          <div className="space-y-8 text-brand-text-primary">
+          <div className="space-y-8">
             <div className="flex items-start gap-4">
               <FaPhone className="w-6 h-6 text-brand-gold flex-shrink-0 mt-1" />
               <div>

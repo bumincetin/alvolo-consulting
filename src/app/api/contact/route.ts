@@ -17,31 +17,55 @@ console.log('Resend API Key Status:', process.env.RESEND_API_KEY ? 'Present' : '
 export const runtime = 'edge'
 export async function POST(request: Request) {
   const toEmail = 'alvoloconsulting@gmail.com';
+  
   try {
+    // Log the start of the request
+    console.log('Starting contact form submission...');
+
     const body = await request.json();
     const { name, email, message } = body;
 
-    // Basic validation (you can expand this)
+    // Log received data
+    console.log('Received form data:', { name, email, messageLength: message?.length });
+
+    // Basic validation
     if (!name || !email || !message) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+      console.log('Validation failed:', { name: !!name, email: !!email, message: !!message });
+      return NextResponse.json({ 
+        error: 'Missing required fields',
+        details: {
+          name: !name ? 'Name is required' : null,
+          email: !email ? 'Email is required' : null,
+          message: !message ? 'Message is required' : null
+        }
+      }, { status: 400 });
     }
 
     // Check if Resend is properly initialized
     if (!resend) {
       console.error('Resend API key is missing');
-      return NextResponse.json({ error: 'Email service is not configured' }, { status: 500 });
+      return NextResponse.json({ 
+        error: 'Email service is not configured',
+        details: 'Please check the server configuration'
+      }, { status: 500 });
     }
 
-    console.log('Received contact form submission:');
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
-    console.log('Would send to:', toEmail);
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      console.log('Invalid email format:', email);
+      return NextResponse.json({ 
+        error: 'Invalid email format',
+        details: 'Please provide a valid email address'
+      }, { status: 400 });
+    }
+
+    console.log('Attempting to send email...');
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'alvoloconsulting@gmail.com',
+      from: 'Alvolo Consulting <onboarding@resend.dev>',
+      to: [toEmail],
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
@@ -60,15 +84,24 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error('Error sending email:', error);
-      return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
+      console.error('Resend API error:', error);
+      return NextResponse.json({ 
+        error: 'Failed to send email',
+        details: error.message || 'Unknown error occurred'
+      }, { status: 500 });
     }
 
     console.log('Email sent successfully:', data);
-    return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
+    return NextResponse.json({ 
+      message: 'Email sent successfully',
+      details: 'Your message has been delivered'
+    }, { status: 200 });
 
   } catch (error) {
-    console.error('Error processing request:', error);
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    console.error('Unexpected error:', error);
+    return NextResponse.json({ 
+      error: 'Internal Server Error',
+      details: error instanceof Error ? error.message : 'An unexpected error occurred'
+    }, { status: 500 });
   }
 } 
