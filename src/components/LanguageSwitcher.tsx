@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { usePathname, useRouter } from 'next/navigation';
+import { slugMapping } from '@/app/pricing/[slug]/serviceData';
 
 const languages = [
   { code: 'tr', label: 'Türkçe' },
@@ -11,6 +13,8 @@ const languages = [
 
 export const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setLanguage(event.target.value);

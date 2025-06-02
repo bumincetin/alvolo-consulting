@@ -83,8 +83,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                     src={service.mainImage} 
                     alt={service.title} 
                     layout="fill"
-                    objectFit="cover"
-                    className="rounded-lg"
+                    className="rounded-lg object-cover"
                   />
                 </div>
               )}

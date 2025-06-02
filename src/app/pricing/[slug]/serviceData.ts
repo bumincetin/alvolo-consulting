@@ -27,7 +27,7 @@ export interface ServiceDetail {
       slug: 'karsilama-hizmeti',
       title: 'Karşılama Hizmeti Detayları',
       pageSubtitle: 'İtalya\'ya varışınızda sizi nelerin beklediğini ve sunduğumuz kolaylıkları keşfedin.',
-      mainImage: '/images/services/welcome_banner.jpg',
+      mainImage: '/karsilama2.png',
       introduction: 'İtalya\'ya ilk adımınızı attığınız andan itibaren konforunuz ve rahatınız bizim için önceliklidir. Karşılama hizmetimiz, yeni şehrinize stressiz, güvenli ve bilgili bir başlangıç yapmanız için özenle tasarlanmıştır. Havalimanı veya tren istasyonunda sizi isminizle karşılayıp, konaklama yerinize kadar eşlik ediyoruz.',
       sections: [
         {
@@ -67,7 +67,7 @@ export interface ServiceDetail {
       slug: 'konaklama-danismanligi',
       title: 'Konaklama Bulma Danışmanlığı Detayları',
       pageSubtitle: 'İtalya\'daki yeni yuvanızı bulma sürecinizi kolaylaştırıyoruz.',
-      mainImage: '/images/services/accommodation_banner.jpg',
+      mainImage: '/konaklama2.jpg',
       introduction: 'İtalya\'da eğitim veya profesyonel yaşamınıza başlarken en önemli adımlardan biri doğru konaklamayı bulmaktır. Bütçenize, tercihlerinize ve yaşam tarzınıza uygun, güvenli ve konforlu bir yer bulmanız için size özel danışmanlık hizmeti sunuyoruz.',
       sections: [
         {
@@ -108,7 +108,7 @@ export interface ServiceDetail {
       slug: 'oturum-izni-ikametgah',
       title: 'Oturum İzni (Permesso di Soggiorno) & İkametgah (Residenza) Danışmanlığı',
       pageSubtitle: 'İtalya\'daki yasal süreçlerinizi sorunsuz bir şekilde tamamlayın.',
-      mainImage: '/images/services/permit_banner.jpg',
+      mainImage: '/bürokrasi.jpg',
       introduction: 'İtalya\'da uzun süreli kalmayı planlayan öğrenciler ve profesyoneller için oturum izni (Permesso di Soggiorno) ve ikametgah kaydı (Residenza) almak yasal bir zorunluluktur. Bu karmaşık ve zaman alıcı bürokratik süreçlerde size adım adım rehberlik ediyoruz.',
       sections: [
         {
@@ -148,7 +148,7 @@ export interface ServiceDetail {
       slug: 'burs-basvurusu',
       title: 'Burs Başvurusu Danışmanlığı Detayları',
       pageSubtitle: 'İtalya\'daki eğitim hayallerinizi burslarla destekleyin.',
-      mainImage: '/images/services/scholarship_banner.jpg',
+      mainImage: '/burs2.png',
       introduction: 'İtalya, uluslararası öğrencilere çeşitli burs imkanları sunan bir ülkedir. Ancak doğru bursu bulmak, başvuru şartlarını anlamak ve etkili bir başvuru dosyası hazırlamak uzmanlık gerektirebilir. Burs başvurusu danışmanlık hizmetimizle, potansiyelinizi en iyi şekilde yansıtarak burs alma şansınızı artırmanıza yardımcı oluyoruz.',
       sections: [
         {
@@ -184,7 +184,7 @@ export interface ServiceDetail {
       slug: 'surucu-belgesi',
       title: 'Sürücü Belgesi (Ehliyet) Alma Danışmanlığı Detayları',
       pageSubtitle: 'İtalya yollarında güvenle araç kullanmak için ilk adımınız.',
-      mainImage: '/images/services/license_banner.jpg',
+      mainImage: '/driver.jpg',
       introduction: 'İtalya\'da araç kullanmayı planlıyorsanız, geçerli bir sürücü belgesine sahip olmanız gerekir. Mevcut ehliyetinizin İtalya\'da ne kadar süreyle geçerli olduğu, İtalyan ehliyetine nasıl çevrileceği veya sıfırdan nasıl İtalyan ehliyeti alınacağı gibi konularda size kapsamlı danışmanlık sunuyoruz.',
       sections: [
         {
@@ -221,7 +221,7 @@ export interface ServiceDetail {
       slug: 'welcome-service',
       title: 'Welcome Service Details',
       pageSubtitle: 'Discover what awaits you upon your arrival in Italy and the conveniences we offer.',
-      mainImage: '/images/services/welcome_banner.jpg',
+      mainImage: '/karsilama2.png',
       introduction: 'Your comfort and ease are our priority from the moment you first step into Italy. Our welcome service is meticulously designed for you to make a stress-free, safe, and informed start in your new city. We greet you by name at the airport or train station and accompany you to your accommodation.',
       sections: [
         {
@@ -261,7 +261,7 @@ export interface ServiceDetail {
       slug: 'accommodation-consultancy',
       title: 'Accommodation Finding Consultancy Details',
       pageSubtitle: 'We simplify the process of finding your new home in Italy.',
-      mainImage: '/images/services/accommodation_banner.jpg',
+      mainImage: '/konaklama2.jpg',
       introduction: 'Finding the right accommodation is one of the most crucial steps when starting your studies or professional life in Italy. We offer personalized consultancy services to help you find a safe, comfortable place that fits your budget, preferences, and lifestyle.',
       sections: [
         {
@@ -302,7 +302,7 @@ export interface ServiceDetail {
       slug: 'residence-permit-residency',
       title: 'Residence Permit (Permesso di Soggiorno) & Residency (Residenza) Consultancy Details',
       pageSubtitle: 'Complete your legal processes in Italy smoothly.',
-      mainImage: '/images/services/permit_banner.jpg',
+      mainImage: '//bürokrasi.jpg',
       introduction: 'For students and professionals planning a long-term stay in Italy, obtaining a residence permit (Permesso di Soggiorno) and registering residency (Residenza) is a legal requirement. We guide you step-by-step through these complex and time-consuming bureaucratic processes.',
       sections: [
         {
@@ -342,7 +342,7 @@ export interface ServiceDetail {
       slug: 'scholarship-application',
       title: 'Scholarship Application Consultancy Details',
       pageSubtitle: 'Support your educational dreams in Italy with scholarships.',
-      mainImage: '/images/services/scholarship_banner.jpg',
+      mainImage: '//burs2.png',
       introduction: 'Italy is a country that offers various scholarship opportunities to international students. However, finding the right scholarship, understanding the application requirements, and preparing an effective application file can require expertise. With our scholarship application consultancy service, we help you increase your chances of receiving a scholarship by best reflecting your potential.',
       sections: [
         {
@@ -378,7 +378,7 @@ export interface ServiceDetail {
       slug: 'driving-license',
       title: 'Driving License Acquisition Consultancy Details',
       pageSubtitle: 'Your first step to driving safely on Italian roads.',
-      mainImage: '/images/services/license_banner.jpg',
+      mainImage: '/driver.jpg',
       introduction: 'If you plan to drive in Italy, you must have a valid driving license. We offer comprehensive consultancy on how long your current license is valid in Italy, how to convert it to an Italian license, or how to obtain an Italian license from scratch.',
       sections: [
         {
@@ -415,7 +415,7 @@ export interface ServiceDetail {
       slug: 'servizio-benvenuto',
       title: 'Dettagli del Servizio di Benvenuto',
       pageSubtitle: 'Scopri cosa ti aspetta al tuo arrivo in Italia e le comodità che offriamo.',
-      mainImage: '/images/services/welcome_banner.jpg',
+      mainImage: '/karsilama2.png',
       introduction: 'Il tuo comfort e la tua tranquillità sono la nostra priorità dal momento in cui metti piede in Italia. Il nostro servizio di benvenuto è meticolosamente progettato per farti iniziare la tua avventura nella nuova città in modo sereno, sicuro e informato. Ti accogliamo per nome all\'aeroporto o alla stazione ferroviaria e ti accompagniamo al tuo alloggio.',
       sections: [
         {
@@ -455,7 +455,7 @@ export interface ServiceDetail {
       slug: 'consulenza-alloggio',
       title: 'Dettagli Consulenza Ricerca Alloggio',
       pageSubtitle: 'Semplifichiamo il processo di ricerca della tua nuova casa in Italia.',
-      mainImage: '/images/services/accommodation_banner.jpg',
+      mainImage: '/konaklama2.jpg',
       introduction: 'Trovare l\'alloggio giusto è uno dei passi più cruciali quando inizi i tuoi studi o la tua vita professionale in Italia. Offriamo servizi di consulenza personalizzati per aiutarti a trovare un luogo sicuro e confortevole che si adatti al tuo budget, alle tue preferenze e al tuo stile di vita.',
       sections: [
         {
@@ -496,7 +496,7 @@ export interface ServiceDetail {
       slug: 'permesso-soggiorno-residenza',
       title: 'Dettagli Consulenza Permesso di Soggiorno e Residenza',
       pageSubtitle: 'Completa senza intoppi le tue procedure legali in Italia.',
-      mainImage: '/images/services/permit_banner.jpg',
+      mainImage: '//bürokrasi.jpg',
       introduction: 'Per studenti e professionisti che pianificano un soggiorno a lungo termine in Italia, ottenere un permesso di soggiorno e registrare la residenza è un requisito legale. Ti guidiamo passo dopo passo attraverso questi complessi e lunghi processi burocratici.',
       sections: [
         {
@@ -536,7 +536,7 @@ export interface ServiceDetail {
       slug: 'domanda-borsa-studio',
       title: 'Dettagli Consulenza Domanda Borsa di Studio',
       pageSubtitle: 'Sostieni i tuoi sogni di studio in Italia con le borse di studio.',
-      mainImage: '/images/services/scholarship_banner.jpg',
+      mainImage: '/burs2.png',
       introduction: 'L\'Italia è un paese che offre varie opportunità di borse di studio agli studenti internazionali. Tuttavia, trovare la borsa di studio giusta, comprendere i requisiti di ammissione e preparare un dossier di candidatura efficace può richiedere competenze specifiche. Con il nostro servizio di consulenza per la domanda di borsa di studio, ti aiutiamo ad aumentare le tue possibilità di ricevere una borsa di studio riflettendo al meglio il tuo potenziale.',
       sections: [
         {
@@ -572,7 +572,7 @@ export interface ServiceDetail {
       slug: 'patente-guida',
       title: 'Dettagli Consulenza Ottenimento Patente di Guida',
       pageSubtitle: 'Il tuo primo passo per guidare in sicurezza sulle strade italiane.',
-      mainImage: '/images/services/license_banner.jpg',
+      mainImage: '/driver.jpg',
       introduction: 'Se hai intenzione di guidare in Italia, devi essere in possesso di una patente di guida valida. Offriamo una consulenza completa su quanto tempo è valida la tua patente attuale in Italia, come convertirla in una patente italiana o come ottenere una patente italiana da zero.',
       sections: [
         {

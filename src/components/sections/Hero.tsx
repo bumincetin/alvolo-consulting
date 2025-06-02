@@ -41,7 +41,7 @@ const Hero = () => {
   return (
     <section id="hero" className="relative min-h-[80vh] md:min-h-screen flex flex-col justify-center md:items-center bg-gradient-to-r from-brand-bg-primary to-blue-50 pt-20 md:pt-0">
       {/* Turkish pattern overlay */}
-      <div className="absolute inset-0 opacity-5 bg-[url('/pattern.png')] bg-repeat"></div>
+      <div className="absolute inset-0 opacity-5 bg-[url('/pattern.svg')] bg-repeat"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between">
