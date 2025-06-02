@@ -40,8 +40,8 @@ export async function POST(request: Request) {
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'Alvolo Consulting <onboarding@resend.dev>',
-      to: [toEmail],
+      from: 'onboarding@resend.dev',
+      to: 'alvoloconsulting@gmail.com',
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
