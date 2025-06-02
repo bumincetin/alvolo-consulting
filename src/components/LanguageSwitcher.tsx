@@ -12,8 +12,6 @@ const languages = [
 
 export const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
-  const pathname = usePathname();
-  const router = useRouter();
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setLanguage(event.target.value);
