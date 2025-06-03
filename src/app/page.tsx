@@ -36,26 +36,33 @@ export default function Home() {
         <video
           autoPlay
           muted
-          loop
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          loop
+          preload="auto"
           poster="/LOGO.png"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          onError={(e) => {
+            console.error('Video loading error:', e);
+          }}
         >
-          <source src="/arkaplan.mp4" type="video/mp4" />
+          <source src="/arka2.mp4" type="video/mp4" />
+          {/* fallback text for very old browsers */}
+          Your browser does not support the video tag.
         </video>
-        
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+
+        {/* Text Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4" style={{ fontFamily: 'var(--font-playfair-display), serif' }}>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 drop-shadow-lg" style={{ fontFamily: 'var(--font-playfair-display), serif' }}>
               {text.brand}
             </h1>
-            <p className="text-xl md:text-2xl text-white" style={{ fontFamily: 'var(--font-playfair-display), serif' }}>
+            <p className="text-xl md:text-2xl text-white drop-shadow-lg" style={{ fontFamily: 'var(--font-playfair-display), serif' }}>
               {text.subtitle}
             </p>
           </div>
         </div>
       </div>
+      
 
       <Hero />
       <Services />
