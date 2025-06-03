@@ -35,6 +35,7 @@ const getServicesContent = (lang: string) => {
         },
         {
           title: "Konaklama Bulma Danışmanlığı",
+
           items: [
             "Bütçe, konum ve konut tipine göre özelleştirilmiş ev portföyü sunumu",
             "Emlak gezileri, video turları ve sözleşme müzakere desteği",
@@ -45,11 +46,55 @@ const getServicesContent = (lang: string) => {
         },
         {
           title: "Karşılama Hizmeti",
+
           items: [
             "Havalimanında karşılama & özel transfer (birey/öğrenci grupları)",
             "Şehir oryantasyonu: toplu taşıma kartı, SIM kart, temel ihtiyaç noktaları",
             "İlk günler için acil destek hattı (kayıp eşya, sağlık, dil yardımı)",
             "Özel taleplere göre turlar ve rehberlik organizasyonu"
+          ]
+        },
+        {
+          title: "Üniversite Kayıt İşlemleri",
+
+          items: [
+            "Üniversite başvuru süreçlerinin yönetimi ve takibi",
+            "Gerekli belgelerin hazırlanması ve kontrolü",
+            "Başvuru formlarının doldurulması ve gönderimi",
+            "Kabul sonrası kayıt işlemlerinin yönetimi",
+            "Oryantasyon ve adaptasyon desteği"
+          ]
+        },
+        {
+          title: "Öğrenci Vizesi Danışmanlığı",
+
+          items: [
+            "Vize başvuru süreçlerinin yönetimi",
+            "Gerekli belgelerin hazırlanması ve kontrolü",
+            "Başvuru formlarının doldurulması",
+            "Konsolosluk randevusu alma ve takibi",
+            "Vize sonrası süreç desteği"
+          ]
+        },
+        {
+          title: "Bürokratik İşlemler Desteği",
+
+          items: [
+            "Codice fiscale alma işlemleri",
+            "Sağlık sigortası ve sağlık sistemi kaydı",
+            "Banka hesabı açma işlemleri",
+            "Belediye kayıt işlemleri",
+            "Diğer resmi işlemlerde rehberlik"
+          ]
+        },
+        {
+          title: "Ehliyet İşlemleri Danışmanlığı",
+          items: [
+            "Mevcut ehliyetin dönüştürülmesi süreci",
+            "Yeni ehliyet alma süreci",
+            "Gerekli belgelerin hazırlanması",
+            "Sınav ve randevu işlemleri",
+            "Motorizzazione Civile işlemleri"
           ]
         }
       ]
@@ -62,6 +107,7 @@ const getServicesContent = (lang: string) => {
       services: [
         {
           title: "Scholarship Application Consultancy",
+
           items: [
             "Scanning for state, regional, and private scholarship opportunities suitable for your profile",
             "Converting application calendars and requirements into a scholarship application timeline",
@@ -72,6 +118,7 @@ const getServicesContent = (lang: string) => {
         },
         {
           title: "Residence Permit (Permesso di Soggiorno) Consultancy",
+
           items: [
             "Selecting the appropriate type of permesso di soggiorno according to your personal situation",
             "Complete preparation of documents (contract, insurance, proof of income, etc.)",
@@ -82,6 +129,7 @@ const getServicesContent = (lang: string) => {
         },
         {
           title: "Accommodation Finding Consultancy",
+
           items: [
             "Presentation of a customized housing portfolio according to budget, location, and housing type",
             "Support for real estate tours, video tours, and contract negotiation",
@@ -92,11 +140,56 @@ const getServicesContent = (lang: string) => {
         },
         {
           title: "Welcome Service",
+
           items: [
             "Airport reception & private transfer (individual/student groups)",
             "City orientation: public transport card, SIM card, essential points of interest",
             "Emergency support line for the first few days (lost items, health, language assistance)",
             "Organization of tours and guidance based on specific requests"
+          ]
+        },
+        {
+          title: "University Enrollment Procedures",
+   
+          items: [
+            "Management and tracking of university application processes",
+            "Preparation and verification of required documents",
+            "Filling out and submitting application forms",
+            "Management of post-acceptance registration procedures",
+            "Orientation and adaptation support"
+          ]
+        },
+        {
+          title: "Student Visa Consultancy",
+    
+          items: [
+            "Management of visa application processes",
+            "Preparation and verification of required documents",
+            "Filling out application forms",
+            "Scheduling and tracking consulate appointments",
+            "Post-visa process support"
+          ]
+        },
+        {
+          title: "Bureaucratic Procedures Support",
+         
+          items: [
+            "Codice fiscale application procedures",
+            "Health insurance and healthcare system registration",
+            "Bank account opening procedures",
+            "Municipal registration procedures",
+            "Guidance for other official procedures"
+          ]
+        },
+        {
+          title: "Driving License Consultancy",
+      
+          items: [
+            "Process for converting existing license",
+            "Process for obtaining new license",
+            "Preparation of required documents",
+            "Exam and appointment procedures",
+            "Motorizzazione Civile procedures"
           ]
         }
       ]
@@ -109,6 +202,7 @@ const getServicesContent = (lang: string) => {
       services: [
         {
           title: "Consulenza per la Domanda di Borsa di Studio",
+  
           items: [
             "Scansione delle opportunità di borse di studio statali, regionali e private adatte al tuo profilo",
             "Conversione dei calendari e dei requisiti delle domande in una cronologia per la domanda di borsa di studio",
@@ -119,7 +213,7 @@ const getServicesContent = (lang: string) => {
         },
         {
           title: "Consulenza per il Permesso di Soggiorno",
-          items: [
+           items: [
             "Selezione del tipo di permesso di soggiorno appropriato in base alla tua situazione personale",
             "Preparazione completa dei documenti (contratto, assicurazione, prova di reddito, ecc.)",
             "Fissare un appuntamento in Questura, compilare il kit postale e tracciare la posta",
@@ -129,6 +223,7 @@ const getServicesContent = (lang: string) => {
         },
         {
           title: "Consulenza per la Ricerca di Alloggio",
+
           items: [
             "Presentazione di un portafoglio di alloggi personalizzato in base a budget, posizione e tipo di alloggio",
             "Supporto per visite immobiliari, video tour e negoziazione contrattuale",
@@ -139,11 +234,53 @@ const getServicesContent = (lang: string) => {
         },
         {
           title: "Servizio di Benvenuto",
+
           items: [
             "Accoglienza in aeroporto e trasferimento privato (individuale/gruppi di studenti)",
             "Orientamento in città: tessera trasporti pubblici, SIM card, punti di interesse essenziali",
             "Linea di supporto di emergenza per i primi giorni (oggetti smarriti, salute, assistenza linguistica)",
             "Organizzazione di tour e guida in base a richieste specifiche"
+          ]
+        },
+        {
+          title: "Procedure di Iscrizione Universitaria",
+  
+          items: [
+            "Gestione e monitoraggio dei processi di candidatura universitaria",
+            "Preparazione e verifica dei documenti richiesti",
+            "Compilazione e invio dei moduli di domanda",
+            "Gestione delle procedure di registrazione post-accettazione",
+            "Supporto per l'orientamento e l'adattamento"
+          ]
+        },
+        {
+          title: "Consulenza Visto Studentesco",
+            items: [
+            "Gestione dei processi di richiesta del visto",
+            "Preparazione e verifica dei documenti richiesti",
+            "Compilazione dei moduli di domanda",
+            "Pianificazione e monitoraggio degli appuntamenti consolari",
+            "Supporto per il processo post-visto"
+          ]
+        },
+        {
+          title: "Supporto Procedure Burocratiche",
+          items: [
+            "Procedure per la richiesta del codice fiscale",
+            "Registrazione assicurazione sanitaria e sistema sanitario",
+            "Procedure di apertura conto bancario",
+            "Procedure di registrazione comunale",
+            "Guida per altre procedure ufficiali"
+          ]
+        },
+        {
+          title: "Consulenza Patente di Guida",
+          items: [
+            "Processo per la conversione della patente esistente",
+            "Processo per l'ottenimento della nuova patente",
+            "Preparazione dei documenti richiesti",
+            "Procedure per esami e appuntamenti",
+            "Procedure presso la Motorizzazione Civile"
           ]
         }
       ]
@@ -175,9 +312,11 @@ const ServicesPageComponent = () => {
               key={index}
               className="bg-brand-bg-surface rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
             >
-              <h2 className="text-2xl font-bold text-brand-blue mb-6">
-                {service.title}
-              </h2>
+              <div className="flex justify-between items-start mb-6">
+                <h2 className="text-2xl font-bold text-brand-blue">
+                  {service.title}
+                </h2>
+              </div>
               <ul className="space-y-4">
                 {service.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="flex items-start gap-3">
