@@ -9,6 +9,11 @@
   --brand-bg-primary: #F7FAFC; /* Intended for overall page background */
   --brand-bg-surface: #FAF9F6; /* Intended for surfaces like cards, navbar */
 
+  /* Logo Colors */
+  --logo-blue: #3c77ad;
+  --logo-orange: #f58643;
+  --logo-orange-ton: #ff8b44;
+
   /* Base Definitions using Brand Colors */
   --background: var(--brand-bg-primary);
   --foreground: var(--brand-text-primary);

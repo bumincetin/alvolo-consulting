@@ -10,15 +10,15 @@ const getAboutSectionContent = (lang: string) => {
     tr: {
       title: "Hakkımızda",
       paragraph1: "Alvolo Danışmanlık olarak, İtalya'da eğitim almak veya yeni bir yaşama başlamak isteyen bireylere kapsamlı danışmanlık hizmetleri sunuyoruz.",
-      paragraph2: "Deneyimli ekibimiz, karmaşık bürokratik süreçlerde size rehberlik ederken, hayallerinize ulaşmanız için gerekli tüm adımları atmanıza yardımcı olur.",
+      paragraph2: "Uzman ekibimiz, karmaşık bürokratik süreçlerde size rehberlik ederken, hayallerinize ulaşmanız için gerekli tüm adımları atmanıza yardımcı olur.",
       paragraph3: "Müşteri memnuniyetini ön planda tutarak, kişiye özel çözümlerle İtalya maceranızı kolaylaştırıyoruz.",
       valuesTitle: "Değerlerimiz",
       value1: "Şeffaflık ve Dürüstlük",
-      value2: "Uzmanlık ve Deneyim",
+      value2: "Uzmanlık ve Profesyonellik",
       value3: "Kişiye Özel Yaklaşım",
       value4: "Güvenilirlik",
       value5: "Sürekli Destek",
-      experienceStat: "Yıllık Deneyim",
+      successRateStat: "Başarı Oranı",
       happyClientsStat: "Mutlu Danışan",
       teamTitle: "Ekibimizle Tanışın",
       team: [
@@ -30,15 +30,15 @@ const getAboutSectionContent = (lang: string) => {
     en: {
       title: "About Us",
       paragraph1: "As Alvolo Consulting, we offer comprehensive consulting services to individuals who want to study or start a new life in Italy.",
-      paragraph2: "Our experienced team guides you through complex bureaucratic processes and helps you take all necessary steps to achieve your dreams.",
+      paragraph2: "Our expert team guides you through complex bureaucratic processes and helps you take all necessary steps to achieve your dreams.",
       paragraph3: "Prioritizing customer satisfaction, we facilitate your Italian adventure with personalized solutions.",
       valuesTitle: "Our Values",
       value1: "Transparency and Honesty",
-      value2: "Expertise and Experience",
+      value2: "Expertise and Professionalism",
       value3: "Personalized Approach",
       value4: "Reliability",
       value5: "Continuous Support",
-      experienceStat: "Years of Experience",
+      successRateStat: "Success Rate",
       happyClientsStat: "Happy Clients",
       teamTitle: "Meet Our Team",
       team: [
@@ -54,11 +54,11 @@ const getAboutSectionContent = (lang: string) => {
       paragraph3: "Dando priorità alla soddisfazione del cliente, facilitiamo la tua avventura italiana con soluzioni personalizzate.",
       valuesTitle: "I Nostri Valori",
       value1: "Trasparenza e Onestà",
-      value2: "Competenza ed Esperienza",
+      value2: "Competenza e Professionalità",
       value3: "Approccio Personalizzato",
       value4: "Affidabilità",
       value5: "Supporto Continuo",
-      experienceStat: "Anni di Esperienza",
+      successRateStat: "Tasso di Successo",
       happyClientsStat: "Clienti Soddisfatti",
       teamTitle: "Incontra il Nostro Team",
       team: [
@@ -132,8 +132,8 @@ const AboutPage = () => {
               
               <div className="grid grid-cols-2 gap-6 text-center">
                 <div className="p-6 bg-brand-bg-surface backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-3xl font-bold text-brand-gold mb-2">28+</div>
-                  <div className="text-brand-text-secondary">{c.experienceStat}</div>
+                  <div className="text-3xl font-bold text-brand-gold mb-2">95%</div>
+                  <div className="text-brand-text-secondary">{c.successRateStat}</div>
                 </div>
                 <div className="p-6 bg-brand-bg-surface backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <div className="text-3xl font-bold text-brand-gold mb-2">1000+</div>

@@ -47,10 +47,10 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-12 md:mb-0 text-center md:text-left">
             <div className="inline-block">
-              <h1 className="text-4xl md:text-6xl font-bold text-brand-blue mb-2">
+              <h1 className="text-4xl md:text-6xl font-bold mb-2" style={{color: 'var(--logo-blue)'}}>
                 {c.brandName}
               </h1>
-              <div className="h-1 w-1/3 bg-brand-gold rounded-full mb-6 mx-auto md:mx-0"></div>
+              <div className="h-1 w-1/3 rounded-full mb-6 mx-auto md:mx-0" style={{backgroundColor: 'var(--logo-orange)'}}></div>
             </div>
             <p className="text-xl md:text-2xl text-brand-text-primary mb-8">
               {c.subheading1}
@@ -61,13 +61,19 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
                 href="/#contact"
-                className="px-8 py-4 bg-brand-gold text-white rounded-lg hover:bg-yellow-700 transition duration-300 shadow-lg hover:shadow-xl text-center"
+                className="px-8 py-4 text-white rounded-lg transition duration-300 shadow-lg hover:shadow-xl text-center"
+                style={{backgroundColor: 'var(--logo-orange)'}}
+                onMouseOver={e => e.currentTarget.style.backgroundColor = 'var(--logo-orange-ton)'}
+                onMouseOut={e => e.currentTarget.style.backgroundColor = 'var(--logo-orange)'}
               >
                 {c.contactButton}
               </Link>
               <Link
                 href="/hizmetlerimiz"
-                className="px-8 py-4 border-2 border-brand-gold text-brand-gold rounded-lg hover:bg-yellow-50 hover:text-yellow-700 transition duration-300 text-center"
+                className="px-8 py-4 border-2 rounded-lg transition duration-300 text-center"
+                style={{borderColor: 'var(--logo-blue)', color: 'var(--logo-blue)'}}
+                onMouseOver={e => {e.currentTarget.style.backgroundColor = 'var(--logo-orange-ton)'; e.currentTarget.style.color = 'white';}}
+                onMouseOut={e => {e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = 'var(--logo-blue)';}}
               >
                 {c.servicesButton}
               </Link>

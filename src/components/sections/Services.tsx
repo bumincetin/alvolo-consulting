@@ -56,7 +56,7 @@ const Services = () => {
     <section id="services" className="pt-10 pb-20 md:pt-20 bg-brand-bg-primary">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-brand-blue mb-4">
+          <h2 className="text-4xl font-bold mb-4" style={{color: 'var(--logo-blue)'}}>
             {c.title}
           </h2>
           <p className="text-xl text-brand-text-secondary">
@@ -72,8 +72,8 @@ const Services = () => {
                 key={index}
                 className="p-8 rounded-xl bg-brand-bg-surface hover:shadow-xl transition duration-300"
               >
-                <ServiceIcon className="w-12 h-12 text-brand-gold mb-6" />
-                <h3 className="text-2xl font-semibold text-brand-blue mb-4">
+                <ServiceIcon className="w-12 h-12 mb-6" style={{color: 'var(--logo-orange)'}} onMouseOver={e => e.currentTarget.style.color = 'var(--logo-orange-ton)'} onMouseOut={e => e.currentTarget.style.color = 'var(--logo-orange)'} />
+                <h3 className="text-2xl font-semibold mb-4" style={{color: 'var(--logo-blue)'}}>
                   {service.title}
                 </h3>
                 <p className="text-brand-text-secondary">

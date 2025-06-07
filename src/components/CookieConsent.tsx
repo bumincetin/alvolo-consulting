@@ -89,19 +89,26 @@ export const CookieConsent = () => {
             <div className="flex gap-4">
               <button
                 onClick={handleAcceptAll}
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                className="px-4 py-2 text-white rounded-md transition-colors"
+                style={{backgroundColor: 'var(--logo-orange)'}}
+                onMouseOver={e => e.currentTarget.style.backgroundColor = 'var(--logo-orange-ton)'}
+                onMouseOut={e => e.currentTarget.style.backgroundColor = 'var(--logo-orange)'}
               >
                 {language === 'tr' ? 'Tümünü Kabul Et' : 'Accept All'}
               </button>
               <button
                 onClick={handleRejectAll}
-                className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                className="px-4 py-2 text-white rounded-md transition-colors"
+                style={{backgroundColor: 'var(--logo-blue)'}}
+                onMouseOver={e => e.currentTarget.style.backgroundColor = 'var(--logo-orange-ton)'}
+                onMouseOut={e => e.currentTarget.style.backgroundColor = 'var(--logo-blue)'}
               >
                 {language === 'tr' ? 'Tümünü Reddet' : 'Reject All'}
               </button>
               <button
                 onClick={() => setShowDetails(true)}
-                className="px-4 py-2 text-blue-600 dark:text-blue-400 hover:underline"
+                className="px-4 py-2 underline"
+                style={{color: 'var(--logo-blue)'}}
               >
                 {language === 'tr' ? 'Daha Fazla Seçenek' : 'More Options'}
               </button>
@@ -110,7 +117,7 @@ export const CookieConsent = () => {
         ) : (
           // Detailed preferences view
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">
+            <h3 className="text-lg font-semibold" style={{color: 'var(--logo-blue)'}}>
               {language === 'tr' ? 'Çerez Tercihleri' : 'Cookie Preferences'}
             </h3>
             {Object.entries(COOKIE_CATEGORIES).map(([category, { title, description }]) => (
@@ -127,7 +134,13 @@ export const CookieConsent = () => {
                     disabled={category === 'necessary'}
                     className="sr-only peer"
                   />
-                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                  <div
+                    className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-200 dark:peer-focus:ring-orange-800 rounded-full peer dark:bg-gray-700 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600"
+                    style={{
+                      backgroundColor: consentState[category as CookieCategory] ? 'var(--logo-orange)' : undefined,
+                      borderColor: consentState[category as CookieCategory] ? 'var(--logo-orange)' : undefined,
+                    }}
+                  ></div>
                 </label>
               </div>
             ))}

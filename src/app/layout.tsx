@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/contexts/LanguageContext"; 
 import { CookieConsent } from "@/components/CookieConsent";
 import { ScriptLoader } from "@/components/ScriptLoader";
+import Footer from "@/components/layout/Footer";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -37,8 +38,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // lang attribute is static here. Dynamic update based on client context is removed to fix the error.
     <html lang="tr" suppressHydrationWarning={true}>
+      <head>
+        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; font-src 'self' https: data:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline';" />
+      </head>
       <body
         className={`${playfairDisplay.variable} ${lato.variable} antialiased`}
         suppressHydrationWarning={true} 
@@ -50,6 +54,7 @@ export default function RootLayout({
         >
           <LanguageProvider> {/* LanguageProvider is a Client Component and can wrap children here */}
             {children}
+            <Footer />
             <CookieConsent />
             {/* Google Tag Manager (inline init, only after analytics consent) */}
             <ScriptLoader
