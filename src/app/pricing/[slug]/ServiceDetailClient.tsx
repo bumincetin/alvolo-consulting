@@ -113,6 +113,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                     alt={service.title} 
                     layout="fill"
                     className="rounded-lg object-cover"
+                    quality={100}
                   />
                 </div>
               )}

@@ -89,6 +89,7 @@ const Hero = () => {
                 fill
                 className="object-cover rounded-xl shadow-2xl"
                 priority
+                quality={100}
               />
             </div>
           </div>

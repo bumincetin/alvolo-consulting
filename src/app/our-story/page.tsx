@@ -45,6 +45,7 @@ const OurStoryPageComponent = () => {
             alt="Milan city view - Our Story"
             width={900}
             height={400}
+            quality={100}
             className="w-full h-auto rounded-2xl object-cover shadow-lg"
             priority
           />

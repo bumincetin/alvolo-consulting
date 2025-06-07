@@ -156,7 +156,7 @@ const AboutPage = () => {
                     alt={member.name}
                     fill
                     className="object-cover"
-                    quality={80}
+                    quality={100}
                     sizes="160px"
                   />
                 </div>

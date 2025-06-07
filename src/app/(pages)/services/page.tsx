@@ -50,10 +50,11 @@ const ServicesPage = () => {
         <div className="container mx-auto px-6">
           <div className="w-full max-w-5xl mx-auto mb-12">
             <Image
-              src="/services2.png"
+              src="/2.png"
               alt="Our Services Overview"
               width={1200}
               height={400}
+              quality={100}
               className="w-full h-auto rounded-2xl object-cover shadow-md"
               priority
             />
