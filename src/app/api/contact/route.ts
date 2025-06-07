@@ -38,14 +38,6 @@ export async function POST(request: Request) {
       }, { status: 400 });
     }
 
-    // Check if Resend is properly initialized
-    if (!resend) {
-      console.error('Resend API key is missing');
-      return NextResponse.json({ 
-        error: 'Email service is not configured',
-        details: 'Please check the server configuration'
-      }, { status: 500 });
-    }
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
