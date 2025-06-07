@@ -9,7 +9,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getServiceDetails } from './serviceData';   // ✅ now a clean import
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter} from 'next/navigation';
 import { useEffect, useMemo } from 'react';
 
 export const runtime = 'edge';
