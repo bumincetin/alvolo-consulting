@@ -8,7 +8,7 @@ const getServicesContent = (lang: string) => {
   const content = {
     tr: {
       pageTitle: "Hizmetlerimiz",
-      pageSubtitle: "Öğrenciler ve profesyoneller için entegrasyon çözümleri",
+      pageSubtitle: "Entegrasyon Çözümleri",
       contactPrompt: "Detaylı bilgi ve danışmanlık için bizimle iletişime geçebilirsiniz.",
       contactButtonText: "İletişime Geçin",
       services: [
@@ -91,11 +91,16 @@ const getServicesContent = (lang: string) => {
             "Motorizzazione Civile işlemleri"
           ]
         }
-      ]
+      ],
+      ctaSection: {
+        title: "İtalya'da Yeni Hayatınıza Güvenle Başlayın",
+        description: "Tüm entegrasyon hizmetlerimiz ve fiyatlarımızı inceleyin veya emlak danışmanlarımızla iletişime geçin.",
+        pricing: "Fiyatlarımızı Görüntüle"
+      }
     },
     en: {
       pageTitle: "Our Services",
-      pageSubtitle: "Integration solutions for students and professionals",
+      pageSubtitle: "Integration Solutions",
       contactPrompt: "You can contact us for detailed information and consultancy.",
       contactButtonText: "Contact Us",
       services: [
@@ -178,11 +183,16 @@ const getServicesContent = (lang: string) => {
             "Motorizzazione Civile procedures"
           ]
         }
-      ]
+      ],
+      ctaSection: {
+        title: "Start Your New Life in Italy with Confidence",
+        description: "See all our integration services and pricing or connect with our real estate agents.",
+        pricing: "View Our Pricing"
+      }
     },
     it: {
       pageTitle: "I Nostri Servizi",
-      pageSubtitle: "Soluzioni di consulenza e assistenza per studenti e professionisti",
+      pageSubtitle: "Soluzioni di Integrazione",
       contactPrompt: "Potete contattarci per informazioni dettagliate e consulenza.",
       contactButtonText: "Contattaci",
       services: [
@@ -265,7 +275,12 @@ const getServicesContent = (lang: string) => {
             "Procedure Motorizzazione Civile"
           ]
         }
-      ]
+      ],
+      ctaSection: {
+        title: "Inizia la tua nuova vita in Italia con fiducia",
+        description: "Scopri tutti i nostri servizi di integrazione e prezzi o contatta i nostri agenti immobiliari.",
+        pricing: "Vedi i nostri prezzi"
+      }
     }
   };
   return content[lang as keyof typeof content] || content.tr;
@@ -306,13 +321,13 @@ const IntegrationServicesPage = () => {
         </div>
       </main>
       <section className="py-16 bg-gradient-to-r from-brand-blue to-brand-blue/90 text-center">
-        <h3 className="text-2xl font-bold text-white mb-4">Start Your New Life in Italy with Confidence</h3>
-        <p className="text-lg text-white/90 mb-8">See all our integration services and pricing or connect with our real estate agents.</p>
+        <h3 className="text-2xl font-bold text-white mb-4">{c.ctaSection.title}</h3>
+        <p className="text-lg text-brand-blue mb-8">{c.ctaSection.description}</p>
         <div className="flex flex-col md:flex-row justify-center gap-6">
           <Link href="/pricing" className="inline-block px-8 py-3 border-2 border-white text-lg font-medium rounded-md text-white hover:bg-white hover:text-brand-blue transition-colors duration-200">View Our Pricing</Link>
-          <Link href="/real-estate-agents" className="inline-block px-8 py-3 border-2 border-white text-lg font-medium rounded-md text-white hover:bg-white hover:text-brand-blue transition-colors duration-200">Meet Our Real Estate Agents</Link>
         </div>
       </section>
+      
     </>
   );
 };

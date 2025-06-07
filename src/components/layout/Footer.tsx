@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { FaInstagram, FaYoutube, FaLinkedin, FaWhatsapp, FaCheck } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaCheck } from 'react-icons/fa';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const getFooterContent = (lang: string) => {
@@ -27,11 +27,8 @@ const getFooterContent = (lang: string) => {
         links: [
           { label: 'Entegrasyon Çözümleri', href: '/services/integration' },
           { label: 'Finansal Danışmanlık', href: '/services/financial' },
-          { label: 'Şirket Kuruluşu', href: '/services/integration#company-setup' },
-          { label: 'Öğrenci Hizmetleri', href: '/services/integration#student-services' },
-          { label: 'Vergi ve Muhasebe', href: '/services/financial/consulting' },
-          { label: 'Fiyatlandırma', href: '/pricing' },
-          { label: 'Emlak Danışmanları', href: '/real-estate-agents' },
+          { label: 'Entegrasyon Hizmetleri Fiyatlandırma', href: '/pricing' },
+          { label: 'Emlak Danışmanları İçin', href: '/real-estate-agents' },
         ],
       },
       hours: {
@@ -66,9 +63,6 @@ const getFooterContent = (lang: string) => {
         links: [
           { label: 'Integration Solutions', href: '/services/integration' },
           { label: 'Financial Consultancy', href: '/services/financial' },
-          { label: 'Company Setup', href: '/services/integration#company-setup' },
-          { label: 'Student Services', href: '/services/integration#student-services' },
-          { label: 'Tax & Accounting', href: '/services/financial/consulting' },
           { label: 'Pricing', href: '/pricing' },
           { label: 'Real Estate Agents', href: '/real-estate-agents' },
         ],
@@ -105,9 +99,6 @@ const getFooterContent = (lang: string) => {
         links: [
           { label: 'Soluzioni di Integrazione', href: '/services/integration' },
           { label: 'Consulenza Finanziaria', href: '/services/financial' },
-          { label: 'Costituzione Società', href: '/services/integration#company-setup' },
-          { label: 'Servizi Studenti', href: '/services/integration#student-services' },
-          { label: 'Fisco e Contabilità', href: '/services/financial/consulting' },
           { label: 'Prezzi', href: '/pricing' },
           { label: 'Agenti Immobiliari', href: '/real-estate-agents' },
         ],
@@ -145,9 +136,7 @@ const Footer = () => {
             <div className="text-sm text-gray-700 mb-2">{c.company.address}</div>
             <div className="flex space-x-2 mb-4">
               <a href="https://instagram.com" target="_blank" rel="noopener" className="p-2 bg-gray-100 rounded hover:bg-brand-blue hover:text-white transition"><FaInstagram size={20} /></a>
-              <a href="https://youtube.com" target="_blank" rel="noopener" className="p-2 bg-gray-100 rounded hover:bg-brand-blue hover:text-white transition"><FaYoutube size={20} /></a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener" className="p-2 bg-gray-100 rounded hover:bg-brand-blue hover:text-white transition"><FaLinkedin size={20} /></a>
-              <a href="https://wa.me/905453707055" target="_blank" rel="noopener" className="p-2 bg-gray-100 rounded hover:bg-brand-blue hover:text-white transition"><FaWhatsapp size={20} /></a>
+              <a href="https://www.linkedin.com/company/alvolo-consulting" target="_blank" rel="noopener" className="p-2 bg-gray-100 rounded hover:bg-brand-blue hover:text-white transition"><FaLinkedin size={20} /></a>
             </div>
           </div>
 
@@ -156,7 +145,14 @@ const Footer = () => {
             <div className="font-bold text-lg text-brand-blue border-b border-gray-200 pb-1 mb-3">{c.corporate.title}</div>
             <ul className="space-y-2 text-sm">
               {c.corporate.links.map((item, idx) => (
-                <li key={idx}><FaCheck className="inline mr-2 text-brand-gold" /><Link href={item.href} className="hover:underline">{item.label}</Link></li>
+                <li key={idx}>
+                  <FaCheck className="inline mr-2 text-brand-gold" />
+                  {item.label === 'Announcements' || item.label === 'Blog' ? (
+                    <Link href={`/${item.label.toLowerCase()}`} className="hover:underline">Blog.</Link>
+                  ) : (
+                    <Link href={item.href} className="hover:underline">{item.label}</Link>
+                  )}
+                </li>
               ))}
             </ul>
           </div>
