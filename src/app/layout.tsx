@@ -7,9 +7,6 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CookieConsent } from "@/components/CookieConsent";
 import { ScriptLoader } from "@/components/ScriptLoader";
 import Footer from "@/components/layout/Footer";
-import { AnimatePresence, motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import ClientLayout from "./ClientLayout";
 
 const playfairDisplay = Playfair_Display({

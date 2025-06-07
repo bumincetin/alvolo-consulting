@@ -38,7 +38,7 @@ const getServicesContent = (lang: string) => {
             "Bütçe, konum ve konut tipine göre özelleştirilmiş ev portföyü sunumu",
             "Emlak gezileri, video turları ve sözleşme müzakere desteği",
             "Kontrat, depozito ve noter işlemlerinde hukuki rehberlik",
-            "Taşınma günü abone açılışları & belediye kayıt işlemlerinde yardımcı olma",
+            "Taşınma günü elektrik, su, internet, TV vb. açılışları & belediye kayıt işlemlerinde yardımcı olma",
             "Yerleşim sonrası acil tamir/servis ağlarına yönlendirme"
           ]
         },
@@ -68,7 +68,6 @@ const getServicesContent = (lang: string) => {
             "Gerekli belgelerin hazırlanması ve kontrolü",
             "Başvuru formlarının doldurulması",
             "Konsolosluk randevusu alma ve takibi",
-            "Vize sonrası süreç desteği"
           ]
         },
         {
@@ -130,7 +129,7 @@ const getServicesContent = (lang: string) => {
             "Presentation of a customized housing portfolio according to budget, location, and housing type",
             "Support for real estate tours, video tours, and contract negotiation",
             "Legal guidance for contracts, deposits, and notary procedures",
-            "Assistance with utility subscriptions & municipal registration on moving day",
+            "Assistance with electricity, water, internet, TV, etc. subscriptions & municipal registration on moving day",
             "Referral to emergency repair/service networks after settling in"
           ]
         },
@@ -160,7 +159,6 @@ const getServicesContent = (lang: string) => {
             "Preparation and verification of required documents",
             "Filling out application forms",
             "Scheduling and tracking consulate appointments",
-            "Post-visa process support"
           ]
         },
         {
@@ -222,7 +220,7 @@ const getServicesContent = (lang: string) => {
             "Presentazione di un portafoglio immobiliare personalizzato in base a budget, posizione e tipologia di alloggio",
             "Supporto per visite immobiliari, video tour e negoziazione contrattuale",
             "Assistenza legale per contratti, depositi e pratiche notarili",
-            "Assistenza per attivazione utenze e registrazione comunale il giorno del trasloco",
+            "Assistenza per attivazione utenze (elettricità, acqua, internet, TV, ecc.) e registrazione comunale il giorno del trasloco",
             "Indirizzamento a reti di assistenza/servizio di emergenza dopo l'insediamento"
           ]
         },
@@ -251,8 +249,7 @@ const getServicesContent = (lang: string) => {
             "Gestione delle procedure di richiesta visto",
             "Preparazione e verifica dei documenti richiesti",
             "Compilazione dei moduli di domanda",
-            "Prenotazione e monitoraggio appuntamenti consolari",
-            "Supporto post-visto"
+            "Prenotazione e monitoraggio appuntamenti consolari"
           ]
         },
         {
