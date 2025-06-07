@@ -21,7 +21,6 @@ interface ServiceDetailClientProps {
 export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) {
     const { language } = useLanguage();
     const router = useRouter();
-    const pathname = usePathname();
     const service = getServiceDetails(slug, language); // Use slug directly
   
     // Compute the correct slug for the current language (if available)
