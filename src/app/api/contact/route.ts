@@ -10,7 +10,7 @@ import nodemailer from 'nodemailer';
 // Example using Resend (you'd need to install resend: npm install resend)
 // import { Resend } from 'resend';
 // const resend = new Resend(process.env.RESEND_API_KEY);
-export const runtime = 'nodejs';
+export const runtime = 'edge';
 
 export async function POST(request: Request) {
   const toEmail = 'alvoloconsulting@gmail.com';
