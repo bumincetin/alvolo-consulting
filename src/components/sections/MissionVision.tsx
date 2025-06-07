@@ -62,6 +62,9 @@ export default function MissionVision() {
             <p className="text-brand-text-secondary leading-relaxed">
               {currentContent.mission.description}
             </p>
+            <p className="mt-4 text-brand-text-secondary leading-relaxed">
+              We are committed to excellence and innovation, ensuring that every client receives the highest quality service tailored to their specific needs.
+            </p>
           </div>
 
           {/* Vision */}
@@ -74,6 +77,9 @@ export default function MissionVision() {
             </div>
             <p className="text-brand-text-secondary leading-relaxed">
               {currentContent.vision.description}
+            </p>
+            <p className="mt-4 text-brand-text-secondary leading-relaxed">
+              Our vision is to be a beacon of trust and excellence, guiding our clients through their journey in Italy with confidence and success.
             </p>
           </div>
         </div>

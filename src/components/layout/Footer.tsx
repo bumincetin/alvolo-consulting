@@ -147,11 +147,7 @@ const Footer = () => {
               {c.corporate.links.map((item, idx) => (
                 <li key={idx}>
                   <FaCheck className="inline mr-2 text-brand-gold" />
-                  {item.label === 'Announcements' || item.label === 'Blog' ? (
-                    <Link href={`/${item.label.toLowerCase()}`} className="hover:underline">Blog.</Link>
-                  ) : (
-                    <Link href={item.href} className="hover:underline">{item.label}</Link>
-                  )}
+                  <Link href={item.href} className="hover:underline">{item.label}</Link>
                 </li>
               ))}
             </ul>

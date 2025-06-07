@@ -23,7 +23,7 @@ const getServicesContent = (lang: string) => {
           ]
         },
         {
-          title: "Oturum İzni (Permesso di Soggiorno) Alma Danışmanlığı",
+          title: "Oturum İzni (Permesso di Soggiorno) Danışmanlığı",
           items: [
             "Kişisel durumunuza göre uygun permesso di soggiorno türünün seçimi",
             "Belgelerin (kontrat, sigorta, gelir kanıtı vb.) eksiksiz hazırlanması",
@@ -52,7 +52,7 @@ const getServicesContent = (lang: string) => {
           ]
         },
         {
-          title: "Üniversite Kayıt İşlemleri",
+          title: "Üniversite Başvuru Danışmanlığı",
           items: [
             "Üniversite başvuru süreçlerinin yönetimi ve takibi",
             "Gerekli belgelerin hazırlanması ve kontrolü",
@@ -324,7 +324,7 @@ const IntegrationServicesPage = () => {
         <h3 className="text-2xl font-bold text-white mb-4">{c.ctaSection.title}</h3>
         <p className="text-lg text-brand-blue mb-8">{c.ctaSection.description}</p>
         <div className="flex flex-col md:flex-row justify-center gap-6">
-          <Link href="/pricing" className="inline-block px-8 py-3 border-2 border-white text-lg font-medium rounded-md text-white hover:bg-white hover:text-brand-blue transition-colors duration-200">{c.ctaSection.pricing}</Link>
+          <Link href="/pricing" className="inline-block px-8 py-3 border-2 border-brand-blue text-lg font-medium rounded-md text-white hover:bg-white hover:text-brand-blue transition-colors duration-200">{c.ctaSection.pricing}</Link>
         </div>
       </section>
           </>
