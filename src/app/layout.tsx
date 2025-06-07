@@ -22,9 +22,17 @@ const lato = Lato({
 
 // Metadata can now be exported as this is a Server Component by default
 export const metadata: Metadata = {
-  title: "Alvolo Consulting Danışmanlık", // Default to TR, or consider removing if it should be truly dynamic via other means
-  description: "Eğitim, bürokrasi, emlak ve adaptasyon süreçlerinizde profesyonel danışmanlık hizmetleri",
-  keywords: "Alvolo Consulting Danışmanlık, Eğitim, bürokrasi, emlak, adaptasyon, danışmanlık",
+  title: "Alvolo Consulting | Financial & Integration Solutions for Italy",
+  description: "Professional, multilingual consulting for doing business in Italy. Company formation, financial consulting, integration, and legal services for international clients. Trusted by hundreds of happy clients.",
+  keywords: [
+    "Alvolo Consulting", "Italy business consulting", "company formation Italy", 
+    "financial consulting Italy", "integration solutions Italy", "İtalya danışmanlık", "business setup Italy", 
+    "Italian market entry", "legal consulting Italy", "international clients Italy", "italy startup package", 
+    "italy expansion package", "italy company formation", "italy financial consulting", "italy integration solutions", 
+    "italy legal consulting", "italy international clients","italya finansal danışmanlık", "italya girişimcilik paketi", 
+    "italya genişleme paketi", "italya şirket kurulumu", "italya finansal danışmanlık", "italya entegrasyon çözümleri", 
+    "italya yasal danışmanlık", "italya uluslararası müşteriler"
+  ],
   icons: {
     icon: '/ICON.png', // Points to public/icon.png
   },

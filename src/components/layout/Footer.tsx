@@ -16,7 +16,7 @@ const getFooterContent = (lang: string) => {
         title: 'Kurumsal',
         links: [
           { label: 'Hakkımızda', href: '/about' },
-          { label: 'İletişim', href: '/contact' },
+          { label: 'İletişim', href: '/#contact' },
           { label: 'Gizlilik Politikası', href: '/privacy' },
           { label: 'Duyurular', href: '/announcements' },
           { label: 'Blog', href: '/blog' },
@@ -52,7 +52,7 @@ const getFooterContent = (lang: string) => {
         title: 'Corporate',
         links: [
           { label: 'About Us', href: '/about' },
-          { label: 'Contact', href: '/contact' },
+          { label: 'Contact', href: '/#contact' },
           { label: 'Privacy Policy', href: '/privacy' },
           { label: 'Announcements', href: '/announcements' },
           { label: 'Blog', href: '/blog' },
@@ -88,7 +88,7 @@ const getFooterContent = (lang: string) => {
         title: 'Società',
         links: [
           { label: 'Chi Siamo', href: '/about' },
-          { label: 'Contatto', href: '/contact' },
+          { label: 'Contatto', href: '/#contact' },
           { label: 'Politica sulla Privacy', href: '/privacy' },
           { label: 'Annunci', href: '/announcements' },
           { label: 'Blog', href: '/blog' },

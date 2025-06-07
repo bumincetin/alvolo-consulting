@@ -2,13 +2,13 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
 import Link from 'next/link';
-import { FaCheck, FaRegLightbulb, FaRegBuilding, FaRegChartBar, FaRegHandshake, FaChevronDown } from 'react-icons/fa';
+import { FaCheck, FaCheckCircle, FaRegLightbulb, FaRegBuilding, FaRegChartBar, FaRegHandshake, FaChevronDown } from 'react-icons/fa';
 import { useState } from 'react';
 
 const getStartupContent = (lang: string) => {
   const content = {
     tr: {
-      title: "Başlangıç Paketi",
+      title: "Girişimcilik Paketi",
       hero: {
         headline: "İtalya'da Şirket Kurulumunda Güvenilir Ortağınız",
         sub: "Girişimciler ve yatırımcılar için anahtar teslim finansal ve yasal danışmanlık. Tüm süreç boyunca yanınızdayız.",
@@ -21,7 +21,7 @@ const getStartupContent = (lang: string) => {
           { icon: <FaRegBuilding />, label: "Şirket Türü Seçimi ve Kuruluş" },
           { icon: <FaRegChartBar />, label: "Finansal Planlama ve Bütçe" },
           { icon: <FaRegHandshake />, label: "Banka Hesabı ve Resmi Kayıtlar" },
-          { icon: <FaCheck />, label: "İlk Yıl Sürekli Destek" }
+          { icon: <FaCheckCircle />, label: "İlk Yıl Sürekli Destek" }
         ]
       },
       features: {
@@ -54,7 +54,7 @@ const getStartupContent = (lang: string) => {
       }
     },
     en: {
-      title: "Startup Package",
+      title: "Startups Package",
       hero: {
         headline: "Your Trusted Partner for Company Formation in Italy",
         sub: "Turnkey financial and legal consulting for entrepreneurs and investors. We guide you every step of the way.",
@@ -67,7 +67,7 @@ const getStartupContent = (lang: string) => {
           { icon: <FaRegBuilding />, label: "Company Type Selection & Incorporation" },
           { icon: <FaRegChartBar />, label: "Financial Planning & Budgeting" },
           { icon: <FaRegHandshake />, label: "Bank Account & Legal Registrations" },
-          { icon: <FaCheck />, label: "Continuous Support (Year 1)" }
+          { icon: <FaCheckCircle />, label: "Continuous Support (Year 1)" }
         ]
       },
       features: {
@@ -113,7 +113,7 @@ const getStartupContent = (lang: string) => {
           { icon: <FaRegBuilding />, label: "Scelta tipo società e costituzione" },
           { icon: <FaRegChartBar />, label: "Pianificazione finanziaria e budget" },
           { icon: <FaRegHandshake />, label: "Conto bancario e registrazioni legali" },
-          { icon: <FaCheck />, label: "Supporto continuo (1° anno)" }
+          { icon: <FaCheckCircle />, label: "Supporto continuo (1° anno)" }
         ]
       },
       features: {
@@ -229,8 +229,8 @@ const StartupPage = () => {
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-brand-blue to-brand-blue/90 text-center">
         <h3 className="text-2xl font-bold text-white mb-4">{c.hero.headline}</h3>
-        <p className="text-lg text-white/90 mb-8">{c.hero.sub}</p>
-        <Link href="/#contact" className="inline-block px-8 py-3 border-2 border-white text-lg font-medium rounded-md text-white hover:bg-white hover:text-brand-blue transition-colors duration-200">{c.hero.cta}</Link>
+        <p className="text-lg text-brand-blue/90 mb-8">{c.hero.sub}</p>
+        <Link href="/#contact" className="inline-block px-8 py-3 border-2 border-white text-lg font-medium rounded-md text-brand-blue hover:bg-white hover:text-brand-blue transition-colors duration-200">{c.hero.cta}</Link>
       </section>
     </>
   );

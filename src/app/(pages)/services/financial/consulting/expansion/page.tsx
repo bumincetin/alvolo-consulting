@@ -2,13 +2,13 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
 import Link from 'next/link';
-import { FaCheck, FaRegChartBar, FaRegHandshake, FaGlobe, FaRegLightbulb, FaChevronDown } from 'react-icons/fa';
+import { FaCheck, FaCheckCircle, FaRegChartBar, FaRegHandshake, FaGlobe, FaRegLightbulb, FaChevronDown } from 'react-icons/fa';
 import { useState } from 'react';
 
 const getExpansionContent = (lang: string) => {
   const content = {
     tr: {
-      title: "Genişleme Paketi",
+      title: "İtalya'ya Açılma Paketi",
       hero: {
         headline: "İtalya Pazarında Büyüme İçin Stratejik Rehberlik",
         sub: "Türk KOBİ'leri ve işletmeler için İtalya'ya açılmada kapsamlı finansal ve stratejik danışmanlık.",
@@ -21,7 +21,7 @@ const getExpansionContent = (lang: string) => {
           { icon: <FaGlobe />, label: "Uluslararası Ticaret ve Finans" },
           { icon: <FaRegChartBar />, label: "Yatırım ve Fon Yönetimi" },
           { icon: <FaRegHandshake />, label: "Risk Yönetimi ve Sigorta" },
-          { icon: <FaCheck />, label: "Sürekli Finansal Danışmanlık" }
+          { icon: <FaCheckCircle />, label: "Sürekli Finansal Danışmanlık" }
         ]
       },
       features: {
@@ -53,7 +53,7 @@ const getExpansionContent = (lang: string) => {
       }
     },
     en: {
-      title: "Expansion Package",
+      title: "Italy Expansion Package",
       hero: {
         headline: "Strategic Guidance for Growth in the Italian Market",
         sub: "Comprehensive financial and strategic consulting for Turkish SMEs and businesses expanding into Italy.",
@@ -66,7 +66,7 @@ const getExpansionContent = (lang: string) => {
           { icon: <FaGlobe />, label: "International Trade & Finance" },
           { icon: <FaRegChartBar />, label: "Investment & Fund Management" },
           { icon: <FaRegHandshake />, label: "Risk Management & Insurance" },
-          { icon: <FaCheck />, label: "Ongoing Financial Consulting" }
+          { icon: <FaCheckCircle />, label: "Ongoing Financial Consulting" }
         ]
       },
       features: {
@@ -98,7 +98,7 @@ const getExpansionContent = (lang: string) => {
       }
     },
     it: {
-      title: "Pacchetto Espansione",
+      title: "Pacchetto Espansione in Italia",
       hero: {
         headline: "Guida Strategica per la Crescita nel Mercato Italiano",
         sub: "Consulenza finanziaria e strategica completa per PMI e aziende turche che si espandono in Italia.",
@@ -111,7 +111,7 @@ const getExpansionContent = (lang: string) => {
           { icon: <FaGlobe />, label: "Commercio e Finanza Internazionale" },
           { icon: <FaRegChartBar />, label: "Gestione Investimenti e Fondi" },
           { icon: <FaRegHandshake />, label: "Gestione del Rischio e Assicurazione" },
-          { icon: <FaCheck />, label: "Consulenza Finanziaria Continua" }
+          { icon: <FaCheckCircle />, label: "Consulenza Finanziaria Continua" }
         ]
       },
       features: {
@@ -187,7 +187,10 @@ const ExpansionPage = () => {
             <h3 className="text-xl font-bold text-brand-blue mb-4">{c.features.title}</h3>
             <ul className="space-y-3">
               {c.features.items.map((item, i) => (
-                <li key={i} className="flex items-start"><FaCheck className="text-brand-gold mt-1 mr-2" />{item}</li>
+                <li key={i} className="flex items-start">
+                  <FaCheck className="text-brand-gold mt-[6px] mr-2" />
+                  {item}
+                </li>
               ))}
             </ul>
           </div>
@@ -195,7 +198,10 @@ const ExpansionPage = () => {
             <h3 className="text-xl font-bold text-brand-blue mb-4">{c.benefits.title}</h3>
             <ul className="space-y-3">
               {c.benefits.items.map((item, i) => (
-                <li key={i} className="flex items-start"><FaCheck className="text-brand-gold mt-1 mr-2" />{item}</li>
+                <li key={i} className="flex items-start">
+                  <FaCheck className="text-brand-gold mt-[6px] mr-2" />
+                  {item}
+                </li>
               ))}
             </ul>
           </div>
