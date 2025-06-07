@@ -1,11 +1,7 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 
-// Initialize Resend only if API key is available
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
-// Log API key status (first few characters for security)
-console.log('Resend API Key Status:', process.env.RESEND_API_KEY ? 'Present' : 'Missing');
 
 // Placeholder for your email sending logic
 // You'll need to install an email library (e.g., Resend, Nodemailer, SendGrid)
@@ -14,7 +10,8 @@ console.log('Resend API Key Status:', process.env.RESEND_API_KEY ? 'Present' : '
 // Example using Resend (you'd need to install resend: npm install resend)
 // import { Resend } from 'resend';
 // const resend = new Resend(process.env.RESEND_API_KEY);
-export const runtime = 'edge'
+export const runtime = 'nodejs';
+
 export async function POST(request: Request) {
   const toEmail = 'alvoloconsulting@gmail.com';
   
@@ -62,36 +59,26 @@ export async function POST(request: Request) {
 
     console.log('Attempting to send email...');
 
-    // Send email using Resend
-    const { data, error } = await resend.emails.send({
-      from: 'Alvolo Consulting <onboarding@resend.dev>',
-      to: [toEmail],
-      replyTo: email,
-      subject: `New Contact Form Submission from ${name}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #1a365d;">New Contact Form Submission</h2>
-          <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
-            <p style="margin: 10px 0;"><strong>Name:</strong> ${name}</p>
-            <p style="margin: 10px 0;"><strong>Email:</strong> ${email}</p>
-            <p style="margin: 10px 0;"><strong>Message:</strong></p>
-            <div style="background-color: white; padding: 15px; border-radius: 4px; margin-top: 10px;">
-              ${message.replace(/\n/g, '<br>')}
-            </div>
-          </div>
-        </div>
-      `,
+    // Configure Nodemailer transporter
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.GMAIL_USER, // Your Gmail email
+        pass: process.env.GMAIL_PASS, // App password
+      },
     });
 
-    if (error) {
-      console.error('Resend API error:', error);
-      return NextResponse.json({ 
-        error: 'Failed to send email',
-        details: error.message || 'Unknown error occurred'
-      }, { status: 500 });
-    }
+    const mailOptions = {
+      from: email,
+      to: toEmail,
+      subject: `New Message from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    };
 
-    console.log('Email sent successfully:', data);
+    // Send email
+    await transporter.sendMail(mailOptions);
+
+    console.log('Email sent successfully');
     return NextResponse.json({ 
       message: 'Email sent successfully',
       details: 'Your message has been delivered'
