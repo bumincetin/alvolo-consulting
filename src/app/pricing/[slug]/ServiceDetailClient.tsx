@@ -9,6 +9,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getServiceDetails } from './serviceData';   // ✅ now a clean import
+import { useRouter, usePathname } from 'next/navigation';
+import { useEffect, useMemo } from 'react';
 
 export const runtime = 'edge';
 
@@ -18,7 +20,35 @@ interface ServiceDetailClientProps {
 
 export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) {
     const { language } = useLanguage();
+    const router = useRouter();
+    const pathname = usePathname();
     const service = getServiceDetails(slug, language); // Use slug directly
+  
+    // Compute the correct slug for the current language (if available)
+    const correctSlug = useMemo(() => {
+      if (service && service.slugMap) {
+        return service.slugMap[language];
+      }
+      // Try to find a service in the current language that maps to this slug
+      // (for when the slug is not in the right language)
+      return null;
+    }, [service, language]);
+  
+    // Redirect if the slug is not correct for the current language
+    useEffect(() => {
+      if (correctSlug && correctSlug !== slug) {
+        router.replace(`/pricing/${correctSlug}`);
+      }
+    }, [correctSlug, slug, router]);
+  
+    // Show loading spinner if redirecting
+    if (correctSlug && correctSlug !== slug) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-brand-bg-primary">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-brand-gold border-solid mx-auto" />
+        </div>
+      );
+    }
   
     if (!service) {
       return (

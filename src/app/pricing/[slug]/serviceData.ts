@@ -15,6 +15,7 @@ export interface ServiceDetail {
     contactPrompt: string;
     contactButtonText: string;
     goBackText: string;
+    slugMap?: Record<string, string>; // Optional: slugMap for cross-language redirection
   }
   export const runtime = 'edge';
   
@@ -61,7 +62,8 @@ export interface ServiceDetail {
       priceDisplay: 'Bu hizmetin tekil fiyatı €200\'dur.',
       contactPrompt: 'Karşılama hizmetimizle ilgili daha fazla bilgi veya özel talepleriniz mi var?',
       contactButtonText: 'Bize Ulaşın',
-      goBackText: 'Tüm Fiyatlara Geri Dön'
+      goBackText: 'Tüm Fiyatlara Geri Dön',
+      slugMap: { tr: 'karsilama-hizmeti', en: 'welcome-service', it: 'servizio-benvenuto' }
     },
     'konaklama-danismanligi': {
       slug: 'konaklama-danismanligi',
@@ -102,7 +104,8 @@ export interface ServiceDetail {
       priceDisplay: 'Bu hizmetin tekil fiyatı €300\'dur.',
       contactPrompt: 'Konaklama bulma sürecinizde profesyonel destek almak ister misiniz?',
       contactButtonText: 'Bize Ulaşın',
-      goBackText: 'Tüm Fiyatlara Geri Dön'
+      goBackText: 'Tüm Fiyatlara Geri Dön',
+      slugMap: { tr: 'konaklama-danismanligi', en: 'accommodation-consultancy', it: 'consulenza-alloggio' }
     },
     'oturum-izni-ikametgah': {
       slug: 'oturum-izni-ikametgah',
@@ -142,7 +145,8 @@ export interface ServiceDetail {
       priceDisplay: 'Bu hizmetin tekil fiyatı €200\'dur.',
       contactPrompt: 'Oturum izni ve ikametgah işlemleriniz için uzman desteğine mi ihtiyacınız var?',
       contactButtonText: 'Bize Ulaşın',
-      goBackText: 'Tüm Fiyatlara Geri Dön'
+      goBackText: 'Tüm Fiyatlara Geri Dön',
+      slugMap: { tr: 'oturum-izni-ikametgah', en: 'residence-permit-residency', it: 'permesso-soggiorno-residenza' }
     },
     'burs-basvurusu': {
       slug: 'burs-basvurusu',
@@ -178,7 +182,8 @@ export interface ServiceDetail {
       priceDisplay: 'Bu hizmetin tekil fiyatı €200\'dur.',
       contactPrompt: 'Burs başvurusu sürecinde profesyonel bir yol arkadaşı mı arıyorsunuz?',
       contactButtonText: 'Bize Ulaşın',
-      goBackText: 'Tüm Fiyatlara Geri Dön'
+      goBackText: 'Tüm Fiyatlara Geri Dön',
+      slugMap: { tr: 'burs-basvurusu', en: 'scholarship-application', it: 'domanda-borsa-studio' }
     },
     'surucu-belgesi': {
       slug: 'surucu-belgesi',
@@ -213,7 +218,8 @@ export interface ServiceDetail {
       priceDisplay: 'Bu hizmetin tekil fiyatı €200\'dur.',
       contactPrompt: 'İtalyan sürücü belgesi işlemleriniz için yardıma mı ihtiyacınız var?',
       contactButtonText: 'Bize Ulaşın',
-      goBackText: 'Tüm Fiyatlara Geri Dön'
+      goBackText: 'Tüm Fiyatlara Geri Dön',
+      slugMap: { tr: 'surucu-belgesi', en: 'driving-license', it: 'patente-guida' }
     },
     'universite-kayit': {
       slug: 'universite-kayit',
@@ -255,7 +261,8 @@ export interface ServiceDetail {
       priceDisplay: 'Bu hizmetin tekil fiyatı €800\'dür.',
       contactPrompt: 'İtalyan üniversitelerine kayıt sürecinizde profesyonel destek mi arıyorsunuz?',
       contactButtonText: 'Bize Ulaşın',
-      goBackText: 'Tüm Fiyatlara Geri Dön'
+      goBackText: 'Tüm Fiyatlara Geri Dön',
+      slugMap: { tr: 'universite-kayit', en: 'university-enrollment', it: 'iscrizione-universitaria' }
     },
     'ogrenci-vizesi': {
       slug: 'ogrenci-vizesi',
@@ -296,7 +303,8 @@ export interface ServiceDetail {
       priceDisplay: 'Bu hizmetin tekil fiyatı €200\'dür.',
       contactPrompt: 'İtalya\'da eğitim almak için vize başvuru sürecinizde profesyonel destek mi arıyorsunuz?',
       contactButtonText: 'Bize Ulaşın',
-      goBackText: 'Tüm Fiyatlara Geri Dön'
+      goBackText: 'Tüm Fiyatlara Geri Dön',
+      slugMap: { tr: 'ogrenci-vizesi', en: 'student-visa', it: 'visto-studentesco' }
     },
     'university-enrollment': {
       slug: 'university-enrollment',
@@ -338,7 +346,8 @@ export interface ServiceDetail {
       priceDisplay: 'The individual price for this service is €800.',
       contactPrompt: 'Are you looking for professional support in your Italian university enrollment process?',
       contactButtonText: 'Contact Us',
-      goBackText: 'Back to All Pricing'
+      goBackText: 'Back to All Pricing',
+      slugMap: { tr: 'universite-kayit', en: 'university-enrollment', it: 'iscrizione-universitaria' }
     },
     'student-visa': {
       slug: 'student-visa',
@@ -379,7 +388,8 @@ export interface ServiceDetail {
       priceDisplay: 'The individual price for this service is €200.',
       contactPrompt: 'Are you looking for professional support in your visa application process for studying in Italy?',
       contactButtonText: 'Contact Us',
-      goBackText: 'Back to All Pricing'
+      goBackText: 'Back to All Pricing',
+      slugMap: { tr: 'ogrenci-vizesi', en: 'student-visa', it: 'visto-studentesco' }
     },
     'iscrizione-universitaria': {
       slug: 'iscrizione-universitaria',
@@ -421,13 +431,14 @@ export interface ServiceDetail {
       priceDisplay: 'Il prezzo individuale per questo servizio è di €800.',
       contactPrompt: 'Stai cercando un supporto professionale nel tuo processo di iscrizione alle università italiane?',
       contactButtonText: 'Contattaci',
-      goBackText: 'Torna a Tutti i Prezzi'
+      goBackText: 'Torna a Tutti i Prezzi',
+      slugMap: { tr: 'universite-kayit', en: 'university-enrollment', it: 'iscrizione-universitaria' }
     },
     'visto-studentesco': {
       slug: 'visto-studentesco',
       title: 'Dettagli Consulenza Visto Studentesco',
       pageSubtitle: 'Guida nei processi di richiesta del visto per studiare in Italia.',
-      mainImage: '/vize.jpg',
+      mainImage: '/bürokrasi.jpg',
       introduction: 'Per studiare in Italia, è necessario richiedere un visto studentesco. Questo processo è fondamentale in termini di preparazione dei documenti corretti e presentazione della domanda in modo appropriato. Con il nostro servizio di consulenza per il visto studentesco, ti guidiamo attraverso ogni fase del processo di richiesta del visto.',
       sections: [
         {
@@ -462,7 +473,8 @@ export interface ServiceDetail {
       priceDisplay: 'Il prezzo individuale per questo servizio è di €200.',
       contactPrompt: 'Stai cercando un supporto professionale nel processo di richiesta del visto per studiare in Italia?',
       contactButtonText: 'Contattaci',
-      goBackText: 'Torna a Tutti i Prezzi'
+      goBackText: 'Torna a Tutti i Prezzi',
+      slugMap: { tr: 'ogrenci-vizesi', en: 'student-visa', it: 'visto-studentesco' }
     }
   },
   en: {
@@ -504,7 +516,8 @@ export interface ServiceDetail {
       priceDisplay: 'The individual price for this service is €200.',
       contactPrompt: 'Do you have more questions or special requests regarding our welcome service?',
       contactButtonText: 'Contact Us',
-      goBackText: 'Back to All Pricing'
+      goBackText: 'Back to All Pricing',
+      slugMap: { tr: 'karsilama-hizmeti', en: 'welcome-service', it: 'servizio-benvenuto' }
     },
     'accommodation-consultancy': {
       slug: 'accommodation-consultancy',
@@ -545,7 +558,8 @@ export interface ServiceDetail {
       priceDisplay: 'The individual price for this service is €300.',
       contactPrompt: 'Would you like professional support in your accommodation search process?',
       contactButtonText: 'Contact Us',
-      goBackText: 'Back to All Pricing'
+      goBackText: 'Back to All Pricing',
+      slugMap: { tr: 'konaklama-danismanligi', en: 'accommodation-consultancy', it: 'consulenza-alloggio' }
     },
     'residence-permit-residency': {
       slug: 'residence-permit-residency',
@@ -585,7 +599,8 @@ export interface ServiceDetail {
       priceDisplay: 'The individual price for this service is €200.',
       contactPrompt: 'Do you need expert support for your residence permit and residency procedures?',
       contactButtonText: 'Contact Us',
-      goBackText: 'Back to All Pricing'
+      goBackText: 'Back to All Pricing',
+      slugMap: { tr: 'oturum-izni-ikametgah', en: 'residence-permit-residency', it: 'permesso-soggiorno-residenza' }
     },
     'scholarship-application': {
       slug: 'scholarship-application',
@@ -621,7 +636,8 @@ export interface ServiceDetail {
       priceDisplay: 'The individual price for this service is €200.',
       contactPrompt: 'Are you looking for a professional companion in the scholarship application process?',
       contactButtonText: 'Contact Us',
-      goBackText: 'Back to All Pricing'
+      goBackText: 'Back to All Pricing',
+      slugMap: { tr: 'burs-basvurusu', en: 'scholarship-application', it: 'domanda-borsa-studio' }
     },
     'driving-license': {
       slug: 'driving-license',
@@ -656,7 +672,8 @@ export interface ServiceDetail {
       priceDisplay: 'The individual price for this service is €200.',
       contactPrompt: 'Do you need help with your Italian driving license procedures?',
       contactButtonText: 'Contact Us',
-      goBackText: 'Back to All Pricing'
+      goBackText: 'Back to All Pricing',
+      slugMap: { tr: 'surucu-belgesi', en: 'driving-license', it: 'patente-guida' }
     },
     'university-enrollment': {
       slug: 'university-enrollment',
@@ -698,7 +715,8 @@ export interface ServiceDetail {
       priceDisplay: 'The individual price for this service is €800.',
       contactPrompt: 'Are you looking for professional support in your Italian university enrollment process?',
       contactButtonText: 'Contact Us',
-      goBackText: 'Back to All Pricing'
+      goBackText: 'Back to All Pricing',
+      slugMap: { tr: 'universite-kayit', en: 'university-enrollment', it: 'iscrizione-universitaria' }
     },
     'student-visa': {
       slug: 'student-visa',
@@ -739,7 +757,8 @@ export interface ServiceDetail {
       priceDisplay: 'The individual price for this service is €200.',
       contactPrompt: 'Are you looking for professional support in your visa application process for studying in Italy?',
       contactButtonText: 'Contact Us',
-      goBackText: 'Back to All Pricing'
+      goBackText: 'Back to All Pricing',
+      slugMap: { tr: 'ogrenci-vizesi', en: 'student-visa', it: 'visto-studentesco' }
     },
     'visto-studentesco': {
       slug: 'visto-studentesco',
@@ -780,7 +799,8 @@ export interface ServiceDetail {
       priceDisplay: 'Il prezzo individuale per questo servizio è di €200.',
       contactPrompt: 'Stai cercando un supporto professionale nel processo di richiesta del visto per studiare in Italia?',
       contactButtonText: 'Contattaci',
-      goBackText: 'Torna a Tutti i Prezzi'
+      goBackText: 'Torna a Tutti i Prezzi',
+      slugMap: { tr: 'ogrenci-vizesi', en: 'student-visa', it: 'visto-studentesco' }
     }
   },
   it: {
@@ -822,7 +842,8 @@ export interface ServiceDetail {
       priceDisplay: 'Il prezzo individuale per questo servizio è di €200.',
       contactPrompt: 'Hai altre domande o richieste speciali riguardo al nostro servizio di benvenuto?',
       contactButtonText: 'Contattaci',
-      goBackText: 'Torna a Tutti i Prezzi'
+      goBackText: 'Torna a Tutti i Prezzi',
+      slugMap: { tr: 'karsilama-hizmeti', en: 'welcome-service', it: 'servizio-benvenuto' }
     },
     'consulenza-alloggio': {
       slug: 'consulenza-alloggio',
@@ -863,7 +884,8 @@ export interface ServiceDetail {
       priceDisplay: 'Il prezzo individuale per questo servizio è di €300.',
       contactPrompt: 'Desideri un supporto professionale nel processo di ricerca del tuo alloggio?',
       contactButtonText: 'Contattaci',
-      goBackText: 'Torna a Tutti i Prezzi'
+      goBackText: 'Torna a Tutti i Prezzi',
+      slugMap: { tr: 'konaklama-danismanligi', en: 'accommodation-consultancy', it: 'consulenza-alloggio' }
     },
     'permesso-soggiorno-residenza': {
       slug: 'permesso-soggiorno-residenza',
@@ -903,7 +925,8 @@ export interface ServiceDetail {
       priceDisplay: 'Il prezzo individuale per questo servizio è di €200.',
       contactPrompt: 'Hai bisogno di un supporto esperto per le tue procedure di permesso di soggiorno e residenza?',
       contactButtonText: 'Contattaci',
-      goBackText: 'Torna a Tutti i Prezzi'
+      goBackText: 'Torna a Tutti i Prezzi',
+      slugMap: { tr: 'oturum-izni-ikametgah', en: 'residence-permit-residency', it: 'permesso-soggiorno-residenza' }
     },
     'domanda-borsa-studio': {
       slug: 'domanda-borsa-studio',
@@ -939,7 +962,8 @@ export interface ServiceDetail {
       priceDisplay: 'Il prezzo individuale per questo servizio è di €200.',
       contactPrompt: 'Stai cercando un compagno professionale nel processo di richiesta della borsa di studio?',
       contactButtonText: 'Contattaci',
-      goBackText: 'Torna a Tutti i Prezzi'
+      goBackText: 'Torna a Tutti i Prezzi',
+      slugMap: { tr: 'burs-basvurusu', en: 'scholarship-application', it: 'domanda-borsa-studio' }
     },
     'patente-guida': {
       slug: 'patente-guida',
@@ -974,7 +998,8 @@ export interface ServiceDetail {
       priceDisplay: 'Il prezzo individuale per questo servizio è di €200.',
       contactPrompt: 'İtalyan sürücü belgesi işlemleriniz için yardıma mı ihtiyacınız var?',
       contactButtonText: 'Bize Ulaşın',
-      goBackText: 'Tüm Fiyatlara Geri Dön'
+      goBackText: 'Tüm Fiyatlara Geri Dön',
+      slugMap: { tr: 'surucu-belgesi', en: 'driving-license', it: 'patente-guida' }
     },
     'iscrizione-universitaria': {
       slug: 'iscrizione-universitaria',
@@ -1016,7 +1041,8 @@ export interface ServiceDetail {
       priceDisplay: 'Il prezzo individuale per questo servizio è di €800.',
       contactPrompt: 'Stai cercando un supporto professionale nel tuo processo di iscrizione alle università italiane?',
       contactButtonText: 'Contattaci',
-      goBackText: 'Torna a Tutti i Prezzi'
+      goBackText: 'Torna a Tutti i Prezzi',
+      slugMap: { tr: 'universite-kayit', en: 'university-enrollment', it: 'iscrizione-universitaria' }
     },
     'visto-studentesco': {
       slug: 'visto-studentesco',
@@ -1057,7 +1083,8 @@ export interface ServiceDetail {
       priceDisplay: 'Il prezzo individuale per questo servizio è di €200.',
       contactPrompt: 'Stai cercando un supporto professionale nel processo di richiesta del visto per studiare in Italia?',
       contactButtonText: 'Contattaci',
-      goBackText: 'Torna a Tutti i Prezzi'
+      goBackText: 'Torna a Tutti i Prezzi',
+      slugMap: { tr: 'ogrenci-vizesi', en: 'student-visa', it: 'visto-studentesco' }
     }
   }
 };

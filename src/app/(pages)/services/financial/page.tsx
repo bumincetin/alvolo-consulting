@@ -72,7 +72,7 @@ const getFinancialContent = (lang: string) => {
         questions: [
           {
             q: "İtalya'da şirket kurmak için ne kadar süre gerekiyor?",
-            a: "Şirket türüne ve karmaşıklığına bağlı olarak, kurulum süreci genellikle 2-4 hafta sürer. Tüm süreç boyunca size rehberlik ediyoruz."
+            a: "Şirket türüne ve büyüklüğüne  bağlı olarak, kurulum süreci genellikle 2-4 hafta sürer. Tüm süreç boyunca size rehberlik ediyoruz."
           },
           {
             q: "Hangi finansal raporlama standartlarını kullanıyoruz?",
@@ -80,7 +80,7 @@ const getFinancialContent = (lang: string) => {
           },
           {
             q: "Vergi planlaması ve uyumluluk konusunda nasıl yardımcı oluyorsunuz?",
-            a: "Kapsamlı vergi planlaması ve uyumluluk hizmetlerimiz, şirketinizin İtalyan vergi düzenlemelerine tam uyumunu sağlar ve vergi avantajlarından yararlanmanıza yardımcı olur."
+            a: "Şirketinizin İtalya’daki vergi yükümlülüklerini eksiksiz yerine getirmenizi sağlarken, aynı zamanda yasal çerçevede maksimum vergi avantajlarından faydalanmanıza yardımcı oluyoruz. Kapsamlı hizmetimiz; stratejik vergi planlaması, beyannamelerin hazırlanması, denetim süreçlerine hazırlık ve sürekli mevzuat takibi gibi başlıkları içerir. Böylece hem mali riskleri en aza indirir hem de işletmenizin finansal verimliliğini artırırız."
           },
           {
             q: "İtalya'da şirket kurmak için minimum sermaye gereksinimleri nelerdir?",
@@ -96,7 +96,8 @@ const getFinancialContent = (lang: string) => {
           },
           {
             q: "Çalışan istihdamı ve SGK süreçleri nasıl işliyor?",
-            a: "İtalya'da çalışan istihdamı için özel sözleşmeler ve SGK kayıtları gereklidir. Size çalışan istihdamı, sözleşme hazırlama ve SGK süreçlerinde destek sağlıyoruz."
+            a: "İtalya'da yasalara uygun şekilde çalışan istihdam edebilmek için doğru sözleşme türlerinin hazırlanması ve sosyal güvenlik kurumuna (INPS) eksiksiz kayıt yapılması zorunludur. Bu süreçte, işe alım öncesi danışmanlıktan başlayarak iş sözleşmelerinin hazırlanması, işe giriş bildirimleri ve SGK (INPS) kayıt işlemleri dahil olmak üzere tüm adımlarda size rehberlik ediyoruz. Böylece hem yasal uyumu sağlıyor hem de işveren yükümlülüklerinizi sorunsuz şekilde yerine getirmenize yardımcı oluyoruz."
+
           },
           {
             q: "İtalya'da şirket kurulumu için hangi belgeler gerekiyor?",
@@ -174,7 +175,7 @@ const getFinancialContent = (lang: string) => {
         questions: [
           {
             q: "How long does it take to set up a company in Italy?",
-            a: "Depending on the company type and complexity, the setup process typically takes 2-4 weeks. We guide you through the entire process."
+            a: "Depending on the company type and size, the setup process typically takes 2-4 weeks. We guide you through the entire process."
           },
           {
             q: "Which financial reporting standards do we use?",
@@ -182,7 +183,7 @@ const getFinancialContent = (lang: string) => {
           },
           {
             q: "How do you help with tax planning and compliance?",
-            a: "Our comprehensive tax planning and compliance services ensure your company's full compliance with Italian tax regulations while helping you benefit from available tax advantages."
+            a: "We help you to fully fulfill your company's tax obligations in Italy, while also benefiting from maximum tax advantages within the legal framework. Our comprehensive service includes strategic tax planning, preparation of declarations, preparation for audit processes and continuous legislative monitoring. In this way, we both minimize financial risks and increase the financial efficiency of your business."
           },
           {
             q: "What are the minimum capital requirements for setting up a company in Italy?",
@@ -198,7 +199,7 @@ const getFinancialContent = (lang: string) => {
           },
           {
             q: "How does employee hiring and social security work?",
-            a: "Employee hiring in Italy requires specific contracts and social security registrations. We support you with employee hiring, contract preparation, and social security processes."
+            a: "In order to employ employees in accordance with the law in Italy, it is mandatory to prepare the right types of contracts and to register completely with the social security institution (INPS). In this process, we guide you through all the steps, starting from pre-employment consultancy, to the preparation of employment contracts, job entry notifications and SSI (INPS) registration procedures. In this way, we ensure both legal compliance and help you fulfill your employer obligations without any problems."
           },
           {
             q: "What documents are needed for company formation in Italy?",
@@ -276,7 +277,7 @@ const getFinancialContent = (lang: string) => {
         questions: [
           {
             q: "Quanto tempo ci vuole per costituire un'azienda in Italia?",
-            a: "A seconda del tipo e della complessità dell'azienda, il processo di costituzione richiede tipicamente 2-4 settimane. Ti guidiamo attraverso l'intero processo."
+            a: "A seconda del tipo e della grandezza dell'azienda, il processo di costituzione richiede tipicamente 2-4 settimane. Ti guidiamo attraverso l'intero processo."
           },
           {
             q: "Quali standard di rendicontazione finanziaria utilizziamo?",
@@ -284,7 +285,7 @@ const getFinancialContent = (lang: string) => {
           },
           {
             q: "Come aiutate nella pianificazione fiscale e nella conformità?",
-            a: "I nostri servizi completi di pianificazione fiscale e conformità garantiscono la piena conformità della tua azienda alle normative fiscali italiane, aiutandoti a beneficiare dei vantaggi fiscali disponibili."
+            a: "Aiutiamo a far rispettare le tue responsabilità fiscali in Italia, mentre ti aiutiamo a beneficiare al massimo dei vantaggi fiscali disponibili all'interno del quadro giuridico. I nostri servizi completi includono pianificazione fiscale strategica, la preparazione delle dichiarazioni, la preparazione per i processi di controllo e il monitoraggio costante della normativa. In questo modo, riduciamo al minimo i rischi finanziari e aumentiamo l'efficienza finanziaria della tua azienda."
           },
           {
             q: "Quali sono i requisiti di capitale minimo per costituire un'azienda in Italia?",
@@ -300,7 +301,7 @@ const getFinancialContent = (lang: string) => {
           },
           {
             q: "Come funziona l'assunzione di dipendenti e la previdenza sociale?",
-            a: "L'assunzione di dipendenti in Italia richiede contratti specifici e registrazioni previdenziali. Ti supportiamo con l'assunzione di dipendenti, la preparazione dei contratti e i processi previdenziali."
+            a: "In Italia, per assumere dipendenti in conformità con la legge, è obbligatorio predisporre i contratti di lavoro corretti e registrarsi completamente presso l'INPS. In questo processo, vi guidiamo in tutte le fasi, dalla consulenza pre-assunzione alla redazione dei contratti di lavoro, dalle notifiche di assunzione alle procedure di iscrizione all'INPS. In questo modo, garantiamo la conformità legale e vi aiutiamo ad adempiere ai vostri obblighi datoriali senza problemi."
           },
           {
             q: "Quali documenti sono necessari per la costituzione di un'azienda in Italia?",

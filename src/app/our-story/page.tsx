@@ -3,6 +3,7 @@
 import Navbar from '@/components/layout/Navbar';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
+import Image from 'next/image';
 
 const getOurStoryContent = (lang: string) => {
   const content = {
@@ -38,6 +39,16 @@ const OurStoryPageComponent = () => {
   return (
     <div className="min-h-screen bg-brand-bg-primary pt-20">
       <div className="container mx-auto px-6 py-20">
+        <div className="w-full max-w-3xl mx-auto mb-10">
+          <Image
+            src="/milanoyeni.jpg"
+            alt="Milan city view - Our Story"
+            width={900}
+            height={400}
+            className="w-full h-auto rounded-2xl object-cover shadow-lg"
+            priority
+          />
+        </div>
         <div className="max-w-3xl mx-auto bg-brand-bg-surface rounded-xl shadow-xl p-8 md:p-12">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
