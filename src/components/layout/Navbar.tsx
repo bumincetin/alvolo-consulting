@@ -118,18 +118,43 @@ const Navbar = () => {
               </Link>
             ))}
             
-            {/* Services Dropdown */}
-            <div className="relative" ref={servicesRef}>
-              <button
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="flex items-center text-brand-text-secondary hover:text-brand-gold transition-colors duration-300"
+            {/* Services Dropdown with Unified Button */}
+            <div className="relative group" ref={servicesRef}>
+              <div
+                className="flex items-center text-brand-text-secondary hover:text-brand-gold transition-colors duration-300 cursor-pointer select-none px-2 py-1 rounded"
+                tabIndex={0}
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+                onFocus={() => setIsServicesOpen(true)}
+                onBlur={() => setIsServicesOpen(false)}
               >
-                {c.services}
-                <FaChevronDown className={`ml-1 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
+                <span
+                  onClick={() => {
+                    setIsServicesOpen(false);
+                    window.location.href = '/services';
+                  }}
+                  className="pr-1"
+                  style={{ outline: 'none' }}
+                  tabIndex={-1}
+                >
+                  {c.services}
+                </span>
+                <button
+                  onClick={e => {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    setIsServicesOpen(!isServicesOpen);
+                  }}
+                  className="flex items-center pl-1 bg-transparent border-none outline-none cursor-pointer"
+                  aria-label={c.services}
+                  tabIndex={0}
+                  type="button"
+                >
+                  <FaChevronDown className={`ml-1 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+              </div>
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-brand-bg-surface rounded-lg shadow-lg py-2">
+                <div className="absolute top-full left-0 mt-2 w-48 bg-brand-bg-surface rounded-lg shadow-lg py-2 z-50">
                   {serviceItems.map((item) => (
                     <Link
                       key={item.label}

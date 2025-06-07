@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
+import Image from 'next/image';
 
 const getServicesContent = (lang: string) => {
   const content = {
@@ -11,7 +12,7 @@ const getServicesContent = (lang: string) => {
       title: "Hizmetlerimiz",
       subtitle: "Size özel çözümler sunuyoruz",
       integrationTitle: "Entegrasyon Çözümleri",
-      integrationDesc: "İşletmenizin dijital dönüşümünü hızlandıracak entegrasyon çözümleri",
+      integrationDesc: "İtalya'ya taşınırken rahat kalmanızı sağlayacak entegrasyon çözümleri",
       financialTitle: "Finansal Danışmanlık",
       financialDesc: "Finansal hedeflerinize ulaşmanız için profesyonel danışmanlık hizmetleri",
       learnMore: "Detaylı Bilgi",
@@ -20,18 +21,18 @@ const getServicesContent = (lang: string) => {
       title: "Our Services",
       subtitle: "Tailored solutions for your needs",
       integrationTitle: "Integration Solutions",
-      integrationDesc: "Integration solutions to accelerate your business's digital transformation",
+      integrationDesc: "Integration solutions to help you relax when you are relocating to Italy",
       financialTitle: "Financial Consulting",
-      financialDesc: "Professional consulting services to help you achieve your financial goals",
+      financialDesc: "Professional consulting services to help you achieve your financial goals in Italy",
       learnMore: "Learn More",
     },
     it: {
       title: "I Nostri Servizi",
       subtitle: "Soluzioni su misura per le tue esigenze",
       integrationTitle: "Soluzioni di Integrazione",
-      integrationDesc: "Soluzioni di integrazione per accelerare la trasformazione digitale della tua azienda",
+      integrationDesc: "Soluzioni di integrazione per aiutarti a rilassarti quando ti stai trasferendo in Italia",
       financialTitle: "Consulenza Finanziaria",
-      financialDesc: "Servizi di consulenza professionale per aiutarti a raggiungere i tuoi obiettivi finanziari",
+      financialDesc: "Servizi di consulenza professionale per aiutarti a raggiungere i tuoi obiettivi finanziari in Italia",
       learnMore: "Scopri di Più",
     }
   };
@@ -47,13 +48,22 @@ const ServicesPage = () => {
       <Navbar />
       <section className="pt-32 pb-20 bg-gradient-to-b from-brand-bg-primary to-blue-50">
         <div className="container mx-auto px-6">
+          <div className="w-full max-w-5xl mx-auto mb-12">
+            <Image
+              src="/services.jpg"
+              alt="Our Services Overview"
+              width={1200}
+              height={400}
+              className="w-full h-auto rounded-2xl object-cover shadow-md"
+              priority
+            />
+          </div>
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
               {c.title}
             </h1>
             <div className="h-1 w-24 bg-brand-gold rounded-full mx-auto mb-6"></div>
             <p className="text-xl text-brand-text-secondary">
-              {c.subtitle}
             </p>
           </div>
 

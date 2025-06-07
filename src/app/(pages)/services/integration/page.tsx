@@ -19,7 +19,7 @@ const getServicesContent = (lang: string) => {
             "Başvuru takvimi ve şartların burs başvurusu zaman çizelgesine dönüştürülmesi",
             "CV, motivasyon mektubu, gelir belgeleri ve referansların hazırlanıp kontrol edilmesi",
             "Online portallarda başvuru gönderimi ve sonuçların takibi",
-            "Muhasebe uygulamaları konusunda danışmanlık yapmak."
+            "Muhasebe uygulamaları konusunda danışmanlık"
           ]
         },
         {
@@ -111,7 +111,7 @@ const getServicesContent = (lang: string) => {
             "Converting application calendars and requirements into a scholarship application timeline",
             "Preparing and checking CVs, motivation letters, income documents, and references",
             "Submitting applications via online portals and monitoring results",
-            "Providing consultancy on accounting practices."
+            "Providing consultancy on accounting practices"
           ]
         },
         {

@@ -7,6 +7,10 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CookieConsent } from "@/components/CookieConsent";
 import { ScriptLoader } from "@/components/ScriptLoader";
 import Footer from "@/components/layout/Footer";
+import { AnimatePresence, motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import ClientLayout from "./ClientLayout";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -45,6 +49,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Add page transition animation using AnimatePresence
+  // This must be a client component, so we need a wrapper
+  // We'll create a ClientLayout for this
   return (
     <html lang="tr" suppressHydrationWarning={true}>
       <head>
@@ -60,8 +67,10 @@ export default function RootLayout({
           defaultTheme="light"
           disableTransitionOnChange
         >
-          <LanguageProvider> {/* LanguageProvider is a Client Component and can wrap children here */}
-            {children}
+          <LanguageProvider>
+            <ClientLayout>
+              {children}
+            </ClientLayout>
             <Footer />
             <CookieConsent />
             {/* Google Tag Manager (inline init, only after analytics consent) */}
@@ -87,3 +96,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+// ClientLayout.tsx (to be created in the same directory)
+// This will wrap children with AnimatePresence and handle route transitions
