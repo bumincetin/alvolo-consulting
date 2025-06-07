@@ -57,7 +57,7 @@ export async function POST(request: Request) {
 
     console.log('Attempting to send email...');
 
-    const { data, error } = await resend.emails.send({
+    const {error } = await resend.emails.send({
       from: 'Alvolo Consulting <onboarding@resend.dev>',
       to: [toEmail],
       replyTo: email,

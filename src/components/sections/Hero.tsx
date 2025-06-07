@@ -9,7 +9,7 @@ const getHeroContent = (lang: string) => {
     tr: {
       brandName: "Alvolo Danışmanlık",
       mainHeading: "İtalya'da Hayallerinize Ulaşın",
-      subheading1: "Eğitim, bürokrasi, emlak ve adaptasyon süreçlerinizde",
+      subheading1: "İtalya'da iş, yaşam, entegrasyon ve finansal süreçlerinizde",
       subheading2: "profesyonel danışmanlık hizmetleri.",
       contactButton: "Bize Ulaşın",
       servicesButton: "Hizmetlerimiz"
@@ -17,16 +17,16 @@ const getHeroContent = (lang: string) => {
     en: {
       brandName: "Alvolo Consulting",
       mainHeading: "Reach Your Dreams in Italy",
-      subheading1: "In your education, bureaucracy, real estate, and orientation processes",
-        subheading2: "professional consultancy services.",
-        contactButton: "Contact Us",
-        servicesButton: "Our Services"
-      },
+      subheading1: "For your business, life, integration, and financial needs in Italy",
+      subheading2: "professional consultancy services.",
+      contactButton: "Contact Us",
+      servicesButton: "Our Services"
+    },
     it: {
       brandName: "Alvolo Consulenza",
       mainHeading: "Raggiungi i Tuoi Sogni in Italia",
-      subheading1: "Nei tuoi processi di istruzione, burocrazia, immobile e orientamento",
-      subheading2: "servizi di consulenza professionale.",
+      subheading1: "Per le tue esigenze di business, vita, integrazione e finanza in Italia",
+      subheading2: "servizi professionali di consulenza.",
       contactButton: "Contattaci",
       servicesButton: "I Nostri Servizi"
     }

@@ -8,7 +8,7 @@ const getContactSectionContent = (lang: string) => {
   const content = {
     tr: {
       title: "İletişim",
-      subtitle: "Sorularınız için bize ulaşın",
+      subtitle: "İtalya'da iş ve yaşam için entegrasyon çözümleri ve finansal danışmanlık hizmetlerimiz hakkında bize ulaşın.",
       formNameLabel: "Ad Soyad",
       formEmailLabel: "E-posta",
       formMessageLabel: "Mesajınız",
@@ -26,7 +26,7 @@ const getContactSectionContent = (lang: string) => {
     },
     en: {
       title: "Contact",
-      subtitle: "Contact us with your questions",
+      subtitle: "Contact us for integration solutions and financial consultancy services for doing business and living in Italy.",
       formNameLabel: "Full Name",
       formEmailLabel: "Email",
       formMessageLabel: "Your Message",
@@ -44,7 +44,7 @@ const getContactSectionContent = (lang: string) => {
     },
     it: {
       title: "Contatti",
-      subtitle: "Contattaci con le tue domande",
+      subtitle: "Contattaci per soluzioni di integrazione e consulenza finanziaria per vivere e fare business in Italia.",
       formNameLabel: "Nome Cognome",
       formEmailLabel: "Email",
       formMessageLabel: "Il Tuo Messaggio",
