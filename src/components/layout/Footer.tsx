@@ -135,7 +135,7 @@ const Footer = () => {
             </div>
             <div className="text-sm text-gray-700 mb-2">{c.company.address}</div>
             <div className="flex space-x-2 mb-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener" className="p-2 bg-gray-100 rounded hover:bg-brand-blue hover:text-white transition"><FaInstagram size={20} /></a>
+              <a href="https://www.instagram.com/alvoloconsulting?igsh=Z3IzbzBsNGJraWs%3D" target="_blank" rel="noopener" className="p-2 bg-gray-100 rounded hover:bg-brand-blue hover:text-white transition"><FaInstagram size={20} /></a>
               <a href="https://www.linkedin.com/company/alvolo-consulting" target="_blank" rel="noopener" className="p-2 bg-gray-100 rounded hover:bg-brand-blue hover:text-white transition"><FaLinkedin size={20} /></a>
             </div>
           </div>
