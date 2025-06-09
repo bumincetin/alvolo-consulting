@@ -69,7 +69,7 @@ const Hero = () => {
                 {c.contactButton}
               </Link>
               <Link
-                href="/hizmetlerimiz"
+                href="/services"
                 className="px-8 py-4 border-2 rounded-lg transition duration-300 text-center"
                 style={{borderColor: 'var(--logo-blue)', color: 'var(--logo-blue)'}}
                 onMouseOver={e => {e.currentTarget.style.backgroundColor = 'var(--logo-orange-ton)'; e.currentTarget.style.color = 'white';}}
