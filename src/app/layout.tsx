@@ -21,10 +21,13 @@ const lato = Lato({
   weight: ["400", "700"],
 });
 
+const siteUrl = "https://www.alvoloconsulting.com";
+
 // Metadata can now be exported as this is a Server Component by default
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Alvolo Consulting | Financial & Integration Solutions for Italy",
-  description: "Professional, multilingual consulting for doing business in Italy. Company formation, financial consulting, integration, and legal services for international clients. Trusted by hundreds of happy clients.",
+  description: "Alvolo Danışmanlık: İtalya'da iş kurma, finansal danışmanlık ve entegrasyon çözümleri. Uluslararası müşterilere yönelik profesyonel ve çok dilli danışmanlık hizmetleri.",
   keywords: [
     "Alvolo Consulting", "Italy business consulting", "company formation Italy", 
     "financial consulting Italy", "integration solutions Italy", "İtalya danışmanlık", "business setup Italy", 
@@ -37,6 +40,28 @@ export const metadata: Metadata = {
   icons: {
     icon: '/ICON.png', // Points to public/icon.png
   },
+  openGraph: {
+    title: "Alvolo Consulting | Financial & Integration Solutions for Italy",
+    description: "Alvolo Danışmanlık: İtalya'da iş kurma, finansal danışmanlık ve entegrasyon çözümleri.",
+    url: siteUrl,
+    siteName: 'Alvolo Consulting',
+    images: [
+      {
+        url: `${siteUrl}/LOGO.png`, // Must be an absolute URL
+        width: 800,
+        height: 600,
+        alt: 'Alvolo Consulting Logo',
+      },
+    ],
+    locale: 'tr_TR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Alvolo Consulting | Financial & Integration Solutions for Italy",
+    description: "Alvolo Danışmanlık: İtalya'da iş kurma, finansal danışmanlık ve entegrasyon çözümleri.",
+    images: [`${siteUrl}/LOGO.png`], // Must be an absolute URL
+  },
   // For truly dynamic metadata based on language, you'd typically rely on route parameters (e.g., /[locale])
   // and generateMetadata function, which is not directly compatible with a purely client-side language context for metadata.
 };
@@ -46,12 +71,59 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Alvolo Consulting",
+        "url": siteUrl,
+        "logo": `${siteUrl}/LOGO.png`,
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+39-123-456-7890", // Add a real phone number here if available
+          "contactType": "customer service"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Via Valsugana 6",
+          "addressLocality": "Milan",
+          "postalCode": "20139",
+          "addressCountry": "IT"
+        },
+        "sameAs": [
+          "https://www.instagram.com/alvoloconsulting?igsh=Z3IzbzBsNGJraWs%3D",
+          "https://www.linkedin.com/company/alvolo-consulting"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "url": siteUrl,
+        "name": "Alvolo Consulting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Alvolo Consulting"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": `${siteUrl}/search?q={search_term_string}`,
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  };
+
   // Add page transition animation using AnimatePresence
   // This must be a client component, so we need a wrapper
   // We'll create a ClientLayout for this
   return (
     <html lang="tr" suppressHydrationWarning={true}>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <meta httpEquiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; font-src 'self' https: data:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline';" />
       </head>
