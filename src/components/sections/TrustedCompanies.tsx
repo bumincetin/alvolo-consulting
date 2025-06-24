@@ -2,6 +2,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const getTrustedCompaniesContent = (lang: string) => {
   const content = {
@@ -152,9 +153,11 @@ const TrustedCompanies = () => {
                 <div className="max-w-4xl mx-auto">
                   <div className="bg-gradient-to-br from-brand-bg-primary to-blue-50 rounded-2xl shadow-xl p-12 text-center">
                     <div className="mb-8">
-                      <img
+                      <Image
                         src={company.logo}
                         alt={company.name}
+                        width={128}
+                        height={128}
                         className="w-32 h-32 mx-auto object-contain rounded-lg shadow-lg"
                       />
                     </div>
@@ -217,9 +220,11 @@ const TrustedCompanies = () => {
                 className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
                 onClick={() => setCurrentIndex(index)}
               >
-                <img
+                <Image
                   src={company.logo}
                   alt={company.name}
+                  width={64}
+                  height={64}
                   className="w-16 h-16 mx-auto object-contain mb-4"
                 />
                 <h4 className="text-sm font-semibold text-brand-text-primary">
