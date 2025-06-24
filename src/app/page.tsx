@@ -2,7 +2,6 @@
 
 import Navbar from '@/components/layout/Navbar';
 import Hero from '@/components/sections/Hero';
-import MissionVision from '@/components/sections/MissionVision';
 import Services from '@/components/sections/Services';
 import CompanyHighlights from '@/components/sections/CompanyHighlights';
 import TrustedCompanies from '@/components/sections/TrustedCompanies';
@@ -41,13 +40,13 @@ export default function Home() {
           playsInline
           loop
           preload="auto"
-          poster="https://www.dropbox.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1"
+          poster="https://dl.dropboxusercontent.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1&raw=1"
           className="absolute top-0 left-0 w-full h-full object-cover"
           onError={(e) => {
             console.error('Video loading error:', e);
           }}
         >
-          <source src="https://www.dropbox.com/scl/fi/fl1theva22dlv65bohcg6/arka2.mp4?rlkey=ui0o1yzxnwj85nex52kd0qmk7&st=649y1r2k&dl=1" type="video/mp4" />
+          <source src="https://dl.dropboxusercontent.com/scl/fi/fl1theva22dlv65bohcg6/arka2.mp4?rlkey=ui0o1yzxnwj85nex52kd0qmk7&st=649y1r2k&dl=1&raw=1" type="video/mp4" />
           {/* fallback text for very old browsers */}
           Your browser does not support the video tag.
         </video>
@@ -68,7 +67,6 @@ export default function Home() {
 
       <Hero />
       <CompanyHighlights />
-      <MissionVision />
       <Services />
       <TrustedCompanies />
     </main>

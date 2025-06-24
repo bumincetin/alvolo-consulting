@@ -4,10 +4,12 @@ export const runtime = 'edge';
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 import { FaCalendarAlt, FaArrowLeft } from 'react-icons/fa';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import { Metadata } from 'next';
+import Image from 'next/image';
+import { notFound } from 'next/navigation';
 
 const getAnnouncementDetails = (lang: string, id: string) => {
   const announcements = {
@@ -534,7 +536,6 @@ const AnnouncementDetailPage = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }
@@ -601,8 +602,6 @@ const AnnouncementDetailPage = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

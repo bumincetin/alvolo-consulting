@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaWhatsapp, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const getContactSectionContent = (lang: string) => {
@@ -12,7 +12,7 @@ const getContactSectionContent = (lang: string) => {
       formNameLabel: "Ad Soyad",
       formEmailLabel: "E-posta",
       formMessageLabel: "Mesajınız",
-      formSubmitButton: "Gönder",
+      formSubmitButton: "Mesaj Gönder",
       formSendingButton: "Gönderiliyor...",
       formSuccessMessage: "Mesajınız başarıyla gönderildi!",
       formErrorMessage: "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
@@ -21,11 +21,17 @@ const getContactSectionContent = (lang: string) => {
       privacyCheckbox2: "Pazarlama, promosyon faaliyetleri, ticari teklifler ve pazar araştırması amaçlarıyla veri işlenmesine izin veriyorum",
       privacyPolicy: "Gizlilik Politikası",
       phoneTitle: "Telefon",
-      phoneDetails: "Whatsapp: +39 348 170 5207<br />Alternatif: +39 351 713 6434",
+      phoneDetails: "+39 348 170 5207",
+      whatsappDetails: "WhatsApp: +39 348 170 5207",
       emailTitle: "E-posta",
       emailDetails: "alvoloconsulting@gmail.com",
       addressTitle: "Adres",
-      addressDetails: "Via Valsugana <br />20139 Milano (MI)"
+      addressDetails: "Via Valsugana, 20139 Milano (MI), İtalya",
+      hoursTitle: "Çalışma Saatleri",
+      hoursDetails: "Pazartesi - Cuma: 09:00 - 18:00<br />Cumartesi: 09:00 - 14:00<br />Pazar: Kapalı",
+      getInTouch: "Bizimle İletişime Geçin",
+      contactInfo: "İletişim Bilgileri",
+      followUs: "Bizi Takip Edin"
     },
     en: {
       title: "Contact",
@@ -33,7 +39,7 @@ const getContactSectionContent = (lang: string) => {
       formNameLabel: "Full Name",
       formEmailLabel: "Email",
       formMessageLabel: "Your Message",
-      formSubmitButton: "Send",
+      formSubmitButton: "Send Message",
       formSendingButton: "Sending...",
       formSuccessMessage: "Your message has been sent successfully!",
       formErrorMessage: "An error occurred while sending your message. Please try again.",
@@ -42,11 +48,17 @@ const getContactSectionContent = (lang: string) => {
       privacyCheckbox2: "I authorize the processing of data for marketing purposes, promotional activities, commercial offers and market research",
       privacyPolicy: "Privacy Policy",
       phoneTitle: "Phone",
-      phoneDetails: "Whatsapp: +39 348 170 5207<br />Alternative: +39 351 713 6434",
+      phoneDetails: "+39 348 170 5207",
+      whatsappDetails: "WhatsApp: +39 348 170 5207",
       emailTitle: "Email",
       emailDetails: "alvoloconsulting@gmail.com",
       addressTitle: "Address",
-      addressDetails: "Via Valsugana <br />20139 Milano (MI)"
+      addressDetails: "Via Valsugana, 20139 Milano (MI), Italy",
+      hoursTitle: "Business Hours",
+      hoursDetails: "Monday - Friday: 09:00 - 18:00<br />Saturday: 09:00 - 14:00<br />Sunday: Closed",
+      getInTouch: "Get In Touch",
+      contactInfo: "Contact Information",
+      followUs: "Follow Us"
     },
     it: {
       title: "Contatti",
@@ -54,7 +66,7 @@ const getContactSectionContent = (lang: string) => {
       formNameLabel: "Nome Cognome",
       formEmailLabel: "Email",
       formMessageLabel: "Il Tuo Messaggio",
-      formSubmitButton: "Invia",
+      formSubmitButton: "Invia Messaggio",
       formSendingButton: "Invio in corso...",
       formSuccessMessage: "Il tuo messaggio è stato inviato con successo!",
       formErrorMessage: "Si è verificato un errore durante l'invio del messaggio. Riprova.",
@@ -63,11 +75,17 @@ const getContactSectionContent = (lang: string) => {
       privacyCheckbox2: "Autorizzo al trattamento dei dati per finalità di marketing, attività promozionali, offerte commerciali ed indagini di mercato.",
       privacyPolicy: "Privacy Policy",
       phoneTitle: "Telefono",
-      phoneDetails: "Whatsapp: +39 348 170 5207<br />Alternativo: +39 351 713 6434",
+      phoneDetails: "+39 348 170 5207",
+      whatsappDetails: "WhatsApp: +39 348 170 5207",
       emailTitle: "Email",
       emailDetails: "alvoloconsulting@gmail.com",
       addressTitle: "Indirizzo",
-      addressDetails: "Via Valsugana <br />20139 Milano (MI)"
+      addressDetails: "Via Valsugana, 20139 Milano (MI), Italia",
+      hoursTitle: "Orari di Lavoro",
+      hoursDetails: "Lunedì - Venerdì: 09:00 - 18:00<br />Sabato: 09:00 - 14:00<br />Domenica: Chiuso",
+      getInTouch: "Mettiti in Contatto",
+      contactInfo: "Informazioni di Contatto",
+      followUs: "Seguici"
     }
   };
   return content[lang as keyof typeof content] || content.tr;
@@ -140,160 +158,260 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-brand-bg-primary">
+    <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-brand-blue mb-4">
+        {/* Header Section */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-brand-gold to-yellow-600 rounded-full mb-6 shadow-lg">
+            <FaEnvelope className="w-8 h-8 text-white" />
+          </div>
+          <h2 className="text-5xl md:text-6xl font-bold text-brand-blue mb-6">
             {c.title}
           </h2>
-          <p className="text-xl text-brand-text-secondary">
+          <p className="text-xl text-brand-text-secondary max-w-3xl mx-auto leading-relaxed">
             {c.subtitle}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-brand-bg-surface p-8 rounded-lg shadow-lg">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-brand-text-primary mb-2">
-                  {c.formNameLabel}
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-brand-text-primary focus:outline-none focus:ring-2 focus:ring-brand-gold"
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  disabled={isSubmitting}
-                />
-              </div>
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-12">
+          {/* Contact Information */}
+          <div className="xl:col-span-1">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+              <h3 className="text-2xl font-bold text-brand-blue mb-8 flex items-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-brand-gold to-yellow-600 rounded-lg flex items-center justify-center mr-3">
+                  <FaPhone className="w-4 h-4 text-white" />
+                </div>
+                {c.contactInfo}
+              </h3>
               
-              <div>
-                <label htmlFor="email" className="block text-brand-text-primary mb-2">
-                  {c.formEmailLabel}
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-brand-text-primary focus:outline-none focus:ring-2 focus:ring-brand-gold"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  disabled={isSubmitting}
-                />
+              <div className="space-y-8">
+                {/* Phone */}
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <FaPhone className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-brand-blue mb-1">
+                      {c.phoneTitle}
+                    </h4>
+                    <p className="text-brand-text-secondary mb-2">
+                      {c.phoneDetails}
+                    </p>
+                    <p className="text-sm text-green-600 font-medium">
+                      {c.whatsappDetails}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <FaEnvelope className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-brand-blue mb-1">
+                      {c.emailTitle}
+                    </h4>
+                    <p className="text-brand-text-secondary">
+                      {c.emailDetails}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <FaMapMarkerAlt className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-brand-blue mb-1">
+                      {c.addressTitle}
+                    </h4>
+                    <p className="text-brand-text-secondary">
+                      {c.addressDetails}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Business Hours */}
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <FaClock className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-brand-blue mb-1">
+                      {c.hoursTitle}
+                    </h4>
+                    <div className="text-brand-text-secondary text-sm">
+                      {renderHtml(c.hoursDetails)}
+                    </div>
+                  </div>
+                </div>
               </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-brand-text-primary mb-2">
-                  {c.formMessageLabel}
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-brand-text-primary focus:outline-none focus:ring-2 focus:ring-brand-gold"
-                  required
-                  value={formData.message}
-                  onChange={handleChange}
-                  disabled={isSubmitting}
-                ></textarea>
+
+              {/* Social Media */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h4 className="text-lg font-semibold text-brand-blue mb-4">
+                  {c.followUs}
+                </h4>
+                <div className="flex space-x-4">
+                  <a
+                    href="https://wa.me/393481705207"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-green-500 hover:bg-green-600 rounded-xl flex items-center justify-center transition-colors duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    <FaWhatsapp className="w-5 h-5 text-white" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/alvolo-consulting"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-xl flex items-center justify-center transition-colors duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    <FaLinkedin className="w-5 h-5 text-white" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/alvoloconsulting"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-xl flex items-center justify-center transition-colors duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    <FaInstagram className="w-5 h-5 text-white" />
+                  </a>
+                </div>
               </div>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="xl:col-span-2">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+              <h3 className="text-2xl font-bold text-brand-blue mb-8 flex items-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-brand-gold to-yellow-600 rounded-lg flex items-center justify-center mr-3">
+                  <FaEnvelope className="w-4 h-4 text-white" />
+                </div>
+                {c.getInTouch}
+              </h3>
               
-              {/* Privacy Checkboxes */}
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <input
-                    type="checkbox"
-                    id="privacyConsent"
-                    className="mt-1 w-4 h-4 text-brand-gold bg-gray-100 border-gray-300 rounded focus:ring-brand-gold focus:ring-2"
-                    required
-                    checked={formData.privacyConsent}
-                    onChange={handleChange}
-                    disabled={isSubmitting}
-                  />
-                  <label htmlFor="privacyConsent" className="text-sm text-brand-text-secondary leading-relaxed">
-                    {c.privacyCheckbox1} (
-                    <a href="/privacy" className="text-brand-gold hover:underline" target="_blank" rel="noopener noreferrer">
-                      {c.privacyPolicy}
-                    </a>
-                    )
-                  </label>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-brand-text-primary font-semibold mb-3">
+                      {c.formNameLabel} *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      className="w-full px-4 py-4 rounded-xl border-2 border-gray-200 bg-gray-50 text-brand-text-primary focus:outline-none focus:border-brand-gold focus:bg-white transition-all duration-300"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      disabled={isSubmitting}
+                      placeholder="Adınız ve soyadınız"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-brand-text-primary font-semibold mb-3">
+                      {c.formEmailLabel} *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="w-full px-4 py-4 rounded-xl border-2 border-gray-200 bg-gray-50 text-brand-text-primary focus:outline-none focus:border-brand-gold focus:bg-white transition-all duration-300"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      disabled={isSubmitting}
+                      placeholder="E-posta adresiniz"
+                    />
+                  </div>
                 </div>
                 
-                <div className="flex items-start gap-3">
-                  <input
-                    type="checkbox"
-                    id="marketingConsent"
-                    className="mt-1 w-4 h-4 text-brand-gold bg-gray-100 border-gray-300 rounded focus:ring-brand-gold focus:ring-2"
-                    checked={formData.marketingConsent}
+                <div>
+                  <label htmlFor="message" className="block text-brand-text-primary font-semibold mb-3">
+                    {c.formMessageLabel} *
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={6}
+                    className="w-full px-4 py-4 rounded-xl border-2 border-gray-200 bg-gray-50 text-brand-text-primary focus:outline-none focus:border-brand-gold focus:bg-white transition-all duration-300 resize-none"
+                    required
+                    value={formData.message}
                     onChange={handleChange}
                     disabled={isSubmitting}
-                  />
-                  <label htmlFor="marketingConsent" className="text-sm text-brand-text-secondary leading-relaxed">
-                    {c.privacyCheckbox2}
-                  </label>
+                    placeholder="Mesajınızı buraya yazın..."
+                  ></textarea>
                 </div>
-              </div>
-              
-              <button
-                type="submit"
-                className="w-full bg-brand-blue text-black py-3 px-6 rounded-lg hover:brightness-10 transition duration-300 disabled:opacity-50"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? c.formSendingButton : c.formSubmitButton}
-              </button>
-
-              {submissionStatus === 'success' && (
-                <p className="text-green-600">{c.formSuccessMessage}</p>
-              )}
-              {submissionStatus === 'error' && (
-                <div className="text-red-600">
-                  <p>{c.formErrorMessage}</p>
-                  {errorDetails && (
-                    <p className="text-sm mt-1">
-                      {c.formErrorDetails}{errorDetails}
-                    </p>
+                
+                {/* Privacy Checkboxes */}
+                <div className="space-y-4 bg-gray-50 p-6 rounded-xl">
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="checkbox"
+                      id="privacyConsent"
+                      className="mt-1 w-5 h-5 text-brand-gold bg-white border-2 border-gray-300 rounded focus:ring-brand-gold focus:ring-2"
+                      required
+                      checked={formData.privacyConsent}
+                      onChange={handleChange}
+                      disabled={isSubmitting}
+                    />
+                    <label htmlFor="privacyConsent" className="text-sm text-brand-text-secondary leading-relaxed">
+                      {c.privacyCheckbox1} (
+                      <a href="/privacy" className="text-brand-gold hover:underline font-medium" target="_blank" rel="noopener noreferrer">
+                        {c.privacyPolicy}
+                      </a>
+                      )
+                    </label>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="checkbox"
+                      id="marketingConsent"
+                      className="mt-1 w-5 h-5 text-brand-gold bg-white border-2 border-gray-300 rounded focus:ring-brand-gold focus:ring-2"
+                      checked={formData.marketingConsent}
+                      onChange={handleChange}
+                      disabled={isSubmitting}
+                    />
+                    <label htmlFor="marketingConsent" className="text-sm text-brand-text-secondary leading-relaxed">
+                      {c.privacyCheckbox2}
+                    </label>
+                  </div>
+                </div>
+                
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-brand-gold to-yellow-600 text-white py-4 px-8 rounded-xl hover:from-yellow-600 hover:to-brand-gold transition-all duration-300 disabled:opacity-50 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <span className="flex items-center justify-center">
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      {c.formSendingButton}
+                    </span>
+                  ) : (
+                    c.formSubmitButton
                   )}
-                </div>
-              )}
-            </form>
-          </div>
-          
-          <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <FaPhone className="w-6 h-6 text-brand-gold flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="text-xl font-semibold text-brand-blue mb-2">
-                  {c.phoneTitle}
-                </h3>
-                <div className="text-brand-text-secondary">
-                  {renderHtml(c.phoneDetails)}
-                </div>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4">
-              <FaEnvelope className="w-6 h-6 text-brand-gold flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="text-xl font-semibold text-brand-blue mb-2">
-                  {c.emailTitle}
-                </h3>
-                <div className="text-brand-text-secondary">
-                  {renderHtml(c.emailDetails)}
-                </div>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4">
-              <FaMapMarkerAlt className="w-6 h-6 text-brand-gold flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="text-xl font-semibold text-brand-blue mb-2">
-                  {c.addressTitle}
-                </h3>
-                <div className="text-brand-text-secondary">
-                  {renderHtml(c.addressDetails)}
-                </div>
-              </div>
+                </button>
+
+                {submissionStatus === 'success' && (
+                  <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+                    <p className="text-green-700 font-medium">{c.formSuccessMessage}</p>
+                  </div>
+                )}
+                {submissionStatus === 'error' && (
+                  <div className="bg-red-50 border border-red-200 rounded-xl p-4">
+                    <p className="text-red-700 font-medium">{c.formErrorMessage}</p>
+                    {errorDetails && (
+                      <p className="text-sm text-red-600 mt-2">
+                        {c.formErrorDetails}{errorDetails}
+                      </p>
+                    )}
+                  </div>
+                )}
+              </form>
             </div>
           </div>
         </div>

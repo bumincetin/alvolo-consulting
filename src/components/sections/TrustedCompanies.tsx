@@ -7,115 +7,161 @@ import Image from 'next/image';
 const getTrustedCompaniesContent = (lang: string) => {
   const content = {
     tr: {
-      title: "Güvenilir Ortaklarımız",
-      subtitle: "İtalya'nın önde gelen kurumları ve şirketleri ile çalışıyoruz",
+      title: "Profesyonel Ağımız",
+      subtitle: "Bu kurumlardan profesyonellerle çalışıyoruz",
       companies: [
         {
           name: "Bocconi Üniversitesi",
-          logo: "https://www.dropbox.com/scl/fi/bh5lnxwkq7nrwy0hh2tiq/burs2.png?rlkey=pvmywttrdg94m4nwhpyflt38q&st=b4xhc5us&dl=1",
-          description: "İtalya'nın prestijli işletme üniversitesi"
+          logo: "/boconoman.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/1e40af/ffffff?text=BOCCONI",
+          description: "Bocconi Üniversitesi'nden akademisyenler ve uzmanlarla çalışıyoruz"
         },
         {
           name: "Milano Belediyesi",
-          logo: "https://www.dropbox.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1",
-          description: "Resmi belediye ortaklığı"
+          logo: "/comune.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/059669/ffffff?text=MILANO",
+          description: "Milano Belediyesi'nden yetkili kişilerle işbirliği yapıyoruz"
         },
         {
           name: "İtalyan Ticaret Odası",
-          logo: "https://www.dropbox.com/scl/fi/kyiy7zmfhp2qm0sucd7nt/ICON.png?rlkey=3wzqu5r27zaag3j8mpawjydpy&st=qjoffk41&dl=1",
-          description: "Ticaret ve iş geliştirme desteği"
+          logo: "/cameradicommercio.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/dc2626/ffffff?text=CHAMBER",
+          description: "Ticaret Odası'ndan deneyimli profesyonellerle çalışıyoruz"
         },
         {
           name: "UniCredit Bank",
-          logo: "https://www.dropbox.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1",
-          description: "Finansal hizmetler ortağı"
+          logo: "/unicredit.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/7c3aed/ffffff?text=UNICREDIT",
+          description: "UniCredit Bank'tan finans uzmanlarıyla işbirliği yapıyoruz"
         },
         {
           name: "İtalyan Göçmenlik Bürosu",
-          logo: "https://www.dropbox.com/scl/fi/y6en2p5fi5mg8clye3cnt/milanoyeni.jpg?rlkey=dfca5yg6f7mzeju965vbr6f8f&st=gsr57h2m&dl=1",
-          description: "Resmi vize ve göçmenlik işlemleri"
+          logo: "/vize.jpg",
+          fallbackLogo: "https://via.placeholder.com/128x128/ea580c/ffffff?text=IMMIGRATION",
+          description: "Göçmenlik Bürosu'ndan yetkili memurlarla çalışıyoruz"
         },
         {
           name: "Milano Teknik Üniversitesi",
-          logo: "https://www.dropbox.com/scl/fi/bh5lnxwkq7nrwy0hh2tiq/burs2.png?rlkey=pvmywttrdg94m4nwhpyflt38q&st=b4xhc5us&dl=1",
-          description: "Teknoloji ve inovasyon ortaklığı"
+          logo: "/polimi.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/be185d/ffffff?text=POLITECNICO",
+          description: "Politecnico di Milano'dan araştırmacılarla işbirliği yapıyoruz"
         }
       ]
     },
     en: {
-      title: "Our Trusted Partners",
-      subtitle: "Working with Italy's leading institutions and companies",
+      title: "Our Professional Network",
+      subtitle: "Working with professionals from these institutions",
       companies: [
         {
           name: "Bocconi University",
-          logo: "https://www.dropbox.com/scl/fi/bh5lnxwkq7nrwy0hh2tiq/burs2.png?rlkey=pvmywttrdg94m4nwhpyflt38q&st=b4xhc5us&dl=1",
-          description: "Italy's prestigious business university"
+          logo: "/boconoman.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/1e40af/ffffff?text=BOCCONI",
+          description: "Working with academics and experts from Bocconi University"
         },
         {
           name: "Milan Municipality",
-          logo: "https://www.dropbox.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1",
-          description: "Official municipal partnership"
+          logo: "/comune.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/059669/ffffff?text=MILANO",
+          description: "Collaborating with authorized personnel from Milan Municipality"
         },
         {
           name: "Italian Chamber of Commerce",
-          logo: "https://www.dropbox.com/scl/fi/kyiy7zmfhp2qm0sucd7nt/ICON.png?rlkey=3wzqu5r27zaag3j8mpawjydpy&st=qjoffk41&dl=1",
-          description: "Trade and business development support"
+          logo: "/cameradicommercio.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/dc2626/ffffff?text=CHAMBER",
+          description: "Working with experienced professionals from the Chamber of Commerce"
         },
         {
           name: "UniCredit Bank",
-          logo: "https://www.dropbox.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1",
-          description: "Financial services partner"
+          logo: "/unicredit.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/7c3aed/ffffff?text=UNICREDIT",
+          description: "Collaborating with financial experts from UniCredit Bank"
         },
         {
           name: "Italian Immigration Office",
-          logo: "https://www.dropbox.com/scl/fi/y6en2p5fi5mg8clye3cnt/milanoyeni.jpg?rlkey=dfca5yg6f7mzeju965vbr6f8f&st=gsr57h2m&dl=1",
-          description: "Official visa and immigration procedures"
+          logo: "/vize.jpg",
+          fallbackLogo: "https://via.placeholder.com/128x128/ea580c/ffffff?text=IMMIGRATION",
+          description: "Working with authorized officers from the Immigration Office"
         },
         {
           name: "Milan Technical University",
-          logo: "https://www.dropbox.com/scl/fi/bh5lnxwkq7nrwy0hh2tiq/burs2.png?rlkey=pvmywttrdg94m4nwhpyflt38q&st=b4xhc5us&dl=1",
-          description: "Technology and innovation partnership"
+          logo: "/polimi.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/be185d/ffffff?text=POLITECNICO",
+          description: "Collaborating with researchers from Politecnico di Milano"
         }
       ]
     },
     it: {
-      title: "I Nostri Partner Fidati",
-      subtitle: "Lavoriamo con le principali istituzioni e aziende italiane",
+      title: "La Nostra Rete Professionale",
+      subtitle: "Lavoriamo con professionisti di queste istituzioni",
       companies: [
         {
           name: "Università Bocconi",
-          logo: "https://www.dropbox.com/scl/fi/bh5lnxwkq7nrwy0hh2tiq/burs2.png?rlkey=pvmywttrdg94m4nwhpyflt38q&st=b4xhc5us&dl=1",
-          description: "L'università di business prestigiosa d'Italia"
+          logo: "/boconoman.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/1e40af/ffffff?text=BOCCONI",
+          description: "Lavoriamo con accademici ed esperti dell'Università Bocconi"
         },
         {
           name: "Comune di Milano",
-          logo: "https://www.dropbox.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1",
-          description: "Partnership municipale ufficiale"
+          logo: "/comune.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/059669/ffffff?text=MILANO",
+          description: "Collaboriamo con personale autorizzato del Comune di Milano"
         },
         {
           name: "Camera di Commercio Italiana",
-          logo: "https://www.dropbox.com/scl/fi/kyiy7zmfhp2qm0sucd7nt/ICON.png?rlkey=3wzqu5r27zaag3j8mpawjydpy&st=qjoffk41&dl=1",
-          description: "Supporto per il commercio e sviluppo aziendale"
+          logo: "/cameradicommercio.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/dc2626/ffffff?text=CHAMBER",
+          description: "Lavoriamo con professionisti esperti della Camera di Commercio"
         },
         {
           name: "Banca UniCredit",
-          logo: "https://www.dropbox.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1",
-          description: "Partner per servizi finanziari"
+          logo: "/unicredit.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/7c3aed/ffffff?text=UNICREDIT",
+          description: "Collaboriamo con esperti finanziari della Banca UniCredit"
         },
         {
           name: "Ufficio Immigrazione Italiano",
-          logo: "https://www.dropbox.com/scl/fi/y6en2p5fi5mg8clye3cnt/milanoyeni.jpg?rlkey=dfca5yg6f7mzeju965vbr6f8f&st=gsr57h2m&dl=1",
-          description: "Procedure ufficiali per visti e immigrazione"
+          logo: "/vize.jpg",
+          fallbackLogo: "https://via.placeholder.com/128x128/ea580c/ffffff?text=IMMIGRATION",
+          description: "Lavoriamo con funzionari autorizzati dell'Ufficio Immigrazione"
         },
         {
           name: "Politecnico di Milano",
-          logo: "https://www.dropbox.com/scl/fi/bh5lnxwkq7nrwy0hh2tiq/burs2.png?rlkey=pvmywttrdg94m4nwhpyflt38q&st=b4xhc5us&dl=1",
-          description: "Partnership per tecnologia e innovazione"
+          logo: "/polimi.png",
+          fallbackLogo: "https://via.placeholder.com/128x128/be185d/ffffff?text=POLITECNICO",
+          description: "Collaboriamo con ricercatori del Politecnico di Milano"
         }
       ]
     }
   };
   return content[lang as keyof typeof content] || content.tr;
+};
+
+const CompanyLogo = ({ company, className }: { company: any; className: string }) => {
+  const [imageError, setImageError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  return (
+    <div className={`relative ${className}`}>
+      {isLoading && (
+        <div className="absolute inset-0 bg-gray-200 rounded-lg animate-pulse flex items-center justify-center">
+          <div className="w-8 h-8 border-4 border-brand-gold border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      )}
+      <Image
+        src={imageError ? company.fallbackLogo : company.logo}
+        alt={company.name}
+        width={128}
+        height={128}
+        className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+        onLoad={() => setIsLoading(false)}
+        onError={() => {
+          setImageError(true);
+          setIsLoading(false);
+        }}
+        priority={true}
+      />
+    </div>
+  );
 };
 
 const TrustedCompanies = () => {
@@ -134,13 +180,18 @@ const TrustedCompanies = () => {
   }, [c.companies.length]);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-brand-gold to-yellow-600 rounded-full mb-6 shadow-lg">
+            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-blue mb-6">
             {c.title}
           </h2>
-          <p className="text-xl text-brand-text-secondary max-w-3xl mx-auto">
+          <p className="text-xl text-brand-text-secondary max-w-3xl mx-auto leading-relaxed">
             {c.subtitle}
           </p>
         </div>
@@ -151,20 +202,17 @@ const TrustedCompanies = () => {
             {c.companies.map((company, index) => (
               <div key={index} className="w-full flex-shrink-0">
                 <div className="max-w-4xl mx-auto">
-                  <div className="bg-gradient-to-br from-brand-bg-primary to-blue-50 rounded-2xl shadow-xl p-12 text-center">
+                  <div className="bg-white rounded-2xl shadow-xl p-12 text-center border border-gray-100">
                     <div className="mb-8">
-                      <Image
-                        src={company.logo}
-                        alt={company.name}
-                        width={128}
-                        height={128}
-                        className="w-32 h-32 mx-auto object-contain rounded-lg shadow-lg"
+                      <CompanyLogo
+                        company={company}
+                        className="w-32 h-32 mx-auto object-contain rounded-xl shadow-lg"
                       />
                     </div>
                     <h3 className="text-3xl font-bold text-brand-blue mb-4">
                       {company.name}
                     </h3>
-                    <p className="text-xl text-brand-text-secondary max-w-2xl mx-auto">
+                    <p className="text-xl text-brand-text-secondary max-w-2xl mx-auto leading-relaxed">
                       {company.description}
                     </p>
                   </div>
@@ -192,7 +240,7 @@ const TrustedCompanies = () => {
           {/* Navigation Arrows */}
           <button
             onClick={() => setCurrentIndex(prev => prev === 0 ? c.companies.length - 1 : prev - 1)}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-100"
             aria-label="Previous company"
           >
             <svg className="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -202,7 +250,7 @@ const TrustedCompanies = () => {
           
           <button
             onClick={() => setCurrentIndex(prev => prev === c.companies.length - 1 ? 0 : prev + 1)}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-100"
             aria-label="Next company"
           >
             <svg className="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -213,21 +261,18 @@ const TrustedCompanies = () => {
 
         {/* Company Grid */}
         <div className="mt-16">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {c.companies.map((company, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+                className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer border border-gray-100"
                 onClick={() => setCurrentIndex(index)}
               >
-                <Image
-                  src={company.logo}
-                  alt={company.name}
-                  width={64}
-                  height={64}
+                <CompanyLogo
+                  company={company}
                   className="w-16 h-16 mx-auto object-contain mb-4"
                 />
-                <h4 className="text-sm font-semibold text-brand-text-primary">
+                <h4 className="text-sm font-semibold text-brand-text-primary leading-tight">
                   {company.name}
                 </h4>
               </div>

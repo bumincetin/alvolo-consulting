@@ -130,7 +130,7 @@ const Footer = () => {
           {/* Logo & Contact */}
           <div className="flex-1 min-w-[220px] mb-8 md:mb-0">
             <div className="flex items-center mb-2">
-              <img src="https://www.dropbox.com/scl/fi/kyiy7zmfhp2qm0sucd7nt/ICON.png?rlkey=3wzqu5r27zaag3j8mpawjydpy&st=qjoffk41&dl=1" alt="ALVOLO CONSULTING Logo" className="h-12 w-12 object-contain mr-3 rounded bg-white border border-gray-200" />
+              <img src="https://dl.dropboxusercontent.com/scl/fi/kyiy7zmfhp2qm0sucd7nt/ICON.png?rlkey=3wzqu5r27zaag3j8mpawjydpy&st=qjoffk41&dl=1&raw=1" alt="ALVOLO CONSULTING Logo" className="h-12 w-12 object-contain mr-3 rounded bg-white border border-gray-200 p-1" />
               <div>
                 <div className="font-bold text-lg text-brand-blue">{c.company.name}</div>
                 <div className="text-xs text-gray-600">{c.company.title}<br />{c.company.subtitle}</div>

@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import Contact from '@/components/sections/Contact';
+import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+// import Footer from '@/components/layout/Footer'; // Remove this import
+import Contact from '@/components/sections/Contact';
 
 export default function ContactPage() {
   return (
-    <>
+    <div className="min-h-screen bg-gray-50">
       <Navbar />
-      <main className="pt-20">
+      <div className="pt-20">
         <Contact />
-      </main>
-      <Footer />
-    </>
+      </div>
+    </div>
   );
 } 

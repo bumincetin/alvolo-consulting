@@ -4,10 +4,12 @@ export const runtime = 'edge';
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 import { FaCalendarAlt, FaUser, FaBookOpen, FaArrowLeft } from 'react-icons/fa';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import { Metadata } from 'next';
+import Image from 'next/image';
+import { notFound } from 'next/navigation';
 
 const getBlogPostDetails = (lang: string, id: string) => {
   const blogPosts = {
@@ -535,23 +537,7 @@ const BlogPostDetailPage = () => {
   const c = getBlogPostDetails(language, id);
 
   if (!c.post) {
-    return (
-      <div className="min-h-screen bg-gray-50">
-        <Navbar />
-        <div className="pt-20">
-          <div className="container mx-auto px-6 py-16">
-            <div className="text-center">
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">Blog Post Not Found</h1>
-              <p className="text-gray-600 mb-8">The blog post you are looking for does not exist.</p>
-              <Link href="/blog" className="text-brand-blue hover:text-brand-blue-dark">
-                ← Back to Blog
-              </Link>
-            </div>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    );
+    notFound();
   }
 
   return (
@@ -631,8 +617,6 @@ const BlogPostDetailPage = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

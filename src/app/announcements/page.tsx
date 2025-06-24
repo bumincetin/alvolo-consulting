@@ -2,9 +2,8 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
-import { FaCalendarAlt } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const getAnnouncementsContent = (lang: string) => {
   const content = {
@@ -210,7 +209,7 @@ const getAnnouncementsContent = (lang: string) => {
   return content[lang as keyof typeof content] || content.en;
 };
 
-const AnnouncementsPage = () => {
+export default function Announcements() {
   const { language } = useLanguage();
   const c = getAnnouncementsContent(language);
 
@@ -218,81 +217,51 @@ const AnnouncementsPage = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-brand-bg-primary to-blue-50 py-16">
-          <div className="container mx-auto px-6">
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <FaCalendarAlt className="text-4xl text-brand-blue" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                {c.title}
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                {c.subtitle}
-              </p>
-              <p className="text-lg text-gray-500 mt-4 max-w-2xl mx-auto">
-                {c.description}
-              </p>
-            </div>
+      {/* Hero Section */}
+      <div className="relative pt-20 pb-16 bg-gradient-to-r from-brand-blue to-blue-600">
+        <div className="container mx-auto px-6">
+          <div className="text-center text-white">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">{c.title}</h1>
+            <p className="text-xl max-w-3xl mx-auto">{c.subtitle}</p>
           </div>
-        </section>
+        </div>
+      </div>
 
-        {/* Announcements Grid */}
-        <section className="py-16">
-          <div className="container mx-auto px-6">
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {c.announcements.map((announcement) => (
-                <article
-                  key={announcement.id}
-                  className={`bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 ${
-                    announcement.featured ? 'ring-2 ring-brand-blue' : ''
-                  }`}
-                >
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center text-sm text-gray-500">
-                        <FaCalendarAlt className="mr-2" />
-                        {announcement.date}
-                      </div>
-                      {announcement.featured && (
-                        <span className="bg-brand-blue text-white text-xs px-2 py-1 rounded-full">
-                          {c.featured}
-                        </span>
-                      )}
-                    </div>
-                    
-                    <div className="mb-3">
-                      <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-                        {announcement.category}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
-                      {announcement.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-4 line-clamp-3">
-                      {announcement.excerpt}
-                    </p>
-                    
-                    <button className="text-brand-blue hover:text-brand-blue-dark font-medium transition-colors">
-                      <Link href={`/announcements/${announcement.id}`}>
-                        {c.readMore} →
-                      </Link>
-                    </button>
+      {/* Announcements */}
+      <div className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {c.announcements.map((announcement) => (
+              <Link
+                key={announcement.id}
+                href={`/announcements/${announcement.id}`}
+                className="group block bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="h-48 bg-gradient-to-br from-brand-blue to-blue-600 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <div className="text-4xl font-bold mb-2">{announcement.id}</div>
+                    <div className="text-sm opacity-90">{announcement.category}</div>
                   </div>
-                </article>
-              ))}
-            </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2 group-hover:text-brand-gold transition-colors">
+                    {announcement.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {announcement.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <span>{announcement.date}</span>
+                    <span className="px-2 py-1 bg-brand-gold text-white rounded text-xs">
+                      {announcement.category}
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
-        </section>
-      </main>
-
-      <Footer />
+        </div>
+      </div>
     </div>
   );
-};
-
-export default AnnouncementsPage; 
+} 

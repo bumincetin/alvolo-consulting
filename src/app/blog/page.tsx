@@ -2,7 +2,6 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 import { FaCalendarAlt, FaUser, FaArrowRight, FaBookOpen } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -35,7 +34,7 @@ const getBlogContent = (lang: string) => {
           readTime: 8,
           category: "İş Kurma",
           featured: true,
-          image: "https://www.dropbox.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1&raw=1"
         },
         {
           id: 2,
@@ -46,7 +45,7 @@ const getBlogContent = (lang: string) => {
           readTime: 12,
           category: "Vize & İzinler",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/bh5lnxwkq7nrwy0hh2tiq/burs2.png?rlkey=pvmywttrdg94m4nwhpyflt38q&st=b4xhc5us&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/bh5lnxwkq7nrwy0hh2tiq/burs2.png?rlkey=pvmywttrdg94m4nwhpyflt38q&st=b4xhc5us&dl=1&raw=1"
         },
         {
           id: 3,
@@ -57,7 +56,7 @@ const getBlogContent = (lang: string) => {
           readTime: 10,
           category: "Finansal Danışmanlık",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1&raw=1"
         },
         {
           id: 4,
@@ -68,7 +67,7 @@ const getBlogContent = (lang: string) => {
           readTime: 15,
           category: "Eğitim",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/y6en2p5fi5mg8clye3cnt/milanoyeni.jpg?rlkey=dfca5yg6f7mzeju965vbr6f8f&st=gsr57h2m&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/y6en2p5fi5mg8clye3cnt/milanoyeni.jpg?rlkey=dfca5yg6f7mzeju965vbr6f8f&st=gsr57h2m&dl=1&raw=1"
         },
         {
           id: 5,
@@ -79,7 +78,7 @@ const getBlogContent = (lang: string) => {
           readTime: 7,
           category: "Yaşam",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1&raw=1"
         },
         {
           id: 6,
@@ -90,7 +89,7 @@ const getBlogContent = (lang: string) => {
           readTime: 9,
           category: "Yasal Süreçler",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/kyiy7zmfhp2qm0sucd7nt/ICON.png?rlkey=3wzqu5r27zaag3j8mpawjydpy&st=qjoffk41&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/kyiy7zmfhp2qm0sucd7nt/ICON.png?rlkey=3wzqu5r27zaag3j8mpawjydpy&st=qjoffk41&dl=1&raw=1"
         }
       ]
     },
@@ -120,7 +119,7 @@ const getBlogContent = (lang: string) => {
           readTime: 8,
           category: "Business Setup",
           featured: true,
-          image: "https://www.dropbox.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1&raw=1"
         },
         {
           id: 2,
@@ -131,7 +130,7 @@ const getBlogContent = (lang: string) => {
           readTime: 12,
           category: "Visa & Permits",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/bh5lnxwkq7nrwy0hh2tiq/burs2.png?rlkey=pvmywttrdg94m4nwhpyflt38q&st=b4xhc5us&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/bh5lnxwkq7nrwy0hh2tiq/burs2.png?rlkey=pvmywttrdg94m4nwhpyflt38q&st=b4xhc5us&dl=1&raw=1"
         },
         {
           id: 3,
@@ -142,7 +141,7 @@ const getBlogContent = (lang: string) => {
           readTime: 10,
           category: "Financial Consulting",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1&raw=1"
         },
         {
           id: 4,
@@ -153,7 +152,7 @@ const getBlogContent = (lang: string) => {
           readTime: 15,
           category: "Education",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/y6en2p5fi5mg8clye3cnt/milanoyeni.jpg?rlkey=dfca5yg6f7mzeju965vbr6f8f&st=gsr57h2m&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/y6en2p5fi5mg8clye3cnt/milanoyeni.jpg?rlkey=dfca5yg6f7mzeju965vbr6f8f&st=gsr57h2m&dl=1&raw=1"
         },
         {
           id: 5,
@@ -164,7 +163,7 @@ const getBlogContent = (lang: string) => {
           readTime: 7,
           category: "Lifestyle",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1&raw=1"
         },
         {
           id: 6,
@@ -175,7 +174,7 @@ const getBlogContent = (lang: string) => {
           readTime: 9,
           category: "Legal Processes",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/kyiy7zmfhp2qm0sucd7nt/ICON.png?rlkey=3wzqu5r27zaag3j8mpawjydpy&st=qjoffk41&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/kyiy7zmfhp2qm0sucd7nt/ICON.png?rlkey=3wzqu5r27zaag3j8mpawjydpy&st=qjoffk41&dl=1&raw=1"
         }
       ]
     },
@@ -205,7 +204,7 @@ const getBlogContent = (lang: string) => {
           readTime: 8,
           category: "Costituzione Aziendale",
           featured: true,
-          image: "https://www.dropbox.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1&raw=1"
         },
         {
           id: 2,
@@ -216,7 +215,7 @@ const getBlogContent = (lang: string) => {
           readTime: 12,
           category: "Visti e Permessi",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/bh5lnxwkq7nrwy0hh2tiq/burs2.png?rlkey=pvmywttrdg94m4nwhpyflt38q&st=b4xhc5us&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/bh5lnxwkq7nrwy0hh2tiq/burs2.png?rlkey=pvmywttrdg94m4nwhpyflt38q&st=b4xhc5us&dl=1&raw=1"
         },
         {
           id: 3,
@@ -227,7 +226,7 @@ const getBlogContent = (lang: string) => {
           readTime: 10,
           category: "Consulenza Finanziaria",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1&raw=1"
         },
         {
           id: 4,
@@ -238,7 +237,7 @@ const getBlogContent = (lang: string) => {
           readTime: 15,
           category: "Educazione",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/y6en2p5fi5mg8clye3cnt/milanoyeni.jpg?rlkey=dfca5yg6f7mzeju965vbr6f8f&st=gsr57h2m&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/y6en2p5fi5mg8clye3cnt/milanoyeni.jpg?rlkey=dfca5yg6f7mzeju965vbr6f8f&st=gsr57h2m&dl=1&raw=1"
         },
         {
           id: 5,
@@ -249,7 +248,7 @@ const getBlogContent = (lang: string) => {
           readTime: 7,
           category: "Stile di Vita",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1&raw=1"
         },
         {
           id: 6,
@@ -260,7 +259,7 @@ const getBlogContent = (lang: string) => {
           readTime: 9,
           category: "Processi Legali",
           featured: false,
-          image: "https://www.dropbox.com/scl/fi/kyiy7zmfhp2qm0sucd7nt/ICON.png?rlkey=3wzqu5r27zaag3j8mpawjydpy&st=qjoffk41&dl=1"
+          image: "https://dl.dropboxusercontent.com/scl/fi/kyiy7zmfhp2qm0sucd7nt/ICON.png?rlkey=3wzqu5r27zaag3j8mpawjydpy&st=qjoffk41&dl=1&raw=1"
         }
       ]
     }
@@ -412,8 +411,6 @@ const BlogPage = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };
