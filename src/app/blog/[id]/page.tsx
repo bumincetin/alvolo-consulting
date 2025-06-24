@@ -3,7 +3,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import { FaCalendarAlt, FaUser, FaBookOpen, FaArrowLeft, FaShare, FaTag } from 'react-icons/fa';
+import { FaCalendarAlt, FaUser, FaBookOpen, FaArrowLeft } from 'react-icons/fa';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 

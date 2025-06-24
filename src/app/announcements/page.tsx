@@ -3,7 +3,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import { FaCalendarAlt, FaNewspaper, FaBullhorn } from 'react-icons/fa';
+import { FaCalendarAlt, FaBullhorn } from 'react-icons/fa';
 import Link from 'next/link';
 
 const getAnnouncementsContent = (lang: string) => {

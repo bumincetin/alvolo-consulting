@@ -3,7 +3,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import { FaCalendarAlt, FaUser, FaTag, FaArrowRight, FaBookOpen } from 'react-icons/fa';
+import { FaCalendarAlt, FaUser, FaArrowRight, FaBookOpen } from 'react-icons/fa';
 import Link from 'next/link';
 
 const getBlogContent = (lang: string) => {
