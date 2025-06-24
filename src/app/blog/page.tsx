@@ -5,6 +5,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { FaCalendarAlt, FaUser, FaArrowRight, FaBookOpen } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const getBlogContent = (lang: string) => {
   const content = {
@@ -306,10 +307,12 @@ const BlogPage = () => {
               <article key={article.id} className="bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto">
                 <div className="md:flex">
                   <div className="md:w-1/2">
-                    <img 
+                    <Image 
                       src={article.image} 
                       alt={article.title}
                       className="w-full h-64 md:h-full object-cover"
+                      width={256}
+                      height={256}
                     />
                   </div>
                   <div className="md:w-1/2 p-8">
@@ -362,10 +365,12 @@ const BlogPage = () => {
                   key={article.id}
                   className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border border-gray-100"
                 >
-                  <img 
+                  <Image 
                     src={article.image} 
                     alt={article.title}
                     className="w-full h-48 object-cover"
+                    width={192}
+                    height={192}
                   />
                   <div className="p-6">
                     <div className="flex items-center text-sm text-gray-500 mb-3">

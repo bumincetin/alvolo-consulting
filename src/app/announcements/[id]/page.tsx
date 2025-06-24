@@ -1,5 +1,7 @@
 'use client';
 
+export const runtime = 'edge';
+
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';

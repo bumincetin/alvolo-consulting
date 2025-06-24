@@ -3,7 +3,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import { FaCalendarAlt, FaBullhorn } from 'react-icons/fa';
+import { FaCalendarAlt } from 'react-icons/fa';
 import Link from 'next/link';
 
 const getAnnouncementsContent = (lang: string) => {
@@ -224,7 +224,7 @@ const AnnouncementsPage = () => {
           <div className="container mx-auto px-6">
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <FaBullhorn className="text-4xl text-brand-blue" />
+                <FaCalendarAlt className="text-4xl text-brand-blue" />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 {c.title}
