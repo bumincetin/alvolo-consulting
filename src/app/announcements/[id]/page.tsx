@@ -7,9 +7,6 @@ import Navbar from '@/components/layout/Navbar';
 import { FaCalendarAlt, FaArrowLeft } from 'react-icons/fa';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { Metadata } from 'next';
-import Image from 'next/image';
-import { notFound } from 'next/navigation';
 
 const getAnnouncementDetails = (lang: string, id: string) => {
   const announcements = {
