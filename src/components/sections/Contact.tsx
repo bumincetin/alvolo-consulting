@@ -17,6 +17,9 @@ const getContactSectionContent = (lang: string) => {
       formSuccessMessage: "Mesajınız başarıyla gönderildi!",
       formErrorMessage: "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
       formErrorDetails: "Hata detayı: ",
+      privacyCheckbox1: "Kişisel verilerimin AB 679/2016 sayılı Tüzük uyarınca işlenmesine izin veriyorum",
+      privacyCheckbox2: "Pazarlama, promosyon faaliyetleri, ticari teklifler ve pazar araştırması amaçlarıyla veri işlenmesine izin veriyorum",
+      privacyPolicy: "Gizlilik Politikası",
       phoneTitle: "Telefon",
       phoneDetails: "Whatsapp: +39 348 170 5207<br />Alternatif: +39 351 713 6434",
       emailTitle: "E-posta",
@@ -35,6 +38,9 @@ const getContactSectionContent = (lang: string) => {
       formSuccessMessage: "Your message has been sent successfully!",
       formErrorMessage: "An error occurred while sending your message. Please try again.",
       formErrorDetails: "Error details: ",
+      privacyCheckbox1: "I authorize the processing of my personal data in accordance with EU Regulation No. 679/2016",
+      privacyCheckbox2: "I authorize the processing of data for marketing purposes, promotional activities, commercial offers and market research",
+      privacyPolicy: "Privacy Policy",
       phoneTitle: "Phone",
       phoneDetails: "Whatsapp: +39 348 170 5207<br />Alternative: +39 351 713 6434",
       emailTitle: "Email",
@@ -53,6 +59,9 @@ const getContactSectionContent = (lang: string) => {
       formSuccessMessage: "Il tuo messaggio è stato inviato con successo!",
       formErrorMessage: "Si è verificato un errore durante l'invio del messaggio. Riprova.",
       formErrorDetails: "Dettagli errore: ",
+      privacyCheckbox1: "Autorizzo il trattamento dei miei dati personali in base al Regolamento UE n. 679/2016",
+      privacyCheckbox2: "Autorizzo al trattamento dei dati per finalità di marketing, attività promozionali, offerte commerciali ed indagini di mercato.",
+      privacyPolicy: "Privacy Policy",
       phoneTitle: "Telefono",
       phoneDetails: "Whatsapp: +39 348 170 5207<br />Alternativo: +39 351 713 6434",
       emailTitle: "Email",
@@ -71,15 +80,20 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    privacyConsent: false,
+    marketingConsent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionStatus, setSubmissionStatus] = useState<'success' | 'error' | null>(null);
   const [errorDetails, setErrorDetails] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { id, value } = e.target;
-    setFormData(prev => ({ ...prev, [id]: value }));
+    const { id, value, type, checked } = e.target;
+    setFormData(prev => ({ 
+      ...prev, 
+      [id]: type === 'checkbox' ? checked : value 
+    }));
     // Clear error when user starts typing
     if (submissionStatus === 'error') {
       setSubmissionStatus(null);
@@ -106,7 +120,7 @@ const Contact = () => {
 
       if (response.ok) {
         setSubmissionStatus('success');
-        setFormData({ name: '', email: '', message: '' }); // Reset form
+        setFormData({ name: '', email: '', message: '', privacyConsent: false, marketingConsent: false }); // Reset form
       } else {
         setSubmissionStatus('error');
         setErrorDetails(data.details || data.error || 'An unknown error occurred');
@@ -182,6 +196,42 @@ const Contact = () => {
                   onChange={handleChange}
                   disabled={isSubmitting}
                 ></textarea>
+              </div>
+              
+              {/* Privacy Checkboxes */}
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    id="privacyConsent"
+                    className="mt-1 w-4 h-4 text-brand-gold bg-gray-100 border-gray-300 rounded focus:ring-brand-gold focus:ring-2"
+                    required
+                    checked={formData.privacyConsent}
+                    onChange={handleChange}
+                    disabled={isSubmitting}
+                  />
+                  <label htmlFor="privacyConsent" className="text-sm text-brand-text-secondary leading-relaxed">
+                    {c.privacyCheckbox1} (
+                    <a href="/privacy" className="text-brand-gold hover:underline" target="_blank" rel="noopener noreferrer">
+                      {c.privacyPolicy}
+                    </a>
+                    )
+                  </label>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    id="marketingConsent"
+                    className="mt-1 w-4 h-4 text-brand-gold bg-gray-100 border-gray-300 rounded focus:ring-brand-gold focus:ring-2"
+                    checked={formData.marketingConsent}
+                    onChange={handleChange}
+                    disabled={isSubmitting}
+                  />
+                  <label htmlFor="marketingConsent" className="text-sm text-brand-text-secondary leading-relaxed">
+                    {c.privacyCheckbox2}
+                  </label>
+                </div>
               </div>
               
               <button

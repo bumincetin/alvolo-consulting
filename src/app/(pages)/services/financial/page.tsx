@@ -80,7 +80,7 @@ const getFinancialContent = (lang: string) => {
           },
           {
             q: "Vergi planlaması ve uyumluluk konusunda nasıl yardımcı oluyorsunuz?",
-            a: "Şirketinizin İtalya’daki vergi yükümlülüklerini eksiksiz yerine getirmenizi sağlarken, aynı zamanda yasal çerçevede maksimum vergi avantajlarından faydalanmanıza yardımcı oluyoruz. Kapsamlı hizmetimiz; stratejik vergi planlaması, beyannamelerin hazırlanması, denetim süreçlerine hazırlık ve sürekli mevzuat takibi gibi başlıkları içerir. Böylece hem mali riskleri en aza indirir hem de işletmenizin finansal verimliliğini artırırız."
+            a: "Şirketinizin İtalya'daki vergi yükümlülüklerini eksiksiz yerine getirmenizi sağlarken, aynı zamanda yasal çerçevede maksimum vergi avantajlarından faydalanmanıza yardımcı oluyoruz. Kapsamlı hizmetimiz; stratejik vergi planlaması, beyannamelerin hazırlanması, denetim süreçlerine hazırlık ve sürekli mevzuat takibi gibi başlıkları içerir. Böylece hem mali riskleri en aza indirir hem de işletmenizin finansal verimliliğini artırırız."
           },
           {
             q: "İtalya'da şirket kurmak için minimum sermaye gereksinimleri nelerdir?",
@@ -349,7 +349,7 @@ const FinancialPage = () => {
               </p>
               <div className="flex justify-center gap-4">
                 <Link 
-                  href="/#contact"
+                  href="/contact"
                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-gold hover:bg-brand-gold/90 transition-colors duration-200"
                 >
                   {c.cta}
@@ -491,7 +491,7 @@ const FinancialPage = () => {
               {c.ctaSection.description}
             </p>
             <Link 
-              href="/#contact"
+              href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-lg font-medium rounded-md text-white hover:bg-white hover:text-brand-blue transition-colors duration-200"
             >
               {c.ctaSection.button}

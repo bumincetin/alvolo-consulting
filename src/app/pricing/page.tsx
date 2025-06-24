@@ -207,8 +207,8 @@ const PricingPageComponent = () => {
             {c.contactPrompt}
           </p>
           <Link
-            href="/#contact"
-            className="inline-block mt-6 px-8 py-4 bg-brand-gold text-white rounded-lg hover:bg-yellow-700 transition duration-300 shadow-lg hover:shadow-xl"
+            href="/contact"
+            className="inline-block px-8 py-4 bg-brand-gold text-white rounded-lg hover:bg-yellow-700 transition duration-300 shadow-lg hover:shadow-xl"
           >
             {c.contactButtonText}
           </Link>

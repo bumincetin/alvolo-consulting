@@ -60,7 +60,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="px-8 py-4 text-white rounded-lg transition duration-300 shadow-lg hover:shadow-xl text-center"
                 style={{backgroundColor: 'var(--logo-orange)'}}
                 onMouseOver={e => e.currentTarget.style.backgroundColor = 'var(--logo-orange-ton)'}

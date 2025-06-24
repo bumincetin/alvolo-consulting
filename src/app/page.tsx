@@ -2,8 +2,10 @@
 
 import Navbar from '@/components/layout/Navbar';
 import Hero from '@/components/sections/Hero';
+import MissionVision from '@/components/sections/MissionVision';
 import Services from '@/components/sections/Services';
-import Contact from '@/components/sections/Contact';
+import CompanyHighlights from '@/components/sections/CompanyHighlights';
+import TrustedCompanies from '@/components/sections/TrustedCompanies';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export const runtime = 'edge';
@@ -65,8 +67,10 @@ export default function Home() {
       
 
       <Hero />
+      <CompanyHighlights />
+      <MissionVision />
       <Services />
-      <Contact />
+      <TrustedCompanies />
     </main>
   );
 }

@@ -78,7 +78,7 @@ const Navbar = () => {
     { label: c.ourStory, href: '/our-story' },
     { label: c.announcements, href: '/announcements' },
     { label: c.blog, href: '/blog' },
-    { label: c.contact, href: '/#contact' },
+    { label: c.contact, href: '/contact' },
   ];
 
   const serviceItems = [

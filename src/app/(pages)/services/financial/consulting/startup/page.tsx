@@ -164,7 +164,7 @@ const StartupPage = () => {
         <h1 className="text-4xl md:text-5xl font-bold text-brand-blue mb-4">{c.title}</h1>
         <h2 className="text-2xl text-brand-gold mb-4">{c.hero.headline}</h2>
         <p className="text-lg text-brand-text-secondary mb-8 max-w-2xl mx-auto">{c.hero.sub}</p>
-        <Link href="/#contact" className="inline-block px-8 py-3 bg-brand-gold text-white font-semibold rounded hover:bg-brand-gold/90 transition">{c.hero.cta}</Link>
+        <Link href="/contact" className="inline-block px-8 py-3 bg-brand-gold text-white font-semibold rounded hover:bg-brand-gold/90 transition">{c.hero.cta}</Link>
       </section>
       {/* Process Timeline */}
       <section className="py-12 bg-white">
@@ -230,7 +230,7 @@ const StartupPage = () => {
       <section className="py-16 bg-gradient-to-r from-brand-blue to-brand-blue/90 text-center">
         <h3 className="text-2xl font-bold text-white mb-4">{c.hero.headline}</h3>
         <p className="text-lg text-brand-blue/90 mb-8">{c.hero.sub}</p>
-        <Link href="/#contact" className="inline-block px-8 py-3 border-2 border-white text-lg font-medium rounded-md text-brand-blue hover:bg-white hover:text-brand-blue transition-colors duration-200">{c.hero.cta}</Link>
+        <Link href="/contact" className="inline-block px-8 py-3 border-2 border-white text-lg font-medium rounded-md text-brand-blue hover:bg-white hover:text-brand-blue transition-colors duration-200">{c.hero.cta}</Link>
       </section>
     </>
   );

@@ -153,7 +153,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
               <div className="mt-12 text-center">
                 <p className="text-lg text-brand-text-secondary mb-4">{service.contactPrompt}</p>
                 <Link
-                  href="/#contact" // Assuming your contact section is on the homepage
+                  href="/contact"
                   className="inline-block px-10 py-4 bg-brand-gold text-white rounded-lg hover:bg-yellow-700 transition duration-300 shadow-lg text-lg font-semibold"
                 >
                   {service.contactButtonText}
