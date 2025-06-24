@@ -4,6 +4,13 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
+interface Company {
+  name: string;
+  logo: string;
+  fallbackLogo: string;
+  description: string;
+}
+
 const getTrustedCompaniesContent = (lang: string) => {
   const content = {
     tr: {
@@ -136,7 +143,7 @@ const getTrustedCompaniesContent = (lang: string) => {
   return content[lang as keyof typeof content] || content.tr;
 };
 
-const CompanyLogo = ({ company, className }: { company: any; className: string }) => {
+const CompanyLogo = ({ company, className }: { company: Company; className: string }) => {
   const [imageError, setImageError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
