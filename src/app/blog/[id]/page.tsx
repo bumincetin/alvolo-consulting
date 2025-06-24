@@ -7,7 +7,6 @@ import Navbar from '@/components/layout/Navbar';
 import { FaCalendarAlt, FaUser, FaBookOpen, FaArrowLeft } from 'react-icons/fa';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
@@ -599,10 +598,12 @@ const BlogPostDetailPage = () => {
 
               {/* Featured Image */}
               <div className="w-full h-64 md:h-96">
-                <img 
+                <Image 
                   src={c.post.image} 
                   alt={c.post.title}
                   className="w-full h-full object-cover"
+                  width={1280}
+                  height={720}
                 />
               </div>
 

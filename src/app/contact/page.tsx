@@ -1,6 +1,5 @@
 "use client";
 
-import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
 // import Footer from '@/components/layout/Footer'; // Remove this import
 import Contact from '@/components/sections/Contact';

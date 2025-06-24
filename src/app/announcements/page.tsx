@@ -3,7 +3,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const getAnnouncementsContent = (lang: string) => {
   const content = {
