@@ -50,7 +50,7 @@ const ServicesPage = () => {
         <div className="container mx-auto px-6">
           <div className="w-full max-w-5xl mx-auto mb-12">
             <Image
-              src="/2.png"
+              src="https://www.dropbox.com/scl/fi/4j6ouwe0jy777zw245hg5/2.png?rlkey=kk84r8a0picoaexdqkn9fx2ow&st=d60d8cpd&dl=1"
               alt="Our Services Overview"
               width={1200}
               height={400}

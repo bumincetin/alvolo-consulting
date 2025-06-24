@@ -41,7 +41,7 @@ const Hero = () => {
   return (
     <section id="hero" className="relative min-h-[80vh] md:min-h-screen flex flex-col justify-center md:items-center bg-gradient-to-r from-brand-bg-primary to-blue-50 pt-20 md:pt-0">
       {/* Turkish pattern overlay */}
-      <div className="absolute inset-0 opacity-5 bg-[url('/pattern.svg')] bg-repeat"></div>
+      <div className="absolute inset-0 opacity-5 bg-[url('https://www.dropbox.com/scl/fi/lj4pmd2e0w91pvxm8m26k/pattern.svg?rlkey=ujqsmsszwn5f1xrmikll2lb5b&st=zk7ed1og&dl=1')] bg-repeat"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between">
@@ -84,7 +84,7 @@ const Hero = () => {
               {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-transparent rounded-xl"></div> */}
               <div className="absolute inset-0 bg-gradient-to-r from-brand-bg-primary to-transparent rounded-xl"></div>
               <Image
-                src="/milano2.jpg"
+                src="https://www.dropbox.com/scl/fi/n8abtlx6olxbmtnwhgi4a/milano2.jpg?rlkey=imyqk3wlq0w9x3ohnmmfagco8&st=fgghxlun&dl=1"
                 alt={language === 'tr' ? "Milano" : (language === 'en' ? "Milan" : "Milano")}
                 fill
                 className="object-cover rounded-xl shadow-2xl"

@@ -39,13 +39,13 @@ export default function Home() {
           playsInline
           loop
           preload="auto"
-          poster="/LOGO.png"
+          poster="https://www.dropbox.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1"
           className="absolute top-0 left-0 w-full h-full object-cover"
           onError={(e) => {
             console.error('Video loading error:', e);
           }}
         >
-          <source src="/arka2.mp4" type="video/mp4" />
+          <source src="https://www.dropbox.com/scl/fi/fl1theva22dlv65bohcg6/arka2.mp4?rlkey=ui0o1yzxnwj85nex52kd0qmk7&st=649y1r2k&dl=1" type="video/mp4" />
           {/* fallback text for very old browsers */}
           Your browser does not support the video tag.
         </video>

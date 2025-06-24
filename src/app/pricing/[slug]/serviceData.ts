@@ -152,7 +152,7 @@ export interface ServiceDetail {
       slug: 'burs-basvurusu',
       title: 'Burs Başvurusu Danışmanlığı Detayları',
       pageSubtitle: 'İtalya\'daki eğitim hayallerinizi burslarla destekleyin.',
-      mainImage: '/burs2.png',
+      mainImage: 'https://www.dropbox.com/scl/fi/bh5lnxwkq7nrwy0hh2tiq/burs2.png?rlkey=pvmywttrdg94m4nwhpyflt38q&st=b4xhc5us&dl=1',
       introduction: 'İtalya, uluslararası öğrencilere çeşitli burs imkanları sunan bir ülkedir. Ancak doğru bursu bulmak, başvuru şartlarını anlamak ve etkili bir başvuru dosyası hazırlamak uzmanlık gerektirebilir. Burs başvurusu danışmanlık hizmetimizle, potansiyelinizi en iyi şekilde yansıtarak burs alma şansınızı artırmanıza yardımcı oluyoruz.',
       sections: [
         {

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "italya yasal danışmanlık", "italya uluslararası müşteriler"
   ],
   icons: {
-    icon: '/ICON.png', // Points to public/icon.png
+    icon: 'https://www.dropbox.com/scl/fi/kyiy7zmfhp2qm0sucd7nt/ICON.png?rlkey=3wzqu5r27zaag3j8mpawjydpy&st=qjoffk41&dl=1', // Points to public/icon.png
   },
   openGraph: {
     title: "Alvolo Consulting | Financial & Integration Solutions for Italy",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: 'Alvolo Consulting',
     images: [
       {
-        url: `${siteUrl}/LOGO.png`, // Must be an absolute URL
+        url: 'https://www.dropbox.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1', // Must be an absolute URL
         width: 800,
         height: 600,
         alt: 'Alvolo Consulting Logo',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Alvolo Consulting | Financial & Integration Solutions for Italy",
     description: "Alvolo Danışmanlık: İtalya'da iş kurma, finansal danışmanlık ve entegrasyon çözümleri.",
-    images: [`${siteUrl}/LOGO.png`], // Must be an absolute URL
+    images: ['https://www.dropbox.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1'], // Must be an absolute URL
   },
   // For truly dynamic metadata based on language, you'd typically rely on route parameters (e.g., /[locale])
   // and generateMetadata function, which is not directly compatible with a purely client-side language context for metadata.
@@ -79,7 +79,7 @@ export default function RootLayout({
         "@type": "Organization",
         "name": "Alvolo Consulting",
         "url": siteUrl,
-        "logo": `${siteUrl}/LOGO.png`,
+        "logo": 'https://www.dropbox.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1',
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+39-123-456-7890", // Add a real phone number here if available

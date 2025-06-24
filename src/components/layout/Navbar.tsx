@@ -97,7 +97,7 @@ const Navbar = () => {
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
               <div className="mr-3">
                 <Image 
-                  src="/LOGO.png" 
+                  src="https://www.dropbox.com/scl/fi/1e6b17ra9y0ey2kw192ej/LOGO.png?rlkey=eijo2u9qpo88udlovkmh3chaj&st=gnjfhg84&dl=1"
                   alt="Alvolo Consulting Logo" 
                   width={170}
                   height={110}

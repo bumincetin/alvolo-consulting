@@ -41,7 +41,7 @@ const OurStoryPageComponent = () => {
       <div className="container mx-auto px-6 py-20">
         <div className="w-full max-w-3xl mx-auto mb-10">
           <Image
-            src="/milanoyeni.jpg"
+            src="https://www.dropbox.com/scl/fi/y6en2p5fi5mg8clye3cnt/milanoyeni.jpg?rlkey=dfca5yg6f7mzeju965vbr6f8f&st=gsr57h2m&dl=1"
             alt="Milan city view - Our Story"
             width={900}
             height={400}
