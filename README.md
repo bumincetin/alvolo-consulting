@@ -51,6 +51,47 @@ To create a visually appealing, responsive, and informative website providing co
     ```
 5.  Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## 📧 Email Configuration
+
+The contact form requires email service configuration to send messages. You have two options:
+
+### Option 1: Resend (Recommended - Free tier available)
+
+1. Sign up at [Resend](https://resend.com) and get your API key
+2. Create a `.env.local` file in the root directory:
+   ```bash
+   RESEND_API_KEY=your_resend_api_key_here
+   CONTACT_EMAIL=alvoloconsulting@gmail.com
+   ```
+
+### Option 2: Gmail with Nodemailer
+
+1. Enable 2-factor authentication on your Gmail account
+2. Generate an App Password: Google Account → Security → App Passwords
+3. Create a `.env.local` file in the root directory:
+   ```bash
+   GMAIL_USER=your_gmail@gmail.com
+   GMAIL_APP_PASSWORD=your_gmail_app_password_here
+   CONTACT_EMAIL=alvoloconsulting@gmail.com
+   ```
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```bash
+# Choose one of the email options above
+RESEND_API_KEY=your_resend_api_key_here
+# OR
+GMAIL_USER=your_gmail@gmail.com
+GMAIL_APP_PASSWORD=your_gmail_app_password_here
+
+# Where contact form submissions will be sent
+CONTACT_EMAIL=alvoloconsulting@gmail.com
+```
+
+**Note:** The `.env.local` file is automatically ignored by Git for security reasons.
+
 ## 📁 Project Structure (Simplified)
 
 ```

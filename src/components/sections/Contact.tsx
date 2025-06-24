@@ -109,10 +109,12 @@ const Contact = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value, type } = e.target;
     const checked = (e.target as HTMLInputElement).checked;
+    
     setFormData(prev => ({ 
       ...prev, 
       [id]: type === 'checkbox' ? checked : value 
     }));
+    
     // Clear error when user starts typing
     if (submissionStatus === 'error') {
       setSubmissionStatus(null);
